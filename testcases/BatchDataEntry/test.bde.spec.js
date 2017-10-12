@@ -7,6 +7,7 @@ describe('When user opens the BDE module, he...', function(){
         loginPage.navigateToRemisDev();
         loginPage.loginREMI();
     });
+    
     it('Should be able to create a new record.', function(){
         bdePage.openBDEpage();
         bdePage.addNewBDEbuttonClick();
@@ -14,19 +15,20 @@ describe('When user opens the BDE module, he...', function(){
         bdePage.selectVenueB10();
         bdePage.productFamilyDropDownSelect(); 
         bdePage.materialNumberDropDownSelect();
-        bdePage.batchLotNumberEnterTextInput();
-        bdePage.orderNumberEnterTextInput();
-        bdePage.batchStartTimeEntry();
-        bdePage.batchEndTimeEntry();
-        bdePage.nextButton();
+        bdePage.runNumberEnterTextInput();
+        bdePage.campaignNameTextInput();
+        bdePage.lotNumberEnterTextInput();
+        bdePage.runStartDateEntry();
+        bdePage.runEndDateEntry();
+        bdePage.thawIDTextInput();
+        bdePage.thawIDDateEntry();
+        bdePage.harvestDateEntry();
+        bdePage.clickNextButton("vm.showValidateAlert('run-details')");
+        browser.sleep(3000);
+        //step2
         bdePage.populateParameterValues();
-        bdePage.nextButton2();
-        bdePage.createButton();
-        bdePage.okButton();
+        //bdePage.clickNextButton('class="k-primary waves-effect waves-primary ng-binding k-button"');
 
-    
-        browser.sleep(5000);
-        
         
     });
 });

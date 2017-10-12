@@ -11,65 +11,59 @@ var bdePage = function(){
     };
 
     this.siteDropDownSelectRSTO = function() {         
-         element(by.cssContainingText('span.k-input.ng-scope', 'Select a site...')).click();
-         browser.sleep(1000);
-         element(by.cssContainingText('#site_listbox > li.k-item.ng-scope.k-state-hover','RSTO')).click();
+        browser.executeScript("var site = $('#site').data('kendoDropDownList');site.select(1);site.trigger('change');");
     };
 
     this.selectVenueB10 = function() {         
-        element(by.cssContainingText('span.k-input.ng-scope', 'Select a venue...')).click();
-        browser.sleep(1000);
-        element(by.css('#venue_listbox > li.k-item.ng-scope.k-state-hover')).click();
+        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.select(1);venue.trigger('change');");
     };
 
     this.productFamilyDropDownSelect = function() {
-        element(by.cssContainingText('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.form-group.row > div:nth-child(4) > div:nth-child(1) > div > span > span > span.k-input.ng-scope', 'Select a product family...')).click();
-        browser.sleep(1000);
-        element(by.xpath('//*[@id="productFamily_listbox"]/li[1]')).click();
+        browser.executeScript("var productFamily = $('#productFamily').data('kendoDropDownList');productFamily.select(1);productFamily.trigger('change');");
     }; 
     
     this.materialNumberDropDownSelect = function() {
-        element(by.cssContainingText('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.form-group.row > div:nth-child(5) > div:nth-child(1) > div > span > span > span.k-input.ng-scope', 'Select a product...')).click();
-        browser.sleep(1000);
-        element(by.xpath('//*[@id="product_listbox"]/li[1]')).click();
+        browser.executeScript("var product = $('#product').data('kendoDropDownList');product.select(1);product.trigger('change');");
     }; 
 
-    this.batchLotNumberEnterTextInput = function() {
-        element(by.model('vm.dataEntryData.BatchNumber')).sendKeys('3123123124');
-        browser.sleep(1000);
+    this.runNumberEnterTextInput = function() {
+        element(by.model('vm.dataEntryData.RunNumber')).sendKeys('3123123124Run');
     }; 
 
-    this.orderNumberEnterTextInput = function() {
-        var orderNumber = element(by.model('vm.dataEntryData.OrderNumber')).sendKeys('1253871235');
-        browser.sleep(1000);
-    };
-    
-    this.batchStartTimeEntry = function() {
-        browser.executeScript("var batchStartTime = $('#batchStartTime').data('kendoDatePicker');batchStartTime.value(new Date(2017, 9, 6));batchStartTime.trigger('change');");
-        browser.sleep(1000);
-    };
-    
-    this.batchEndTimeEntry = function() {
-        browser.executeScript("var batchEndTime = $('#batchEndTime').data('kendoDatePicker');batchEndTime.value(new Date(2017, 9, 7));batchEndTime.trigger('change');");
+    this.campaignNameTextInput = function() {
+        var orderNumber = element(by.model('vm.dataEntryData.CampaignName')).sendKeys('My New Campaign');
     };
 
-    this.nextButton = function() {
-        element(by.xpath('/html/body/div[1]/div/div/div[2]/div/div/section[1]/div/form/div[2]/div/button[1]')).click();
+    this.lotNumberEnterTextInput = function() {
+        element(by.model('vm.dataEntryData.BatchNumber')).sendKeys('3123123124Lot');
+    }; 
+    
+    this.runStartDateEntry = function() {
+        browser.executeScript("var runStartTime = $('#runStartTime').data('kendoDatePicker');runStartTime.value(new Date(2017, 1, 1));runStartTime.trigger('change');");
+    };
+
+    this.runEndDateEntry = function() {
+        browser.executeScript("var runEndTime = $('#runEndTime').data('kendoDatePicker');runEndTime.value(new Date(2017, 2, 2));runEndTime.trigger('change');");
+    };
+    
+    this.thawIDTextInput = function() {
+        element(by.model('vm.dataEntryData.ThawID')).sendKeys('17264871246ThawID');
+    };
+
+    this.thawIDDateEntry = function() {
+        browser.executeScript("var thawDate = $('#thawDate').data('kendoDatePicker');thawDate.value(new Date(2017, 3, 3));thawDate.trigger('change');");
+    };
+
+    this.harvestDateEntry = function() {
+        browser.executeScript("var harvestDate = $('#harvestDate').data('kendoDatePicker');harvestDate.value(new Date(2017, 4, 4));harvestDate.trigger('change');");
+    };
+
+    this.clickNextButton = function (selector) {
+        element(by.css('button[wz-next="' + selector + '"]')).click();
     };
 
     this.populateParameterValues = function() {
-        element(by.xpath('/html/body/div[1]/div/div/div[2]/div/div/section[2]/div/div/div[1]/div/ul[1]/li[1]/div[2]/span/span/input[1]')).sendKeys('111.4');
-        browser.sleep(1000);
-        element(by.xpath('/html/body/div[1]/div/div/div[2]/div/div/section[2]/div/div/div[1]/div/ul[1]/li[2]/div[2]/span/span/input[1]')).sendKeys('768.7');
-        browser.sleep(1000);
-        element(by.xpath('/html/body/div[1]/div/div/div[2]/div/div/section[2]/div/div/div[1]/div/ul[2]/li/div[2]/span/span/input[1]')).sendKeys('332.5');
-        browser.sleep(1000);
-
-    };
-
-    this.nextButton2 = function() {
-        element(by.xpath('/html/body/div[1]/div/div/div[2]/div/div/section[2]/div/div/div[2]/div/button[2]')).click();
-        browser.sleep(1000);
+        browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]').data('kendoBgoNumericTextBox'); param.value(10); param.trigger('change');");
     };
 
     this.createButton = function() {
@@ -82,25 +76,8 @@ var bdePage = function(){
     };
 
     this.verifyThatRecordIsCreated = function() {
-        //expect(element(by.xpath('//*[@id="dataEntry-grid"]/div[2]/table/tbody/tr[1]/td[3]')).getAttribute('innerHTML')).toEqual('' + orderNumber + '');
-        //browser.sleep(1000);
+        
     };
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-    
-    
 
 };
 
