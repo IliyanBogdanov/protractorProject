@@ -27,6 +27,7 @@ describe('When user opens the BDE module, he...', function(){
         browser.sleep(3000);
         //step2
         bdePage.populateParameterValues();
+        browser.sleep(5000);
         //bdePage.clickNextButton('class="k-primary waves-effect waves-primary ng-binding k-button"');
 
         

@@ -63,7 +63,12 @@ var bdePage = function(){
     };
 
     this.populateParameterValues = function() {
-        browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]').data('kendoBgoNumericTextBox'); param.value(10); param.trigger('change');");
+        browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'block');");
+        element.all(by.css('input[kendo-bgo-numeric-text-box]')).each(function(element, index) {
+            // Will print 0 First, 1 Second, 2 Third.
+            element.sendKeys(10);
+        });
+        browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'none');");
     };
 
     this.createButton = function() {

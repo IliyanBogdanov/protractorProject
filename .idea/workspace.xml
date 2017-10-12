@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="446d90b7-abea-4bd6-a0d5-f07bd028e648" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js" afterPath="$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js" afterPath="$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js" afterPath="$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js" afterPath="$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.ideLiquid.spec.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.ideLiquid.spec.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
@@ -38,11 +38,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="bde.page.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="64" column="47" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.bde.spec.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ideLiquid.page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="35" />
+            <state relative-caret-position="307">
+              <caret line="152" column="57" lean-forward="false" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="57" />
               <folding>
                 <element signature="e#273#351#0" expanded="false" />
                 <element signature="e#1025#1358#0" expanded="false" />
@@ -117,6 +137,8 @@
         <option value="$PROJECT_DIR$/testcases/REMILogin/test.login.spec.js" />
         <option value="$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js" />
         <option value="$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js" />
+        <option value="$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js" />
+        <option value="$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js" />
       </list>
     </option>
   </component>
@@ -174,6 +196,12 @@
               <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
               <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
               <item name="testcases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
+              <item name="testcases" type="462c0819:PsiDirectoryNode" />
+              <item name="BatchDataEntry" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
@@ -258,11 +286,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507790301243</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="IDE-Liquid - CRUD Ready">
+      <created>1507803773321</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507803773321</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10618000" />
+    <option name="totallyTimeSpent" value="12683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -308,7 +343,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="init" />
     <MESSAGE value="Function params" />
-    <option name="LAST_COMMIT_MESSAGE" value="Function params" />
+    <MESSAGE value="IDE-Liquid - CRUD Ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="IDE-Liquid - CRUD Ready" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -467,10 +503,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="77" column="52" lean-forward="false" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="307">
+          <caret line="152" column="57" lean-forward="false" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="57" />
           <folding>
             <element signature="e#273#351#0" expanded="false" />
             <element signature="e#1025#1358#0" expanded="false" />
@@ -486,10 +530,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js">
+    <entry file="file://$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="77" column="52" lean-forward="false" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
+        <state relative-caret-position="52">
+          <caret line="64" column="47" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
           <folding />
         </state>
       </provider>
