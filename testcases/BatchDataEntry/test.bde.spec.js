@@ -24,12 +24,12 @@ describe('When user opens the BDE module, he...', function(){
         bdePage.thawIDDateEntry();
         bdePage.harvestDateEntry();
         bdePage.clickNextButton("vm.showValidateAlert('run-details')");
-        browser.sleep(3000);
         //step2
         bdePage.populateParameterValues();
+        bdePage.clickNextButton('');
+        bdePage.createButtonClick();
+        bdePage.okButtonClick();
         browser.sleep(5000);
-        //bdePage.clickNextButton('class="k-primary waves-effect waves-primary ng-binding k-button"');
-
         
     });
 });

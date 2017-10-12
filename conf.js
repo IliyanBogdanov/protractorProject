@@ -16,6 +16,8 @@ exports.config = {
     violationCategoriesTests: ['./testcases/MasterData-ViolationCategories/test.violationCategories.spec.js'],
     bdeTests: ['./testcases/BatchDataEntry/test.bde.spec.js'],
     liquidTests: ['./testcases/IDE-Liquid/test.ideLiquid.spec.js'],
+    lyophilizationTests: ['./testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
+    ideTests:['./testcases/IDE-Liquid/test.ideLiquid.spec.js','./testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
   },
 
   onPrepare: function() {

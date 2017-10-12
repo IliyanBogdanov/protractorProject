@@ -15,18 +15,7 @@ ideLiquidPage = function () {
     this.clickButtonByText = function (text) {
         element(by.buttonText(text)).click();
     };
-    /*
-     * Click the update button
-     */
-    this.clickUpdateButton = function () {
-        element(by.buttonText('Update')).click();
-    };
-    /*
-     * Click the finish button
-     */
-    this.clickFinishButton = function () {
-        element(by.buttonText('Finish')).click();
-    };
+    
     /*
      * Click the edit IDE button
      */

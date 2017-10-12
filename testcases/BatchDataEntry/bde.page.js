@@ -71,11 +71,11 @@ var bdePage = function(){
         browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'none');");
     };
 
-    this.createButton = function() {
+    this.createButtonClick = function() {
         element(by.buttonText('Create')).click();
     };
 
-    this.okButton = function() {
+    this.okButtonClick = function() {
         element(by.buttonText('OK')).click();
         browser.sleep(1000);
     };

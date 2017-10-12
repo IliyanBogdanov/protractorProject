@@ -5,6 +5,7 @@
 /node_modules
 /bower_components
 /packages
+/target
 
 # Ignore .NET specific files/folders
 bin
