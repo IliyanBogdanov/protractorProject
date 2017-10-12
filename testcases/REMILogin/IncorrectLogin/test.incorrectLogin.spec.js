@@ -10,47 +10,44 @@ describe('Incorrect Login details, asserts for validation messages', function ()
       browser.get('http://remisdev.demos.bgosoftware.com/login/');
   });
 
-  xit('Empty Domain', function () {
+  it('Empty Domain', function () {
     incorrectLoginPage.enterEmptyDomainValue();
-    loginPage.enterUsernameValue();
-    loginPage.enterPasswordValue();
+    loginPage.enterUsernameValue('martouser1');
+    loginPage.enterPasswordValue('25Kukuvici');
+    loginPage.clickLogin();
     incorrectLoginPage.verifyValidationMessageDomain();
   });
 
-  xit('Empty Username', function () {
+  it('Empty Username', function () {
     loginPage.enterDomainValue();
-    incorrectLoginPage.enterEmptyUsernameValue();
-    loginPage.enterPasswordValue();
+    loginPage.enterUsernameValue('');
+    loginPage.enterPasswordValue('25Kukuvici');
+    loginPage.clickLogin();
     incorrectLoginPage.verifyValidationMessageUsername();  
   });
 
-  xit('Empty Password', function () {
+  it('Empty Password', function () {
     loginPage.enterDomainValue();
-    loginPage.enterUsernameValue();
-    incorrectLoginPage.enterEmptyPasswordValue();
+    loginPage.enterUsernameValue('martouser1');
+    loginPage.enterPasswordValue('');
+    loginPage.clickLogin();
     incorrectLoginPage.verifyValidationMessagePassword();
   });
 
-  fit('Correct Username ; Wrong Password', function () {
+  it('Correct Username ; Wrong Password', function () {
     loginPage.enterDomainValue();
-    loginPage.enterUsernameValue();
-    loginPage.enter('blablabla');
-    //Function that populates domain , correct username and wrong password fields and clicks on login button
-    //browser.executeScript(BGO.utils.login, 'ad.bgosoftware.com', 'martouser1', 'wrongpassword');
-    //browser.sleep(1000);
-    //Check validation message for domain that is not selected
-    //var domainValidationMessage = element(by.css('.toast-error'));
-    //expect(domainValidationMessage.isDisplayed()).toBe(true);
+    loginPage.enterUsernameValue('martouser1');
+    loginPage.enterPasswordValue('wrongpassword');
+    loginPage.clickLogin();
+    incorrectLoginPage.verifyValidationMessageWrongPassword();
   });
 
-  xit('Wrong Username ; Correct Password', function () {
-    //Function that populates domain , wrong username and correct password fields and clicks on login button
-    browser.executeScript(BGO.utils.login, 'ad.bgosoftware.com', 'wrongusername', '25Kukuvici');
-    //browser.waitForAngular();
-    browser.sleep(1000);
-    //Check validation message for password that is not entered
-    var domainValidationMessage = element(by.css('.toast-error'));
-    expect(domainValidationMessage.isDisplayed()).toBe(true);
+  it('Wrong Username ; Correct Password', function () {
+    loginPage.enterDomainValue();
+    loginPage.enterUsernameValue('wrongusername');
+    loginPage.enterPasswordValue('25Kukuvici');
+    loginPage.clickLogin();
+    incorrectLoginPage.verifyValidationMessageWrongUsername();
   });
 
 });
