@@ -12,8 +12,14 @@ ideLiquidPage = function () {
     /*
      * Click the create button
      */
-    this.clickCreateButton = function () {
-        element(by.buttonText('Create')).click();
+    this.clickButtonByText = function (text) {
+        element(by.buttonText(text)).click();
+    };
+    /*
+     * Click the update button
+     */
+    this.clickUpdateButton = function () {
+        element(by.buttonText('Update')).click();
     };
     /*
      * Click the finish button
@@ -21,18 +27,30 @@ ideLiquidPage = function () {
     this.clickFinishButton = function () {
         element(by.buttonText('Finish')).click();
     };
-
+    /*
+     * Click the edit IDE button
+     */
+    this.clickEditButton = function (selector) {
+        element(by.css('.' + selector)).click();
+    };
     /*
      * Verify create
      */
-    this.filterTable = function() {
+    this.filterTable = function(numberValue) {
+        if (typeof numberValue !== 'undefined') {
+            inspectionLotNumber = numberValue;
+        }
         browser.executeScript("var product = $('#hto-grid-liquid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"General_LotNumber\", operator: \"eq\", value: \""+inspectionLotNumber+"\" });");
     };
-
     this.verifyThatRecordIsCreated = function() {
         var list = element.all(by.css('#hto-grid-liquid .k-grid-content table tbody tr'));
         expect(list.count()).toBe(1);
+    };
+
+    this.verifyThatRecordIsDeleted = function() {
+        var list = element.all(by.css('#hto-grid-liquid .k-grid-content table tbody tr'));
+        expect(list.count()).toBe(0);
     };
 
     /*
@@ -64,7 +82,10 @@ ideLiquidPage = function () {
     /*
      *  Set Total Vials
      */
-    this.enterTotalVials = function () {
+    this.enterTotalVials = function (vials) {
+        if (typeof vials !== 'undefined') {
+            totalVials = vials;
+        }
         browser.executeScript("var vials = $('#total-number-of-vials').data('kendoNumericTextBox');" +
             "vials.value(" + totalVials + ");vials.trigger('change');");
     };
@@ -93,9 +114,14 @@ ideLiquidPage = function () {
     /*
      *  Set Inspection Lot Number
      */
-    this.enterInspectionLotNumber = function () {
+    this.enterInspectionLotNumber = function (newLotNumber) {
+        if (typeof newLotNumber !== 'undefined') {
+            inspectionLotNumber = newLotNumber;
+        }
         browser.executeScript("var iln = $('#genentech-lot-number').data('kendoMaskedTextBox');" +
             "iln.value('" + inspectionLotNumber + "');iln.trigger('change');");
+
+        return inspectionLotNumber;
     };
     /*
      *  Set Comments
@@ -116,9 +142,21 @@ ideLiquidPage = function () {
      STEP ENTER VIOLATIONS
      */
 
-    this.addVials = function () {
-        browser.executeScript('$("input[kendo-numeric-text-box]").each(function( index ) {var data = $(this).data("kendoNumericTextBox"); data.value(2); data.trigger("change");})');
+    this.addVials = function (value) {
+        if (typeof value === 'undefined') {
+            value = 2;
+        }
+        // value.id !== 'total-number-of-vials' &&
+        // value.id !== 'genentech-lot-number'
+        browser.executeScript('$("input[kendo-numeric-text-box]").each(function( index ) {' +
+            'if ($(this).attr("id") !== "total-number-of-vials" && $(this).attr("id") !== "genentech-lot-number") {' +
+            'var data = $(this).data("kendoNumericTextBox"); ' +
+            'data.value('+ value +'); data.trigger("change");' +
+            '}' +
+            '})');
     }
+
+
 };
 
 module.exports = new ideLiquidPage();
