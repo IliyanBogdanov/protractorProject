@@ -10,17 +10,10 @@ var incorrectLoginPage = function(){
         expect(validationMessageDomain.getAttribute('innerHTML')).toEqual('Please select Domain'); 
     };
 
-    this.enterEmptyUsernameValue = function() {
-        element(by.id('remis-login-username')).click().sendKeys(''); 
-    };
 
     this.verifyValidationMessageUsername = function() {
         var validationMessageUsername = element(by.css('#remis-login-form > div:nth-child(2) > div > div > div'));
         expect(validationMessageUsername.getAttribute('innerHTML')).toEqual('Please enter your Username');
-    };
-
-    this.enterEmptyPasswordValue = function() {
-        element(by.id('remis-login-password')).click().sendKeys('');
     };
 
     this.verifyValidationMessagePassword = function() {
@@ -28,11 +21,15 @@ var incorrectLoginPage = function(){
         expect(validationMessagePassword.getAttribute('innerHTML')).toEqual('Please enter your Password');
     };
 
-    this.enterWrongPasswordValue = function(wrongpassword) {
-        var wrongpassword = element(by.id('remis-login-password')).click();
-        wrongpassword.sendKeys();
+    this.verifyValidationMessageWrongPassword = function() {
+        var validationMessageWrongPassword = element(by.css('.toast-message'));
+        expect(validationMessageWrongPassword.isDisplayed()).toBe(true);
     };
 
+    this.verifyValidationMessageWrongUsername = function() {
+        var verifyValidationMessageWrongUsername = element(by.css('.toast-message'));
+        expect(verifyValidationMessageWrongUsername.isDisplayed()).toBe(true);
+    };
 
 
 
