@@ -1,3 +1,4 @@
+var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 exports.config = {
   framework: 'jasmine',
   seleniumAddress: 'http://localhost:4444/wd/hub',
@@ -5,7 +6,6 @@ exports.config = {
   multiCapabilities: [{
     browserName: 'chrome'
   }],
-
   // Spec patterns are relative to the location of the spec file. They may
   // include glob patterns.
   suites: {
@@ -20,8 +20,13 @@ exports.config = {
 
   onPrepare: function() {
       browser.manage().window().maximize();
-   }
+      jasmine.getEnv().addReporter(
+          new Jasmine2HtmlReporter({
+              savePath: 'target/screenshots'
+          })
+      );
+   },
 
-   
+
 
 }

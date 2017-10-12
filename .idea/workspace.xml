@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="446d90b7-abea-4bd6-a0d5-f07bd028e648" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js" afterPath="$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js" afterPath="$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf.js" afterPath="$PROJECT_DIR$/conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.bde.spec.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.bde.spec.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
@@ -99,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conf.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="conf.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="15" />
+            <state relative-caret-position="546">
+              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -131,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/conf.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/testcases/REMILogin/login.page.js" />
         <option value="$PROJECT_DIR$/testcases/REMILogin/test.login.spec.js" />
@@ -139,6 +138,7 @@
         <option value="$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js" />
         <option value="$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js" />
         <option value="$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js" />
+        <option value="$PROJECT_DIR$/conf.js" />
       </list>
     </option>
   </component>
@@ -186,34 +186,6 @@
             <path>
               <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
               <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
-              <item name=".vscode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
-              <item name="testcases" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
-              <item name="testcases" type="462c0819:PsiDirectoryNode" />
-              <item name="BatchDataEntry" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
-              <item name="testcases" type="462c0819:PsiDirectoryNode" />
-              <item name="BGOFile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
-              <item name="testcases" type="462c0819:PsiDirectoryNode" />
-              <item name="IDE-Liquid" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,16 +265,23 @@
       <option name="project" value="LOCAL" />
       <updated>1507803773321</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="BDE - params">
+      <created>1507807959182</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1507807959182</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12683000" />
+    <option name="totallyTimeSpent" value="14339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -344,7 +323,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="Function params" />
     <MESSAGE value="IDE-Liquid - CRUD Ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="IDE-Liquid - CRUD Ready" />
+    <MESSAGE value="BDE - params" />
+    <option name="LAST_COMMIT_MESSAGE" value="BDE - params" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -495,14 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -542,6 +514,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/htmlReports/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmlresults.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
           <folding />
         </state>
       </provider>
