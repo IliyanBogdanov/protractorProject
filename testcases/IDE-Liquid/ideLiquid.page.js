@@ -12,13 +12,13 @@ ideLiquidPage = function () {
     /*
      * Click the create button
      */
-    this.clickCreateButton = function (selector) {
+    this.clickCreateButton = function () {
         element(by.buttonText('Create')).click();
     };
     /*
      * Click the finish button
      */
-    this.clickFinishButton = function (selector) {
+    this.clickFinishButton = function () {
         element(by.buttonText('Finish')).click();
     };
 

@@ -11,8 +11,8 @@ describe('When user is openning the login page, he...', function(){
 
     it('Should be able to log into the system.', function(){
         loginPage.enterDomainValue();
-        loginPage.enterUsernameValue();
-        loginPage.enterPasswordValue();
+        loginPage.enterUsernameValue('martouser1');
+        loginPage.enterPasswordValue('25Kukuvici');
         loginPage.clickLogin();
     });
 

@@ -5,12 +5,12 @@ var loginPage = function(){
         browser.executeScript("var test = $('#remis-login-domain').data('kendoDropDownList');test.select(4);test.trigger('change');"); 
     };
 
-    this.enterUsernameValue = function() {
-        element(by.id('remis-login-username')).click().sendKeys('martouser1');       
+    this.enterUsernameValue = function(username) {
+        element(by.id('remis-login-username')).click().sendKeys(username);
     };
 
-    this.enterPasswordValue = function() {
-        element(by.id('remis-login-password')).click().sendKeys('25Kukuvici');       
+    this.enterPasswordValue = function(password) {
+        element(by.id('remis-login-password')).click().sendKeys(password);
     };
 
     this.clickLogin = function() {
