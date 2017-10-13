@@ -31,34 +31,43 @@ describe('When user opens the BDE module, he...', function(){
         bdePage.clickNextButton('');
         bdePage.createButtonClick();
         bdePage.clickButtonByText('OK');
-        //verify 
+        //Verify that the record has been created
         bdePage.filterTableBDE();
         bdePage.verifyThatRecordIsCreated();
         loginPage.logoutREMI();
     });
 
-    it('Should be able to update a new record.', function(){
+    it('Should be able to update a record.', function(){
         var newRunNumber = 'UPDATE';
         bdePage.openBDEpage();
         //Filter table to get the last added record from the test
         bdePage.filterTableBDE(runNumber);
         //Click the edit button
         bdePage.clickEditButton('icon-small-edit');
-        browser.sleep(3000);
+        browser.sleep(2000);
         //Enter new run number value
         bdePage.clearRunNumberInput();
         runNumber = bdePage.runNumberEnterTextInput(newRunNumber);
-        //Click next button
         bdePage.clickNextButton("vm.showValidateAlert('run-details')");
-        //Click next button
         bdePage.clickNextButton('');
-        //Click update button
         bdePage.clickButtonByText('Update');
-        //Click finish button
         bdePage.clickButtonByText('OK');
         //Verify that the record has been updated
         bdePage.filterTableBDE(newRunNumber);
         bdePage.verifyThatRecordIsCreated();
+        loginPage.logoutREMI();
+    });
+
+    it('Should be able to delete a record.', function() {
+        bdePage.openBDEpage();
+        //Filter table to get the last added/updated record from the test
+        bdePage.filterTableBDE(runNumber);
+        bdePage.clickEditButton('icon-small-clear');
+        bdePage.clickButtonByText('Delete');
+        bdePage.clickButtonByText('Finish');
+        bdePage.filterTableBDE(runNumber);
+        browser.sleep(1000);
+        bdePage.verifyThatRecordIsDeleted();
     });
 
 
