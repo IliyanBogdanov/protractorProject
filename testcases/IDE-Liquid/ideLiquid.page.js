@@ -123,7 +123,6 @@ ideLiquidPage = function () {
      *  Set Inspection
      */
     this.enterInspection = function () {
-        //browser.executeScript("var inspection = $('#Inspection1st');inspection.prop('checked', true);inspection.click();");
         element(by.model('vm.htoDataLiquid.General_Inspection')).click();
     };
 

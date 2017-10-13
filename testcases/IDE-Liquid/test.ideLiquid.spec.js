@@ -1,6 +1,7 @@
 var loginPage = require('../REMILogin/login.page.js');
 var ideLiquidPage = require('./ideLiquid.page.js');
 var inspectionLotNumber = '';
+
 describe('When user opens the IDE-Liquid module, he...', function(){
 
     beforeEach(function(){
