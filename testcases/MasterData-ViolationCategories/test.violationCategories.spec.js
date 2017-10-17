@@ -17,13 +17,20 @@ describe('When user opens the Violation Categories module, he...', function() {
         //Click the add new violation category button
         violationCategoriesPage.clickOnAddNewViolationCategoryButton();
         //Enter name for the violation category
-        violationCategoriesPage.enterNameForViolationCategory();
+        var temp = violationCategoriesPage.enterNameForViolationCategory();
         //Check poduct quality impact checkbox
         violationCategoriesPage.checkPQIcheckbox();
         //Check active checkbox
         violationCategoriesPage.checkActiveCheckbox();
         //Select a site value from the dropdown
-        
+        violationCategoriesPage.selectSiteValue();
+        //Create the new violation category record
+        violationCategoriesPage.clickUpdateButton();
+        //Verify that the record is created
+        //browser.sleep(5000);
+        console.log(temp);
+        violationCategoriesPage.filterTable(temp);
+
         browser.sleep(3000);
 
    
