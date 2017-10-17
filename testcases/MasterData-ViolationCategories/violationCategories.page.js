@@ -42,9 +42,29 @@ var violationCategoriesPage = function(){
 
     this.selectSiteValue = function() {
         //Select site value
-        element(by.css('input[data-bind="checked: Active"]')).click(); 
+        var site = $('span[role=\"listbox\"]').click();
+        browser.sleep(500);
+        var rstoValue = $('li[class=\"k-item k-state-focused\"]').click();
     };
 
+    this.clickUpdateButton = function(text) {
+        //Click the create new control limit button
+        element(by.css('a[class="k-button k-button-icontext k-primary k-grid-update"]')).click();
+    };
+
+    this.filterTable = function(numberValue) {
+        //Filter table by the respective attribute name column
+        if (typeof numberValue !== 'undefined') {
+            violationCategoryName = numberValue;
+        }
+        console.log(violationCategoryName);
+        
+        browser.executeScript("var name = $('#categoriesTreeList').data('kendoGrid');" +
+            "name.dataSource.filter({field: 'Name', operator: 'eq', value: '" + violationCategoryName + "'});");
+        browser.sleep(1000);    
+    };
+    
+    
 
 
 

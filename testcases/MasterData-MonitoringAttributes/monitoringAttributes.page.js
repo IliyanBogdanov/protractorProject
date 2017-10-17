@@ -20,11 +20,6 @@ var monitoringAttributesPage = function(){
 
     };
 
-    // this.enterCompanyValue = function() {
-    //     //Enter Company value 
-    //     browser.executeScript("var company = $('#company').data('kendoDropDownList');company.value(1);company.trigger('change');");      
-    // };
-
     this.enterSiteValue = function() {
         //Enter Site value 
         browser.executeScript("var site = $('#site').data('kendoDropDownList');site.value(2);site.trigger('change');");
