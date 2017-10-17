@@ -34,7 +34,6 @@ describe('When user opens the BDE module, he...', function(){
         //Verify that the record has been created
         bdePage.filterTableBDE();
         bdePage.verifyThatRecordIsCreated();
-        loginPage.logoutREMI();
     });
 
     it('Should be able to update a record.', function(){
@@ -55,7 +54,6 @@ describe('When user opens the BDE module, he...', function(){
         //Verify that the record has been updated
         bdePage.filterTableBDE(newRunNumber);
         bdePage.verifyThatRecordIsCreated();
-        loginPage.logoutREMI();
     });
 
     it('Should be able to delete a record.', function() {

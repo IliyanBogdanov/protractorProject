@@ -19,6 +19,7 @@ var loginPage = function(){
 
     this.navigateToRemisDev = function() {
         browser.get('http://remisdev.demos.bgosoftware.com/login/');
+        browser.sleep(1000);
     };
 
     this.loginREMI = function() {
