@@ -21,8 +21,9 @@ var violationCategoriesPage = function(){
 
     this.enterNameForViolationCategory = function(newViolationCategoryName) {
         if (typeof newViolationCategoryName !== 'undefined') {
-            violationCategoryName = newViolationCategoryName;
+            //violationCategoryName = newViolationCategoryName;
         }
+        browser.executeScript("$('input[name=\"Name\"]').val('').change();" );
         element(by.css('input[name="Name"]')).sendKeys(violationCategoryName);
         return violationCategoryName;
     };
@@ -46,7 +47,8 @@ var violationCategoriesPage = function(){
 
     this.clickUpdateButton = function(text) {
         //Click the create new control limit button
-        element(by.css('a[class="k-button k-button-icontext k-primary k-grid-update"]')).click();
+        browser.executeScript("$('.k-grid-update').click();" );
+        //element(by.css('a.k-grid-update')).click();
     };
 
     this.filterTable = function(numberValue) {
