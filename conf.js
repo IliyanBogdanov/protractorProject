@@ -18,6 +18,7 @@ exports.config = {
     liquidTests: ['./testcases/IDE-Liquid/test.ideLiquid.spec.js'],
     lyophilizationTests: ['./testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
     ideTests:['./testcases/IDE-Liquid/test.ideLiquid.spec.js','./testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
+    productFamiliesTests:['./testcases/MasterData-ProductFamilies/productFamilies.page.js', './testcases/MasterData-ProductFamilies/test.productFamilies.spec.js']
   },
 
   onPrepare: function() {
