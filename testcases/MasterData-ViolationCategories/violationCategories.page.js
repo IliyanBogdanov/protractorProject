@@ -9,6 +9,10 @@ var violationCategoriesPage = function(){
     element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a')).click();
     };
 
+    this.clickButtonByText = function (text) {
+        element(by.buttonText(text)).click();
+    };
+
     this.clickOnClearButton = function() {
         //Click on the Clear button
         element(by.css('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')).click();
@@ -21,11 +25,12 @@ var violationCategoriesPage = function(){
 
     this.enterNameForViolationCategory = function(newViolationCategoryName) {
         if (typeof newViolationCategoryName !== 'undefined') {
-            //violationCategoryName = newViolationCategoryName;
+            violationCategoryName = newViolationCategoryName;
         }
-        browser.executeScript("$('input[name=\"Name\"]').val('').change();" );
-        element(by.css('input[name="Name"]')).sendKeys(violationCategoryName);
+        browser.executeScript("$('input[name=\"Name\"]').val('"+violationCategoryName+"').change();" );
+        //element(by.css('input[type="text"][name="Name"]')).sendKeys(violationCategoryName);
         return violationCategoryName;
+
     };
 
     this.checkPQIcheckbox = function() {
@@ -61,6 +66,13 @@ var violationCategoriesPage = function(){
         browser.sleep(1000);    
     };
 
+    this.resetFilterTable = function() {
+        browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
+            "product.dataSource.filter({});" +
+            "product.refresh();");
+        browser.sleep(1000);
+    };
+
     this.verifyThatRecordIsCreated = function() {
         //Verification that the record is created
         var list = element.all(by.css('#categoriesTreeList .k-grid-content table tbody tr'));
@@ -70,6 +82,14 @@ var violationCategoriesPage = function(){
     this.clickEditButton = function (selector) {
         //Click edit button by provided selector
         element(by.css('.' + selector)).click();
+    };
+
+    this.saveRow = function() {
+        //Click the create new control limit button
+        browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
+            "product.saveChanges();" +
+            "product.refresh();" );
+
     };
 
  

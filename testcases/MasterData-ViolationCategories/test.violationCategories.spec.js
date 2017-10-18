@@ -32,25 +32,26 @@ describe('When user opens the Violation Categories module, he...', function() {
     });
 
     it ('Should be able to update a record.', function (){
+
         var newViolationCategoryName = "UPDATE-" + violationCategoryName;
         //Open violation categories module
         violationCategoriesPage.navigateToViolationCategories();
         //Clear filter settings
         violationCategoriesPage.clickOnClearButton();
         //Filter table to get the last added record from the test
-        //violationCategoriesPage.filterTable(violationCategoryName);
-        browser.sleep(1000);
+        violationCategoriesPage.filterTable(violationCategoryName);
         //Click the edit icon
         violationCategoriesPage.clickEditButton('icon-small-edit');
-        browser.sleep(1000);
         //Change the name of the violation category
         violationCategoryName = violationCategoriesPage.enterNameForViolationCategory(newViolationCategoryName);
         //Save the updated record
-        violationCategoriesPage.clickUpdateButton();
-        browser.sleep(2000);
+        violationCategoriesPage.saveRow();
+        //violationCategoriesPage.resetFilterTable();
         //Verify that the record is updated
-        violationCategoriesPage.filterTable(violationCategoriesPage);
+        violationCategoriesPage.filterTable(violationCategoryName);
+        browser.ignoreSynchronization = true;
         violationCategoriesPage.verifyThatRecordIsCreated();
+        browser.ignoreSynchronization = false;
     });
 });
 
