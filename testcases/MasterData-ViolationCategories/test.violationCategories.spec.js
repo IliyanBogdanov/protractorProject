@@ -17,7 +17,7 @@ describe('When user opens the Violation Categories module, he...', function() {
         //Click the add new violation category button
         violationCategoriesPage.clickOnAddNewViolationCategoryButton();
         //Enter name for the violation category
-        var temp = violationCategoriesPage.enterNameForViolationCategory();
+        violationCategoryName = violationCategoriesPage.enterNameForViolationCategory();
         //Check poduct quality impact checkbox
         violationCategoriesPage.checkPQIcheckbox();
         //Check active checkbox
@@ -27,22 +27,29 @@ describe('When user opens the Violation Categories module, he...', function() {
         //Create the new violation category record
         violationCategoriesPage.clickUpdateButton();
         //Verify that the record is created
-        //browser.sleep(5000);
-        console.log(temp);
-        violationCategoriesPage.filterTable(temp);
-
-        browser.sleep(3000);
-
-   
+        violationCategoriesPage.filterTable();
+        violationCategoriesPage.verifyThatRecordIsCreated();
     });
 
-    xit ('Should be able to update a record.', function (){
+    it ('Should be able to update a record.', function (){
+        var newViolationCategoryName = 'UPDATE' + violationCategoryName;
+        //Open violation categories module
         violationCategoriesPage.navigateToViolationCategories();
-
-       
+        //Clear filter settings
+        violationCategoriesPage.clickOnClearButton();
+        //Filter table to get the last added record from the test
+        violationCategoriesPage.filterTable(violationCategoryName);
+        //Click the edit icon
+        violationCategoriesPage.clickEditButton('icon-small-edit');
+        //Change the name of the violation category
+        element(by.css('input[name="Name"]')).focus().sendKeys('Bai Blagoi');
+        //violationCategoryName = violationCategoriesPage.enterNameForViolationCategory(newViolationCategoryName);
+        //Save the updated record
+        violationCategoriesPage.clickUpdateButton();
+        //Verify that the record is updated
+        violationCategoriesPage.filterTable(newViolationCategoryName);
+        violationCategoriesPage.verifyThatRecordIsCreated();
     });
-
-
 });
 
 

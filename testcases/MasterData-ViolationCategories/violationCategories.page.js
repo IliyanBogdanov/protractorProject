@@ -1,5 +1,5 @@
 var BGO = require('./../BGOFile/BGO.js').init();
-var violationCategoryName = "Test-VC-" + BGO.utils.random();
+var violationCategoryName = " Test-VC-" + BGO.utils.random();
 
 var violationCategoriesPage = function(){
 
@@ -20,14 +20,11 @@ var violationCategoriesPage = function(){
     };
 
     this.enterNameForViolationCategory = function(newViolationCategoryName) {
-        //Enter name for the violation category
         if (typeof newViolationCategoryName !== 'undefined') {
             violationCategoryName = newViolationCategoryName;
         }
-        element(by.css('input[name="Name"]')).sendKeys(" "+ violationCategoryName + " ");
-     
+        element(by.css('input[name="Name"]')).sendKeys(violationCategoryName);
         return violationCategoryName;
-
     };
 
     this.checkPQIcheckbox = function() {
@@ -57,18 +54,22 @@ var violationCategoriesPage = function(){
         if (typeof numberValue !== 'undefined') {
             violationCategoryName = numberValue;
         }
-        console.log(violationCategoryName);
-        
-        browser.executeScript("var name = $('#categoriesTreeList').data('kendoGrid');" +
-            "name.dataSource.filter({field: 'Name', operator: 'eq', value: '" + violationCategoryName + "'});");
+        browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
+        "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+violationCategoryName+"\" });");
         browser.sleep(1000);    
     };
-    
-    
 
+    this.verifyThatRecordIsCreated = function() {
+        //Verification that the record is created
+        var list = element.all(by.css('#categoriesTreeList .k-grid-content table tbody tr'));
+        expect(list.count()).toBe(1);
+    };
 
+    this.clickEditButton = function (selector) {
+        //Click edit button by provided selector
+        element(by.css('.' + selector)).click();
+    };
 
-
-    
+ 
 };
 module.exports = new violationCategoriesPage();
