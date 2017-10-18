@@ -13,12 +13,14 @@ exports.config = {
     incorrectLoginTests: ['./testcases/REMILogin/IncorrectLogin/test.incorrectLogin.spec.js'],
     processMonitoringTests: ['./testcases/ProcessMonitoring/test.processMonitoring.spec.js'],
     monitoringAttributesTests: ['./testcases/MasterData-MonitoringAttributes/test.monitoringAttributes.spec.js'],
+    productFamiliesTests:['./testcases/MasterData-ProductFamilies/test.productFamilies.spec.js'],
     violationCategoriesTests: ['./testcases/MasterData-ViolationCategories/test.violationCategories.spec.js'],
     bdeTests: ['./testcases/BatchDataEntry/test.bde.spec.js'],
     liquidTests: ['./testcases/IDE-Liquid/test.ideLiquid.spec.js'],
     lyophilizationTests: ['./testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
     ideTests:['./testcases/IDE-Liquid/test.ideLiquid.spec.js','./testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
-    productFamiliesTests:['./testcases/MasterData-ProductFamilies/productFamilies.page.js', './testcases/MasterData-ProductFamilies/test.productFamilies.spec.js']
+    masterDataTests:['./testcases/MasterData-MonitoringAttributes/test.monitoringAttributes.spec.js',
+    './testcases/MasterData-ProductFamilies/test.productFamilies.spec.js','./testcases/MasterData-ViolationCategories/test.violationCategories.spec.js'],
   },
 
   onPrepare: function() {

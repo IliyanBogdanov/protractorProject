@@ -44,7 +44,7 @@ describe('When user opens the Violation Categories module, he...', function() {
         violationCategoriesPage.clickEditButton('icon-small-edit');
         browser.sleep(1000);
         //Change the name of the violation category
-        violationCategoryName = violationCategoriesPage.enterNameForViolationCategory(newViolationCategoryName);
+        violationCategoryName = violationCategoriesPage.enterNameForViolationCategory('UPDATE');
         //Save the updated record
         violationCategoriesPage.clickUpdateButton();
         browser.sleep(2000);
