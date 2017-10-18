@@ -43,7 +43,7 @@ describe('When user opens the Violation Categories module, he...', function() {
         //Click the edit icon
         violationCategoriesPage.clickEditButton('icon-small-edit');
         //Change the name of the violation category
-        violationCategoryName = violationCategoriesPage.enterNameForViolationCategory('UPDATE');
+        violationCategoryName = violationCategoriesPage.enterNameForViolationCategory(newViolationCategoryName);
         //Save the updated record
         violationCategoriesPage.saveRow();
         //violationCategoriesPage.resetFilterTable();
