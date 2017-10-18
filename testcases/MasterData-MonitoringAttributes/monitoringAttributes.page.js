@@ -89,6 +89,7 @@ var monitoringAttributesPage = function(){
 
     this.clickButtonByText = function(text) {
         //Click the create new control limit button
+        browser.sleep(1000);
         element(by.buttonText(text)).click();
     };
 
@@ -131,6 +132,7 @@ var monitoringAttributesPage = function(){
     
     this.clickEditButton = function (selector) {
         //Click edit button by provided selector
+        browser.sleep(1000);
         element(by.css('.' + selector)).click();
     };
 

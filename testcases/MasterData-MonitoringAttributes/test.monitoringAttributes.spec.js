@@ -2,7 +2,7 @@ var loginPage = require('../REMILogin/login.page.js');
 var monitoringAttrubutesPage = require('./monitoringAttributes.page.js');
 var attributeName = '';
 
-describe(' When user opens the Master Data module, he ... ', function () {
+describe(' When user opens the Monitoring Attributes module, he ... ', function () {
   
   beforeEach(function () {
     loginPage.navigateToRemisDev();

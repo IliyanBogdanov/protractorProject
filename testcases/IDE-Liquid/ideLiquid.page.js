@@ -20,6 +20,7 @@ ideLiquidPage = function () {
      * Click the edit IDE button
      */
     this.clickEditButton = function (selector) {
+        browser.sleep(1000);
         element(by.css('.' + selector)).click();
     };
     /*

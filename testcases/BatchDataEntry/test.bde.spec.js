@@ -43,7 +43,6 @@ describe('When user opens the BDE module, he...', function(){
         bdePage.filterTableBDE(runNumber);
         //Click the edit button
         bdePage.clickEditButton('icon-small-edit');
-        browser.sleep(2000);
         //Enter new run number value
         bdePage.clearRunNumberInput();
         runNumber = bdePage.runNumberEnterTextInput(newRunNumber);
@@ -60,7 +59,7 @@ describe('When user opens the BDE module, he...', function(){
         bdePage.openBDEpage();
         //Filter table to get the last added/updated record from the test
         bdePage.filterTableBDE(runNumber);
-        bdePage.clickEditButton('icon-small-clear');
+        bdePage.clickDeleteButton('icon-small-clear');
         bdePage.clickButtonByText('Delete');
         bdePage.clickButtonByText('Finish');
         bdePage.filterTableBDE(runNumber);

@@ -8,12 +8,14 @@ var bdePage = function(){
     this.openBDEpage = function() {
         browser.sleep(1000);
         element(by.css('a[ui-sref="dataEntry.home"]')).click();
+        browser.sleep(1000);
         element(by.css('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')).click();
     };
     /*
      * Click the add new button
      */
     this.addNewBDEbuttonClick = function() {
+        browser.sleep(1000);
         element(by.css('button[ng-click="vm.openEditModal()"]')).click();
     };
     /*
@@ -56,8 +58,6 @@ var bdePage = function(){
     this.clearRunNumberInput = function(newRunNumber) {
         element(by.model('vm.dataEntryData.RunNumber')).clear();
     };
-    
-
     /*
      * Enter campaign name
      */
@@ -104,8 +104,16 @@ var bdePage = function(){
      * Click next button
      */
     this.clickNextButton = function (selector) {
+        browser.sleep(1000);
         element(by.css('button[wz-next="' + selector + '"]')).click();
     };
+    /*
+     * Click 2nd next button
+     */
+    // this.click2ndNextButton = function () {
+    //     browser.sleep(1000);
+    //     element(by.css('button[class="k-primary waves-effect waves-primary ng-binding k-button"]')).click();
+    // };
     /*
      * Populate the parameter values on the second step of the wizard
      */
@@ -116,6 +124,7 @@ var bdePage = function(){
             element.sendKeys(10);
         });
         browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'none');");
+        browser.sleep(1000);
     };
     /*
      * Click create button 
@@ -129,6 +138,15 @@ var bdePage = function(){
      * Click the edit BDE button
      */
     this.clickEditButton = function (selector) {
+        browser.sleep(1000);
+        element(by.css('.' + selector)).click();
+        browser.sleep(1000);
+    };
+    /*
+     * Click the delete BDE button
+     */
+    this.clickDeleteButton = function (selector) {
+        browser.sleep(1000);
         element(by.css('.' + selector)).click();
     };
     /*
@@ -147,6 +165,7 @@ var bdePage = function(){
         }
         browser.executeScript("var bdeGrid = $('#dataEntry-grid').data('kendoGrid');" +
             "bdeGrid.dataSource.filter({field: \"RunNumber\", operator: \"eq\", value: \""+runNumber+"\" });");
+        browser.sleep(1000);    
     };
     /*
      * Verify that the record is created

@@ -20,6 +20,7 @@ ideLyophilizationPage = function () {
      * Click the edit IDE button
      */
     this.clickEditButton = function (selector) {
+        browser.sleep(1000);
         element(by.css('.' + selector)).click();
     };
     /*
@@ -31,6 +32,7 @@ ideLyophilizationPage = function () {
         }
         browser.executeScript("var product = $('#hto-grid-lyophilization').data('kendoGrid');" +
             "product.dataSource.filter({field: \"Lot_Number\", operator: \"eq\", value: \""+inspectionLotNumber+"\" });");
+        browser.sleep(500);    
     };
     this.verifyThatRecordIsCreated = function() {
         var list = element.all(by.css('#hto-grid-lyophilization .k-grid-content table tbody tr'));
