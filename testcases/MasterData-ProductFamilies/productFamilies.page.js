@@ -70,7 +70,12 @@ MDProductFamiliesPage = function () {
         browser.executeScript("var cm = $('#commercial-product').data('kendoDropDownList');cm.select(1);cm.trigger('change');");
     };
 
-    this.enterVersionValue = function() {
+    this.enterVersionValue = function(newName) {
+        if(typeof newName !== 'undefined') {
+            displayName = newName
+        }
+        browser.executeScript("$('input[ng-model=\"vm.productFamilyData.Version\"').val('');");
+        //element(by.model('vm.productFamilyData.Version')).sendKeys();
         element(by.model('vm.productFamilyData.Version')).sendKeys(displayName);
         return displayName;
     };

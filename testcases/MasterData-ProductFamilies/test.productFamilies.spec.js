@@ -29,6 +29,36 @@ describe('When user opens the MD Product families module, he...', function() {
         //verify
         MDProductFamilyPage.filterTable();
         MDProductFamilyPage.verifyThatRecordIsCreated();
-        browser.sleep(5000);
     })
+
+    it('Should be able to update a new record.', function(){
+        var newproductFamilyVersion = 'UPDATE-' + productFamilyVersion;
+        MDProductFamilyPage.filterTable(productFamilyVersion);
+        browser.sleep(1000);
+        MDProductFamilyPage.clickEditButton('icon-small-edit');
+        browser.sleep(1000);
+        MDProductFamilyPage.enterSiteValue();
+        MDProductFamilyPage.enterVenueValue();
+        MDProductFamilyPage.enterCommercialProductValue();
+        MDProductFamilyPage.enterConfigDossageValue();
+        productFamilyVersion = MDProductFamilyPage.enterVersionValue(newproductFamilyVersion);
+        //Add Process Step
+        MDProductFamilyPage.clickButtonByText('Update');
+        browser.sleep(2000);
+        MDProductFamilyPage.clickButtonByText('Finish');
+        //verify
+        MDProductFamilyPage.filterTable(productFamilyVersion);
+        MDProductFamilyPage.verifyThatRecordIsCreated();
+    })
+
+    it('Should be able to delete a record.', function() {
+        //Filter table to get the last added/updated record from the test
+        MDProductFamilyPage.filterTable(productFamilyVersion);
+        browser.sleep(2000);
+        MDProductFamilyPage.clickEditButton('icon-small-clear');
+        MDProductFamilyPage.clickButtonByText('Delete');
+        MDProductFamilyPage.clickButtonByText('Finish');
+        MDProductFamilyPage.filterTable(productFamilyVersion);
+        MDProductFamilyPage.verifyThatRecordIsDeleted();
+    });
 });

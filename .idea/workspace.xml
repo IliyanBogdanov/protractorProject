@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="446d90b7-abea-4bd6-a0d5-f07bd028e648" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf.js" afterPath="$PROJECT_DIR$/conf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js" afterPath="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/test.productFamilies.spec.js" afterPath="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/test.productFamilies.spec.js" />
     </list>
@@ -22,8 +21,8 @@
       <file leaf-file-name="productFamilies.page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+            <state relative-caret-position="210">
+              <caret line="76" column="89" lean-forward="false" selection-start-line="76" selection-start-column="89" selection-end-line="76" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -32,8 +31,8 @@
       <file leaf-file-name="test.ideLiquid.spec.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="41" column="50" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="41" selection-end-column="50" />
+            <state relative-caret-position="343">
+              <caret line="85" column="7" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="85" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -52,8 +51,8 @@
       <file leaf-file-name="test.productFamilies.spec.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/test.productFamilies.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="343">
+              <caret line="56" column="23" lean-forward="false" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -63,8 +62,31 @@
         <entry file="file://$PROJECT_DIR$/testcases/MasterData-MonitoringAttributes/monitoringAttributes.page.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="36" column="6" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="36" selection-end-column="6" />
-              <folding />
+              <caret line="31" column="6" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="31" selection-end-column="6" />
+              <folding>
+                <marker date="1508244154812" expanded="true" signature="148:5749" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="1145:1315" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="1352:1531" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="1582:1660" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="1841:2014" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="2048:2214" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="2287:2606" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="2342:2399" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="2648:2801" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="2835:2994" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="3038:3263" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="3307:3528" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="3575:3680" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="3731:4051" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="4098:4251" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="4303:4502" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="4550:4954" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="4663:4715" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="5005:5191" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="5245:5350" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="5402:5509" ph="{...}" />
+                <marker date="1508244154812" expanded="true" signature="5560:5746" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -251,7 +273,7 @@
       <option name="presentableId" value="Default" />
       <updated>1507782517244</updated>
       <workItem from="1507782518678" duration="563000" />
-      <workItem from="1508234813583" duration="8673000" />
+      <workItem from="1508234813583" duration="10368000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1507782909570</created>
@@ -302,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507809613736</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="MD-Product Family -Create test">
+      <created>1508244147417</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1508244147417</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23638000" />
+    <option name="totallyTimeSpent" value="25333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -353,7 +382,8 @@
     <MESSAGE value="IDE-Liquid - CRUD Ready" />
     <MESSAGE value="BDE - params" />
     <MESSAGE value="Jasmine2 html reporter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jasmine2 html reporter" />
+    <MESSAGE value="MD-Product Family -Create test" />
+    <option name="LAST_COMMIT_MESSAGE" value="MD-Product Family -Create test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -707,8 +737,31 @@
     <entry file="file://$PROJECT_DIR$/testcases/MasterData-MonitoringAttributes/monitoringAttributes.page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="36" column="6" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="36" selection-end-column="6" />
-          <folding />
+          <caret line="31" column="6" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <marker date="1508244154812" expanded="true" signature="148:5749" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="1145:1315" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="1352:1531" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="1582:1660" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="1841:2014" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="2048:2214" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="2287:2606" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="2342:2399" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="2648:2801" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="2835:2994" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="3038:3263" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="3307:3528" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="3575:3680" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="3731:4051" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="4098:4251" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="4303:4502" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="4550:4954" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="4663:4715" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="5005:5191" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="5245:5350" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="5402:5509" ph="{...}" />
+            <marker date="1508244154812" expanded="true" signature="5560:5746" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -732,24 +785,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="41" column="50" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="41" selection-end-column="50" />
+        <state relative-caret-position="343">
+          <caret line="85" column="7" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="85" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+        <state relative-caret-position="210">
+          <caret line="76" column="89" lean-forward="false" selection-start-line="76" selection-start-column="89" selection-end-line="76" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/test.productFamilies.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        <state relative-caret-position="343">
+          <caret line="56" column="23" lean-forward="false" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
           <folding />
         </state>
       </provider>
