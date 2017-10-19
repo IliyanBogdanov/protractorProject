@@ -1,5 +1,5 @@
-var BGO = require('./../BGOFile/BGO.js').init();
-var attributeName = "Test-MonAttr" + BGO.utils.random();
+var helper = require('./../Helpers/Helper.js').init();
+var attributeName = "Test-MonAttr" + helper.utils.random();
 
 var monitoringAttributesPage = function(){
     

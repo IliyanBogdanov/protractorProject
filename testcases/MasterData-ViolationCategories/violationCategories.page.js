@@ -1,5 +1,5 @@
-var BGO = require('./../BGOFile/BGO.js').init();
-var violationCategoryName = " Test-VC-" + BGO.utils.random();
+var helper = require('./../Helpers/Helper.js').init();
+var violationCategoryName = " Test-VC-" + helper.utils.random();
 
 var violationCategoriesPage = function(){
 

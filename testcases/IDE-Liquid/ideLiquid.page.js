@@ -1,5 +1,5 @@
-var BGO = require('./../BGOFile/BGO.js').init();
-var inspectionLotNumber = "Test-Liquid-" + BGO.utils.random();
+var helper = require('./../Helpers/Helper.js').init();
+var inspectionLotNumber = "Test-Liquid-" + helper.utils.random();
 var totalVials = 10;
 var ideLiquidPage;
 ideLiquidPage = function () {

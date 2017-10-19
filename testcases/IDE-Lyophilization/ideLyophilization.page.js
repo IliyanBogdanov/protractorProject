@@ -1,5 +1,5 @@
-var BGO = require('./../BGOFile/BGO.js').init();
-var inspectionLotNumber = "Test-Lyophilization-" + BGO.utils.random();
+var helper = require('./../Helpers/Helper.js').init();
+var inspectionLotNumber = "Test-Lyophilization-" + helper.utils.random();
 var totalVials = 10;
 var ideLyophilizationPage;
 ideLyophilizationPage = function () {

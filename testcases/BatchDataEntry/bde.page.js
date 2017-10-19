@@ -1,5 +1,5 @@
-var BGO = require('./../BGOFile/BGO.js').init();
-var runNumber = 'BDE-'+ BGO.utils.random();
+var helper = require('./../Helpers/Helper.js').init();
+var runNumber = 'BDE-'+ helper.utils.random();
 
 var bdePage = function(){
     /*

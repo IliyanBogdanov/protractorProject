@@ -1,5 +1,5 @@
-var BGO = require('./../BGOFile/BGO.js').init();
-var displayName = 'Test-PF-' + BGO.utils.random();
+var helper = require('./../Helpers/Helper.js').init();
+var displayName = 'Test-PF-' + helper.utils.random();
 var materialNumber = 'test101';
 MDProductFamiliesPage = function () {
     /*
@@ -31,6 +31,8 @@ MDProductFamiliesPage = function () {
         }
         browser.executeScript("var product = $('#product-family-grid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"Version\", operator: \"eq\", value: \""+displayName+"\" });");
+        browser.sleep(1000);    
+
     };
     this.verifyThatRecordIsCreated = function() {
         var list = element.all(by.css('#product-family-grid .k-grid-content table tbody tr'));
