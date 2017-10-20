@@ -1,61 +1,56 @@
-var helper = require('./../Helpers/Helper.js').init();
-var attributeName = "Test-MonAttr" + helper.utils.random();
-
-var monitoringAttributesPage = function(){
-    
+var helper = require('./../Helpers/Helper.js');
+var attributeName = "Test-MonAttr" + helper.createARandomValue();
+var EC = protractor.ExpectedConditions;
+var monitoringAttributesPage = function() {
+    /*
+     * Navigates to the module Master Data - Monitoring Attributes
+     */
     this.navigateToMonitoringAttributesSection = function() {
-        browser.sleep(1000);
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 5000);
         element(by.css('#sidebar-menu > ul > li:nth-child(2) > a > i')).click();
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(1) > a')), 5000);
         element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(1) > a')).click();
     };
-
-    this.clickOnClearButton = function() {
-        //Click on the Clear button
-        element(by.css('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')).click();
-    };
-
+    /*
+     * Clicks on "Add New Monitoring Attribute" button
+     */
     this.clickOnAddMonitoringAttributeButton = function() {
-        //Click on "Add New Monitoring Attribute" button
+        browser.wait(EC.elementToBeClickable($('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 5000);
         element(by.css('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click(); 
-
     };
-
+    /*
+     * Enters Site value 
+     */
     this.enterSiteValue = function() {
-        //Enter Site value 
         browser.executeScript("var site = $('#site').data('kendoDropDownList');site.value(2);site.trigger('change');");
     };
-
+    /*
+     * Enters Venue value 
+     */
     this.enterVenueValue = function() {
-        //Eneter Venue value 
-        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.value(1);venue.trigger('change');");
-        
+        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.value(1);venue.trigger('change');");   
     };
-    this.enterPFValue = function() {
-        //Eneter product family value 
+    /*
+     * Enters product family value 
+     */
+    this.enterPFValue = function() { 
         browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.value(305);pf.trigger('change');");
-        
     };
-
-
-    this.clickNextButton = function (selector) {
-        element(by.css('button[wz-next="' + selector + '"]')).click();
-    };
-
-    this.clickNextButton2ndStep = function (selector) {
-        element(by.css('button[ng-click="' + selector + '"]')).click();
-    };
-
-
+    /*
+     * Enters an attribute type 
+     */
     this.enterAttributeType = function() {
-        //Enter an attribute type - KPI
         browser.executeScript("var type = $('#type').data('kendoDropDownList');type.value(1);type.trigger('change');");      
     };
-
+    /*
+     * Enters an UoM 
+     */
     this.enterUoM = function() {
-        //Enter an UoM - x 10e2 U/mg
         browser.executeScript("var UoM = $('#uom').data('kendoDropDownList');UoM.value(7);UoM.trigger('change');");      
     };
-
+    /*
+     * Enters name for the monitoring attribute ("Test-MonAttr" + random value)
+     */
     this.enterNameForMonitoringAttribute = function(newAttributeName) {
         if (typeof newAttributeName !== 'undefined') {
             attributeName = newAttributeName;
@@ -64,85 +59,86 @@ var monitoringAttributesPage = function(){
             "monAttr.value('" + attributeName + "');monAttr.trigger('change');");
 
         return attributeName;
-
     };
-
+    /*
+     * Enters description for the monitoring attribute
+     */
     this.enterDescription = function() {
-        //Enter description for the monitoring attribute
+        browser.wait(EC.presenceOf($('#description')), 5000);
         element(by.id("description")).sendKeys('New Description for KPI attribute');    
     };
-
-    this.enterMoM = function() {
-        //Enter MoM for the monitoring attribute        
+    /*
+     * Enters MoM for the monitoring attribute
+     */
+    this.enterMoM = function() {       
+        browser.wait(EC.presenceOf($('#mom')), 5000);
         element(by.id("mom")).sendKeys("New Method of Measurement For Test Attribute KPI");   
     };
-
-    this.enterEffectiveDate = function() {
-        //Enter effective date         
+    /*
+     * Enters effective date
+     */
+    this.enterEffectiveDate = function() {  
         browser.executeScript("var effectiveDate = $('#effective-from').data('kendoDatePicker');effectiveDate.value(new Date(2016, 10, 1));effectiveDate.trigger('change');");   
     };
-
-    this.enterDecimalPoints = function() {
-        //Enter decimal points        
+    /*
+     * Enters decimal points 
+     */
+    this.enterDecimalPoints = function() {       
         browser.executeScript("var decimalPointsInput = $('#decimal-points').data('kendoNumericTextBox');decimalPointsInput.value(10);decimalPointsInput.trigger('change');");
     };
-
+    /*
+     * Clicks the create new control limit button
+     */
     this.clickButtonByText = function(text) {
-        //Click the create new control limit button
-        browser.sleep(1000);
         element(by.buttonText(text)).click();
     };
-
+    /*
+     * Populates control limit values
+     */
     this.populateContrlLimitValues = function() {
-        //Populate control limit values
+        browser.wait(EC.presenceOf($('input[name="LCL"]')), 5000);
         element(by.css('input[name="LCL"]')).sendKeys(10.7);
-        browser.sleep(500);
+        browser.wait(EC.presenceOf($('input[name="Center"]')), 5000);
         element(by.css('input[name="Center"]')).sendKeys(11.52);
-        browser.sleep(500);
+        browser.wait(EC.presenceOf($('input[name="UCL"]')), 5000);
         element(by.css('input[name="UCL"]')).sendKeys(13.413);
-        browser.sleep(500);
     };
-
+    /*
+     * Clicks create button
+     */
     this.clickCreateButton = function(text) {
-        //Click button by its button text value
+        browser.wait(EC.elementToBeClickable($('a[class="k-button k-button-icontext k-primary k-grid-update"]')), 5000);
         element(by.css('a[class="k-button k-button-icontext k-primary k-grid-update"]')).click();
     };
-
+    /*
+     * Clicks button by its button text value
+     */
     this.clickNextButton3rdStep = function(text) {
-        //Click button by its button text value
         browser.sleep(1000);
         element(by.xpath('/html/body/div[1]/div/div/div[2]/div/div/section[3]/div/div[2]/div/button[2]')).click();
     };
-
+    /*
+     * Filters table by the respective attribute name column
+     */
     this.filterTable = function(numberValue) {
-        //Filter table by the respective attribute name column
         if (typeof numberValue !== 'undefined') {
             attributeName = numberValue;
         }
         browser.executeScript("var product = $('#attributes-grid').data('kendoGrid');" +
-            "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+attributeName+"\" });");
-        browser.sleep(1000);    
+            "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+attributeName+"\" });");   
     };
-
+    /*
+     * Verifies that the record is created
+     */
     this.verifyThatRecordIsCreated = function() {
-        //Verification that the record is created
+        browser.wait(EC.presenceOf($('#attributes-grid .k-grid-content table tbody tr')), 5000);
         var list = element.all(by.css('#attributes-grid .k-grid-content table tbody tr'));
         expect(list.count()).toBe(1);
     };
-    
-    this.clickEditButton = function (selector) {
-        //Click edit button by provided selector
-        browser.sleep(1000);
-        element(by.css('.' + selector)).click();
-    };
-
-    this.clickDeleteButton = function (selector) {
-        //Click delete button by provided selector
-        element(by.css('.' + selector)).click();
-    };
-
+    /*
+     * Verifies that the record is deleted
+     */
     this.verifyThatRecordIsDeleted = function() {
-        //Verification that the record is deleted
         var list = element.all(by.css('#attributes-grid .k-grid-content table tbody tr'));
         expect(list.count()).toBe(0);
     };

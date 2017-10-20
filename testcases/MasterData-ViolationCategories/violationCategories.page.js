@@ -14,7 +14,7 @@ var violationCategoriesPage = function(){
     };
 
     this.clickOnClearButton = function() {
-        //Click on the Clear button
+        //Click on the Clear filter button
         element(by.css('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')).click();
     };
 

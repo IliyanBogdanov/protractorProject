@@ -1,5 +1,6 @@
 var loginPage = require('../REMILogin/login.page.js');
 var monitoringAttrubutesPage = require('./monitoringAttributes.page.js');
+var helperFile = require('./../Helpers/Helper.js');
 var attributeName = '';
 
 describe(' When user opens the Monitoring Attributes module, he ... ', function () {
@@ -11,13 +12,12 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
 
   it('Should be able to create a new record.', function () {
     monitoringAttrubutesPage.navigateToMonitoringAttributesSection();
-    monitoringAttrubutesPage.clickOnClearButton();
     monitoringAttrubutesPage.clickOnAddMonitoringAttributeButton();
     //Step 1 - product details
     monitoringAttrubutesPage.enterSiteValue();
     monitoringAttrubutesPage.enterVenueValue();
     monitoringAttrubutesPage.enterPFValue();
-    monitoringAttrubutesPage.clickNextButton('vm.showValidateAlert(\'product-details\')');
+    helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
     //Step 2 - attribute details
     monitoringAttrubutesPage.enterAttributeType();
     monitoringAttrubutesPage.enterUoM();
@@ -26,7 +26,7 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     monitoringAttrubutesPage.enterMoM();
     monitoringAttrubutesPage.enterEffectiveDate();
     monitoringAttrubutesPage.enterDecimalPoints();
-    monitoringAttrubutesPage.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
+    helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
     //Step 3 - control limits
     monitoringAttrubutesPage.clickButtonByText('Create New Control Limit');
     monitoringAttrubutesPage.populateContrlLimitValues();
@@ -46,12 +46,12 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     //Filter table to get the last added record from the test
     monitoringAttrubutesPage.filterTable(attributeName);
     //Enter edit mode
-    monitoringAttrubutesPage.clickEditButton('icon-small-edit');
+    helperFile.clickEditButton('.icon-small-edit');
     //Navigate to second step of the wizard
-    monitoringAttrubutesPage.clickNextButton('vm.showValidateAlert(\'product-details\')');
+    helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
     attributeName = monitoringAttrubutesPage.enterNameForMonitoringAttribute(newAttributeName);
     //Process to the last tab
-    monitoringAttrubutesPage.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
+    helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
     monitoringAttrubutesPage.clickNextButton3rdStep();
     //Confirm the update of the entry
     monitoringAttrubutesPage.clickButtonByText('Update');
@@ -66,7 +66,7 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     //Filter table to get the last added/updated record from the test
     monitoringAttrubutesPage.filterTable(attributeName);
     //Click the delete icon
-    monitoringAttrubutesPage.clickDeleteButton('icon-small-clear');
+    helperFile.clickDeleteButton('.icon-small-clear');
     //Confirm that the record will be deleted
     monitoringAttrubutesPage.clickButtonByText('Delete');
     monitoringAttrubutesPage.clickButtonByText('Finish');

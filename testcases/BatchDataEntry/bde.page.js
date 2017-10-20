@@ -108,13 +108,6 @@ var bdePage = function(){
         element(by.css('button[wz-next="' + selector + '"]')).click();
     };
     /*
-     * Click 2nd next button
-     */
-    // this.click2ndNextButton = function () {
-    //     browser.sleep(1000);
-    //     element(by.css('button[class="k-primary waves-effect waves-primary ng-binding k-button"]')).click();
-    // };
-    /*
      * Populate the parameter values on the second step of the wizard
      */
     this.populateParameterValues = function() {

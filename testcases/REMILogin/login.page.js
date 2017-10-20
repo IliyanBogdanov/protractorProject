@@ -1,7 +1,8 @@
+var EC = protractor.ExpectedConditions;
+
 var loginPage = function(){
-    
+
     this.enterDomainValue = function() {
-        browser.sleep(1000);
         browser.executeScript("var test = $('#remis-login-domain').data('kendoDropDownList');test.select(4);test.trigger('change');"); 
     };
 
@@ -14,23 +15,27 @@ var loginPage = function(){
     };
 
     this.clickLogin = function() {
+        browser.wait(EC.elementToBeClickable($('button[type="button"]')), 5000);
         element(by.css('button[type="button"]')).click();
     };
 
     this.navigateToRemisDev = function() {
         browser.get('http://remisdev.demos.bgosoftware.com/login/');
-        browser.sleep(1000);
+        browser.wait(EC.elementToBeClickable($('button[type="button"]')), 5000);
     };
 
     this.loginREMI = function() {
-        browser.sleep(1000);
         browser.executeScript("var test = $('#remis-login-domain').data('kendoDropDownList');test.select(4);test.trigger('change');");
+        browser.wait(EC.elementToBeClickable($('#remis-login-username')), 5000);
         element(by.id('remis-login-username')).click().sendKeys('martouser1');
+        browser.wait(EC.elementToBeClickable($('#remis-login-password')), 5000);
         element(by.id('remis-login-password')).click().sendKeys('25Kukuvici');
+        browser.wait(EC.elementToBeClickable($('button[type="button"]')), 5000);
         element(by.css('button[type="button"]')).click();
     };
 
     this.logoutREMI = function() {
+        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > header > nav > div > ul > li:nth-child(2) > a > i')), 5000);
         element(by.css('#wrapper > div > div > header > nav > div > ul > li:nth-child(2) > a > i')).click();
         element(by.buttonText('Yes')).click();  
     };

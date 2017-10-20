@@ -10,8 +10,8 @@ MDProductFamiliesPage = function () {
         element(by.css('.btn[ng-click="vm.openEditModal()"]')).click();
     };
     /*
-         * Click the create button
-         */
+     * Click the create button
+     */
     this.clickButtonByText = function (text) {
         element(by.buttonText(text)).click();
     };
