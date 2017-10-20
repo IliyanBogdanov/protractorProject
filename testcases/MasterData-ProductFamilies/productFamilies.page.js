@@ -2,20 +2,21 @@ var helper = require('./../Helpers/Helper.js');
 var displayName = 'Test-PF-' + helper.createARandomValue();
 var EC = protractor.ExpectedConditions;
 var materialNumber = 'test101';
+
 var MDProductFamiliesPage = function () {
     /*
      *  Clicks on "Add New PF" button
      */
     this.clickOnAddPFButton = function () {
-        browser.wait(EC.elementToBeClickable($('.btn[ng-click="vm.openEditModal()"]')), 5000);
-        element(by.css('.btn[ng-click="vm.openEditModal()"]')).click();
+        browser.wait(EC.elementToBeClickable($('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 5000);
+        element(by.css('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click();
     };
     /*
      *  Clicks the finish button
      */
     this.clickOnFinishButton = function () {
-        browser.wait(EC.elementToBeClickable($('.btn[ng-click="vm.callFunction(vm.cancelFunction)"]')), 5000);
-        element(by.css('.btn[ng-click="vm.callFunction(vm.cancelFunction)"]')).click();
+        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')), 5000);
+        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')).click();
     };
     /*
      * Clicks the create button
@@ -61,13 +62,13 @@ var MDProductFamiliesPage = function () {
             inspectionLotNumber = numberValue;
         }
         browser.executeScript("var product = $('#product-family-grid').data('kendoGrid');" +
-            "product.dataSource.filter({field: \"Version\", operator: \"eq\", value: \""+displayName+"\" });");    
+            "product.dataSource.filter({field: \"Version\", operator: \"eq\", value: \""+displayName+"\" });");
+        browser.wait(EC.visibilityOf($('#product-family-grid')), 5000);
     };
     /*
      * Verifies create
      */
     this.verifyThatRecordIsCreated = function() {
-        browser.wait(EC.presenceOf($('#product-family-grid .k-grid-content table tbody tr')), 5000);
         var list = element.all(by.css('#product-family-grid .k-grid-content table tbody tr'));
         expect(list.count()).toBe(1);
     };
@@ -75,7 +76,6 @@ var MDProductFamiliesPage = function () {
      * Verifies delete
      */
     this.verifyThatRecordIsDeleted = function() {
-        browser.wait(EC.invisibilityOf($('#product-family-grid .k-grid-content table tbody tr')), 5000);
         var list = element.all(by.css('#product-family-grid .k-grid-content table tbody tr'));
         expect(list.count()).toBe(0);
     };
@@ -83,10 +83,10 @@ var MDProductFamiliesPage = function () {
      *  Navigates to MD-PF
      */
     this.navigateMDProductFamilySection = function () {
-        browser.wait(EC.elementToBeClickable($('.icon-menu-masterdata')), 5000);
-        element(by.css('.icon-menu-masterdata')).click();
-        browser.wait(EC.elementToBeClickable($('a[ui-sref="productfamily.monitoring"]')), 5000);
-        element(by.css('a[ui-sref="productfamily.monitoring"]')).click();
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 5000);
+        element(by.css('#sidebar-menu > ul > li:nth-child(2) > a > i')).click();
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(2) > a')), 5000);
+        element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(2) > a')).click();
     };
     /*
      *  Enters site value

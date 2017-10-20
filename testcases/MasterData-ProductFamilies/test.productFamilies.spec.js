@@ -3,7 +3,7 @@ var MDProductFamilyPage = require('./productFamilies.page.js');
 var helperFile = require('./../Helpers/Helper.js');
 var productFamilyVersion = '';
 
-describe('When user opens the MD Product families module, he...', function() {
+describe('When user opens the Product families module, he...', function() {
 
     beforeEach(function () {
         loginPage.navigateToRemisDev();

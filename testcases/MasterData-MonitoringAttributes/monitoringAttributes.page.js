@@ -1,6 +1,7 @@
 var helper = require('./../Helpers/Helper.js');
 var attributeName = "Test-MonAttr" + helper.createARandomValue();
 var EC = protractor.ExpectedConditions;
+
 var monitoringAttributesPage = function() {
     /*
      * Navigates to the module Master Data - Monitoring Attributes
@@ -125,13 +126,13 @@ var monitoringAttributesPage = function() {
             attributeName = numberValue;
         }
         browser.executeScript("var product = $('#attributes-grid').data('kendoGrid');" +
-            "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+attributeName+"\" });");   
+            "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+attributeName+"\" });");
+        browser.wait(EC.visibilityOf($('#attributes-grid')), 5000);       
     };
     /*
      * Verifies that the record is created
      */
     this.verifyThatRecordIsCreated = function() {
-        browser.wait(EC.presenceOf($('#attributes-grid .k-grid-content table tbody tr')), 5000);
         var list = element.all(by.css('#attributes-grid .k-grid-content table tbody tr'));
         expect(list.count()).toBe(1);
     };
@@ -139,7 +140,6 @@ var monitoringAttributesPage = function() {
      * Verifies that the record is deleted
      */
     this.verifyThatRecordIsDeleted = function() {
-        browser.wait(EC.invisibilityOf($('#attributes-grid .k-grid-content table tbody tr')), 5000);
         var list = element.all(by.css('#attributes-grid .k-grid-content table tbody tr'));
         expect(list.count()).toBe(0);
     };

@@ -1,97 +1,98 @@
-var helper = require('./../Helpers/Helper.js').init();
-var violationCategoryName = " Test-VC-" + helper.utils.random();
+var helper = require('./../Helpers/Helper.js');
+var violationCategoryName = " Test-VC-" + helper.createARandomValue();
+var EC = protractor.ExpectedConditions;
 
 var violationCategoriesPage = function(){
 
+    /*
+     * Navigate to Violation Categories
+     */
     this.navigateToViolationCategories = function() {
-    //Navigate to Violation Categories
+    browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 5000);    
     element(by.css('#sidebar-menu > ul > li:nth-child(2) > a > i')).click();
+    browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a')), 5000);
     element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a')).click();
     };
-
-    this.clickButtonByText = function (text) {
-        element(by.buttonText(text)).click();
-    };
-
-    this.clickOnClearButton = function() {
-        //Click on the Clear filter button
-        element(by.css('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')).click();
-    };
-
+    /*
+     * Clicks the add new violation category button
+     */
     this.clickOnAddNewViolationCategoryButton = function() {
-        //Click on "Add New Violation Category" button
+        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.addNewRow()"]')), 5000);
         element(by.css('button[ng-click="vm.addNewRow()"]')).click(); 
     };
-
+    /*
+     * Enters name for the violation category
+     */
     this.enterNameForViolationCategory = function(newViolationCategoryName) {
         if (typeof newViolationCategoryName !== 'undefined') {
             violationCategoryName = newViolationCategoryName;
         }
         browser.executeScript("$('input[name=\"Name\"]').val('"+violationCategoryName+"').change();" );
-        //element(by.css('input[type="text"][name="Name"]')).sendKeys(violationCategoryName);
         return violationCategoryName;
-
     };
-
+    /*
+     * Checks the product quality impact checkbox
+     */
     this.checkPQIcheckbox = function() {
-        //Check product quality impact checkbox
+        browser.wait(EC.presenceOf($('input[data-bind="checked: ProductQAImpact"]')), 5000);
         element(by.css('input[data-bind="checked: ProductQAImpact"]')).click(); 
     };
-
+    /*
+     * Checks the active checkbox
+     */
     this.checkActiveCheckbox = function() {
-        //Check active checkbox
+        browser.wait(EC.presenceOf($('input[data-bind="checked: Active"]')), 5000);
         element(by.css('input[data-bind="checked: Active"]')).click(); 
     };
-
+    /*
+     * Selects the site value
+     */
     this.selectSiteValue = function() {
-        //Select site value
+        browser.wait(EC.elementToBeClickable($('span[role=\"listbox\"]')), 5000);
         var site = $('span[role=\"listbox\"]').click();
-        browser.sleep(500);
+        browser.wait(EC.elementToBeClickable($('li[class=\"k-item k-state-focused\"]')), 5000);
         var rstoValue = $('li[class=\"k-item k-state-focused\"]').click();
     };
-
+    /*
+     * Clicks the create new control limit button
+     */
     this.clickUpdateButton = function(text) {
-        //Click the create new control limit button
         browser.executeScript("$('.k-grid-update').click();" );
-        //element(by.css('a.k-grid-update')).click();
     };
-
+    /*
+     * Filters table by the respective attribute name column
+     */
     this.filterTable = function(numberValue) {
-        //Filter table by the respective attribute name column
         if (typeof numberValue !== 'undefined') {
             violationCategoryName = numberValue;
         }
         browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
         "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+violationCategoryName+"\" });");
-        browser.sleep(1000);    
+        //browser.wait(EC.visibilityOf($('#categoriesTreeList')), 5000); - does not work ?
     };
-
+    /*
+     * Resets the filter table settings
+     */
     this.resetFilterTable = function() {
         browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
             "product.dataSource.filter({});" +
             "product.refresh();");
-        browser.sleep(1000);
     };
-
+    /*
+     * Verifies that the record is created
+     */   
     this.verifyThatRecordIsCreated = function() {
-        //Verification that the record is created
         var list = element.all(by.css('#categoriesTreeList .k-grid-content table tbody tr'));
         expect(list.count()).toBe(1);
     };
-
-    this.clickEditButton = function (selector) {
-        //Click edit button by provided selector
-        element(by.css('.' + selector)).click();
-    };
-
+    /*
+     * Save the row changes to the grid
+     */
     this.saveRow = function() {
-        //Click the create new control limit button
         browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
             "product.saveChanges();" +
             "product.refresh();" );
-
     };
-
  
 };
 module.exports = new violationCategoriesPage();
