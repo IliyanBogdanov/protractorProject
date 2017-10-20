@@ -139,6 +139,7 @@ var monitoringAttributesPage = function() {
      * Verifies that the record is deleted
      */
     this.verifyThatRecordIsDeleted = function() {
+        browser.wait(EC.invisibilityOf($('#attributes-grid .k-grid-content table tbody tr')), 5000);
         var list = element.all(by.css('#attributes-grid .k-grid-content table tbody tr'));
         expect(list.count()).toBe(0);
     };

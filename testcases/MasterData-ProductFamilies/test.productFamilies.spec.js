@@ -1,5 +1,6 @@
 var loginPage = require('../REMILogin/login.page.js');
 var MDProductFamilyPage = require('./productFamilies.page.js');
+var helperFile = require('./../Helpers/Helper.js');
 var productFamilyVersion = '';
 
 describe('When user opens the MD Product families module, he...', function() {
@@ -17,47 +18,39 @@ describe('When user opens the MD Product families module, he...', function() {
         MDProductFamilyPage.enterCommercialProductValue();
         MDProductFamilyPage.enterConfigDossageValue();
         productFamilyVersion = MDProductFamilyPage.enterVersionValue();
-//Add Material Number
-        MDProductFamilyPage.clickButtonByText('Add Material Number');
+        MDProductFamilyPage.clickOnAddMaterialNumberButton();
         MDProductFamilyPage.enterMaterialNumberValue();
-        MDProductFamilyPage.clickButtonByText('Add Process Step');
+        MDProductFamilyPage.clickOnAddProcessStepButton();
         MDProductFamilyPage.enterProcessStepValue();
-        //Add Process Step
-        MDProductFamilyPage.clickButtonByText('Create');
-        browser.sleep(2000);
-        MDProductFamilyPage.clickButtonByText('Finish');
-        //verify
+        MDProductFamilyPage.clickOnCreateButton();
+        MDProductFamilyPage.clickOnFinishButton();
+        //Verification 
         MDProductFamilyPage.filterTable();
         MDProductFamilyPage.verifyThatRecordIsCreated();
-    })
+    });
 
     it('Should be able to update a new record.', function(){
         var newproductFamilyVersion = 'UPDATE-' + productFamilyVersion;
         MDProductFamilyPage.filterTable(productFamilyVersion);
-        browser.sleep(1000);
-        MDProductFamilyPage.clickEditButton('icon-small-edit');
-        browser.sleep(1000);
+        helperFile.clickEditButton('.icon-small-edit');
         MDProductFamilyPage.enterSiteValue();
         MDProductFamilyPage.enterVenueValue();
         MDProductFamilyPage.enterCommercialProductValue();
         MDProductFamilyPage.enterConfigDossageValue();
         productFamilyVersion = MDProductFamilyPage.enterVersionValue(newproductFamilyVersion);
-        //Add Process Step
-        MDProductFamilyPage.clickButtonByText('Update');
-        browser.sleep(2000);
-        MDProductFamilyPage.clickButtonByText('Finish');
-        //verify
+        MDProductFamilyPage.clickOnUpdateButton();
+        MDProductFamilyPage.clickOnFinishButton();
+        //Verification 
         MDProductFamilyPage.filterTable(productFamilyVersion);
         MDProductFamilyPage.verifyThatRecordIsCreated();
-    })
+    });
 
     it('Should be able to delete a record.', function() {
-        //Filter table to get the last added/updated record from the test
         MDProductFamilyPage.filterTable(productFamilyVersion);
-        browser.sleep(2000);
-        MDProductFamilyPage.clickEditButton('icon-small-clear');
-        MDProductFamilyPage.clickButtonByText('Delete');
-        MDProductFamilyPage.clickButtonByText('Finish');
+        helperFile.clickEditButton('.icon-small-clear');
+        MDProductFamilyPage.clickOnDeleteButton();
+        MDProductFamilyPage.clickOnFinishButton();
+        //Verification 
         MDProductFamilyPage.filterTable(productFamilyVersion);
         MDProductFamilyPage.verifyThatRecordIsDeleted();
     });
