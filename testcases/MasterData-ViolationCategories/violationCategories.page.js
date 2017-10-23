@@ -8,16 +8,16 @@ var violationCategoriesPage = function(){
      * Navigate to Violation Categories
      */
     this.navigateToViolationCategories = function() {
-    browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 5000);    
+    browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 10000, 'Main menu wait for element has failed.');    
     element(by.css('#sidebar-menu > ul > li:nth-child(2) > a > i')).click();
-    browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a')), 5000);
+    browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a')), 10000, 'Main menu wait for element has failed.');
     element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a')).click();
     };
     /*
      * Clicks the add new violation category button
      */
     this.clickOnAddNewViolationCategoryButton = function() {
-        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.addNewRow()"]')), 5000);
+        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.addNewRow()"]')), 10000,'Wait for clickOnAddNewViolationCategoryButton element has failed.');
         element(by.css('button[ng-click="vm.addNewRow()"]')).click(); 
     };
     /*
@@ -34,24 +34,24 @@ var violationCategoriesPage = function(){
      * Checks the product quality impact checkbox
      */
     this.checkPQIcheckbox = function() {
-        browser.wait(EC.presenceOf($('input[data-bind="checked: ProductQAImpact"]')), 5000);
+        browser.wait(EC.presenceOf($('input[data-bind="checked: ProductQAImpact"]')), 10000, 'Wait for checkPQIcheckbox element has failed.');
         element(by.css('input[data-bind="checked: ProductQAImpact"]')).click(); 
     };
     /*
      * Checks the active checkbox
      */
     this.checkActiveCheckbox = function() {
-        browser.wait(EC.presenceOf($('input[data-bind="checked: Active"]')), 5000);
+        browser.wait(EC.presenceOf($('input[data-bind="checked: Active"]')), 10000, 'Wait for checkActiveCheckbox element has failed.');
         element(by.css('input[data-bind="checked: Active"]')).click(); 
     };
     /*
      * Selects the site value
      */
     this.selectSiteValue = function() {
-        browser.wait(EC.elementToBeClickable($('span[role=\"listbox\"]')), 5000);
+        browser.wait(EC.elementToBeClickable($('span[role=\"listbox\"]')), 10000, 'Wait for selectSiteValue element has failed.');
         var site = $('span[role=\"listbox\"]').click();
-        browser.wait(EC.elementToBeClickable($('li[class=\"k-item k-state-focused\"]')), 5000);
-        var rstoValue = $('li[class=\"k-item k-state-focused\"]').click();
+        browser.wait(EC.elementToBeClickable($('body > div:nth-child(13) > div > div.k-list-scroller > ul > li:nth-child(2)')), 10000, 'Wait for rstoValue element has failed.');
+        var rstoValue = $('body > div:nth-child(13) > div > div.k-list-scroller > ul > li:nth-child(2)').click();
     };
     /*
      * Clicks the create new control limit button
@@ -68,7 +68,6 @@ var violationCategoriesPage = function(){
         }
         browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
         "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+violationCategoryName+"\" });");
-        //browser.wait(EC.visibilityOf($('#categoriesTreeList')), 5000); - does not work ?
     };
     /*
      * Resets the filter table settings
@@ -77,13 +76,6 @@ var violationCategoriesPage = function(){
         browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
             "product.dataSource.filter({});" +
             "product.refresh();");
-    };
-    /*
-     * Verifies that the record is created
-     */   
-    this.verifyThatRecordIsCreated = function() {
-        var list = element.all(by.css('#categoriesTreeList .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(1);
     };
     /*
      * Save the row changes to the grid
