@@ -91,12 +91,6 @@ var helperFile = function() {
 	 * Log in REMIS with a specific credentials
  	 */
 	this.loginREMIwithSpecificCredentials = function(username, password, domain) {
-<<<<<<< HEAD
-        browser.wait(EC.presenceOf($('#remis-login-username')), 10000, 'Wait for #remis-login-username button has failed.');
-        browser.executeScript("var test = $('#remis-login-domain').data('kendoDropDownList');test.select(" + domain + ");test.trigger('change');");
-        element(by.id('remis-login-username')).click().sendKeys(username);
-        element(by.id('remis-login-password')).click().sendKeys(password);
-=======
         var setUsername = (username) ? username : 'martouser1';
         var setPassword = (password) ? password : '25Kukuvici';
         var setDomain = (domain) ? domain : 4;
@@ -106,7 +100,6 @@ var helperFile = function() {
         browser.wait(EC.elementToBeClickable($('#remis-login-password')), 5000);
         element(by.id('remis-login-password')).click().sendKeys(setPassword);
         browser.wait(EC.elementToBeClickable($('button[type="button"]')), 5000);
->>>>>>> a77d27fa74412bfc1161daf8906fa7168135a220
         element(by.css('button[type="button"]')).click();
     };
     /*
@@ -123,31 +116,6 @@ var helperFile = function() {
         var list = element.all(by.css(""+gridIDname+" .k-grid-content table tbody tr"));
         expect(list.count()).toBe(0);
     };
-
-
-        
-
-        
-
-  
-
-
-
-
-         
-
-          
-           
-
-
-
-     
-
-
-
-
- 
- 
 
 };
 module.exports = new helperFile();
