@@ -22,6 +22,7 @@ exports.config = {
         masterDataTests:['./testcases/MasterData-MonitoringAttributes/test.monitoringAttributes.spec.js',
         './testcases/MasterData-ProductFamilies/test.productFamilies.spec.js','./testcases/MasterData-ViolationCategories/test.violationCategories.spec.js'],
         cleTests: ['./testcases/PM-CLE/test.pmCLE.spec.js'],
+        maRolesTests: ['./testcases/MasterData-MA-Roles/test.MARoles.spec.js'],
   },
 
   onPrepare: function() {

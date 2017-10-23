@@ -1,7 +1,37 @@
 var EC = protractor.ExpectedConditions;
 
 var helperFile = function() {
-    
+    this.usersByRole = {
+        'ADMIN': {
+            username: 'martouser1',
+            password: '25Kukuvici'
+        },
+
+        'OCNREGULARUSER': {
+            username: 'OCNREGULARUSER',
+            password: '25Kukuvici'
+        },
+        'OCNREADONLYUSER': {
+            username: 'OCNREADONLYUSER',
+            password: '25Kukuvici'
+        },
+        'OCNMASTERENTRY': {
+            username: 'OCNMASTERENTRY',
+            password: '25Kukuvici'
+        },
+        'OCNMASTERAPPROVE': {
+            username: 'OCNMASTERAPPROVE',
+            password: '25Kukuvici'
+        },
+        'OCNGMPENTRY': {
+            username: 'OCNGMPENTRY',
+            password: '25Kukuvici'
+        },
+        'OCNGMPAPPROVE': {
+            username: 'OCNGMPAPPROVE',
+            password: '25Kukuvici'
+        }
+    }
     /*
  	 * Function that generates a random value
      */
@@ -53,10 +83,15 @@ var helperFile = function() {
 	 * Log in REMIS with a specific credentials
  	 */
 	this.loginREMIwithSpecificCredentials = function(username, password, domain) {
-        browser.wait(EC.presenceOf($('#remis-login-username')), 5000);
-        browser.executeScript("var test = $('#remis-login-domain').data('kendoDropDownList');test.select(" + domain + ");test.trigger('change');");
-        element(by.id('remis-login-username')).click().sendKeys(username);
-        element(by.id('remis-login-password')).click().sendKeys(password);
+        var setUsername = (username) ? username : 'martouser1';
+        var setPassword = (password) ? password : '25Kukuvici';
+        var setDomain = (domain) ? domain : 4;
+        browser.executeScript("var test = $('#remis-login-domain').data('kendoDropDownList');test.select(" + setDomain + ");test.trigger('change');");
+        browser.wait(EC.elementToBeClickable($('#remis-login-username')), 5000);
+        element(by.id('remis-login-username')).click().sendKeys(setUsername);
+        browser.wait(EC.elementToBeClickable($('#remis-login-password')), 5000);
+        element(by.id('remis-login-password')).click().sendKeys(setPassword);
+        browser.wait(EC.elementToBeClickable($('button[type="button"]')), 5000);
         element(by.css('button[type="button"]')).click();
     };
 
