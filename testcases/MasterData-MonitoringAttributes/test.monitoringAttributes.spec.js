@@ -75,4 +75,5 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     //Verification that the record is deleted
     monitoringAttrubutesPage.verifyThatRecordIsDeleted();
   });
+
 });
