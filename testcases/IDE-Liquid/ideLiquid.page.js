@@ -1,28 +1,9 @@
-var helper = require('./../Helpers/Helper.js').init();
-var inspectionLotNumber = "Test-Liquid-" + helper.utils.random();
+var helper = require('./../Helpers/Helper.js');
+var inspectionLotNumber = "Test-Liquid-" + helper.createARandomValue();
+var EC = protractor.ExpectedConditions;
 var totalVials = 10;
-var ideLiquidPage;
-ideLiquidPage = function () {
-    /*
-     * Click the next button
-     */
-    this.clickNextButton = function (selector) {
-        element(by.css('button[wz-next="' + selector + '"]')).click();
-    };
-    /*
-     * Click the create button
-     */
-    this.clickButtonByText = function (text) {
-        element(by.buttonText(text)).click();
-    };
-    
-    /*
-     * Click the edit IDE button
-     */
-    this.clickEditButton = function (selector) {
-        browser.sleep(1000);
-        element(by.css('.' + selector)).click();
-    };
+
+var ideLiquidPage = function () {
     /*
      * Verify create
      */
@@ -32,25 +13,17 @@ ideLiquidPage = function () {
         }
         browser.executeScript("var product = $('#hto-grid-liquid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"General_LotNumber\", operator: \"eq\", value: \""+inspectionLotNumber+"\" });");
+        browser.wait(EC.visibilityOf($('#hto-grid-liquid')), 5000,'#hto-grid-liquid wait has failed.');    
     };
-    this.verifyThatRecordIsCreated = function() {
-        var list = element.all(by.css('#hto-grid-liquid .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(1);
-    };
-
-    this.verifyThatRecordIsDeleted = function() {
-        var list = element.all(by.css('#hto-grid-liquid .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(0);
-    };
-
     /*
      *  Navigate to IDE-Liquid
      */
     this.navigateToIDELiquidSection = function () {
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(4) > a > i')), 10000,'Main menu wait for element has failed.');
         element(by.css('#sidebar-menu > ul > li:nth-child(4) > a > i')).click();
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(4) > ul > li:nth-child(1) > a')), 10000, 'Main menu wait for element has failed.');
         element(by.css('#sidebar-menu > ul > li:nth-child(4) > ul > li:nth-child(1) > a')).click();
     };
-
     /*
      STEP ONE
      */
@@ -59,7 +32,7 @@ ideLiquidPage = function () {
      *  Click on "Add New IDE" button
      */
     this.clickOnAddIDEButton = function () {
-
+        browser.wait(EC.elementToBeClickable($('a.btn[href="/hto/create/Liquid"]')), 10000, 'Wait for IDE button has failed.');
         element(by.css('a.btn[href="/hto/create/Liquid"]')).click();
     };
     /*
@@ -108,6 +81,7 @@ ideLiquidPage = function () {
         if (typeof newLotNumber !== 'undefined') {
             inspectionLotNumber = newLotNumber;
         }
+        browser.wait(EC.visibilityOf($('#genentech-lot-number')), 10000, 'Wait for InspectionLotNumber has failed.');
         browser.executeScript("var iln = $('#genentech-lot-number').data('kendoMaskedTextBox');" +
             "iln.value('" + inspectionLotNumber + "');iln.trigger('change');");
 
@@ -144,8 +118,6 @@ ideLiquidPage = function () {
             '}' +
             '})');
     }
-
-
 };
 
 module.exports = new ideLiquidPage();
