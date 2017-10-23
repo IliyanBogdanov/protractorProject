@@ -88,12 +88,6 @@ var monitoringAttributesPage = function() {
         browser.executeScript("var decimalPointsInput = $('#decimal-points').data('kendoNumericTextBox');decimalPointsInput.value(10);decimalPointsInput.trigger('change');");
     };
     /*
-     * Clicks button by text - please change
-     */
-    this.clickButtonByText = function(text) {
-        element(by.buttonText(text)).click();
-    };
-    /*
      * Populates control limit values
      */
     this.populateContrlLimitValues = function() {
@@ -128,20 +122,6 @@ var monitoringAttributesPage = function() {
         browser.executeScript("var product = $('#attributes-grid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+attributeName+"\" });");
         browser.wait(EC.visibilityOf($('#attributes-grid')), 5000);       
-    };
-    /*
-     * Verifies that the record is created
-     */
-    this.verifyThatRecordIsCreated = function() {
-        var list = element.all(by.css('#attributes-grid .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(1);
-    };
-    /*
-     * Verifies that the record is deleted
-     */
-    this.verifyThatRecordIsDeleted = function() {
-        var list = element.all(by.css('#attributes-grid .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(0);
     };
 };
 

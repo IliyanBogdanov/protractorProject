@@ -8,10 +8,10 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
   beforeEach(function () {
     loginPage.navigateToRemisDev();
     loginPage.loginREMI();
+    monitoringAttrubutesPage.navigateToMonitoringAttributesSection();
   });
 
   it('Should be able to create a new record.', function () {
-    monitoringAttrubutesPage.navigateToMonitoringAttributesSection();
     monitoringAttrubutesPage.clickOnAddMonitoringAttributeButton();
     //Step 1 - product details
     monitoringAttrubutesPage.enterSiteValue();
@@ -28,21 +28,20 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     monitoringAttrubutesPage.enterDecimalPoints();
     helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
     //Step 3 - control limits
-    monitoringAttrubutesPage.clickButtonByText('Create New Control Limit');
+    helperFile.clickButtonByText('Create New Control Limit');
     monitoringAttrubutesPage.populateContrlLimitValues();
     monitoringAttrubutesPage.clickCreateButton();
     monitoringAttrubutesPage.clickNextButton3rdStep();
     //Step 4 - summary
-    monitoringAttrubutesPage.clickButtonByText('Create');
-    monitoringAttrubutesPage.clickButtonByText('Finish');
+    helperFile.clickButtonByText('Create');
+    helperFile.clickButtonByText('Finish');
     //Verification that the record is created
     monitoringAttrubutesPage.filterTable();
-    monitoringAttrubutesPage.verifyThatRecordIsCreated();
+    helperFile.verifyThatRecordIsCreated('#attributes-grid');
   });
 
   it('Should be able to update a record.', function () {
     var newAttributeName = 'UPDATE';
-    monitoringAttrubutesPage.navigateToMonitoringAttributesSection();
     //Filter table to get the last added record from the test
     monitoringAttrubutesPage.filterTable(attributeName);
     //Enter edit mode
@@ -54,26 +53,25 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
     monitoringAttrubutesPage.clickNextButton3rdStep();
     //Confirm the update of the entry
-    monitoringAttrubutesPage.clickButtonByText('Update');
-    monitoringAttrubutesPage.clickButtonByText('Finish');
+    helperFile.clickButtonByText('Update');
+    helperFile.clickButtonByText('Finish');
     //Verification that the record is updated
     monitoringAttrubutesPage.filterTable(newAttributeName);
-    monitoringAttrubutesPage.verifyThatRecordIsCreated();
+    helperFile.verifyThatRecordIsCreated('#attributes-grid');
   });
 
   it('Should be able to delete a record.', function () {
-    monitoringAttrubutesPage.navigateToMonitoringAttributesSection();
     //Filter table to get the last added/updated record from the test
     monitoringAttrubutesPage.filterTable(attributeName);
     //Click the delete icon
     helperFile.clickDeleteButton('.icon-small-clear');
     //Confirm that the record will be deleted
-    monitoringAttrubutesPage.clickButtonByText('Delete');
-    monitoringAttrubutesPage.clickButtonByText('Finish');
+    helperFile.clickButtonByText('Delete');
+    helperFile.clickButtonByText('Finish');
     //Filter the table 
     monitoringAttrubutesPage.filterTable(attributeName);
     //Verification that the record is deleted
-    monitoringAttrubutesPage.verifyThatRecordIsDeleted();
+    helperFile.verifyThatRecordIsDeleted('#attributes-grid');
   });
 
 });
