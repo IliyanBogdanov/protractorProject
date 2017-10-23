@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="446d90b7-abea-4bd6-a0d5-f07bd028e648" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testcases/MasterData-MA-Roles/MARoles.page.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testcases/MasterData-MA-Roles/test.MARoles.spec.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf.js" afterPath="$PROJECT_DIR$/conf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/Helpers/Helper.js" afterPath="$PROJECT_DIR$/testcases/Helpers/Helper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/MasterData-MonitoringAttributes/test.monitoringAttributes.spec.js" afterPath="$PROJECT_DIR$/testcases/MasterData-MonitoringAttributes/test.monitoringAttributes.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/REMILogin/login.page.js" afterPath="$PROJECT_DIR$/testcases/REMILogin/login.page.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Helper.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Helper.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testcases/Helpers/Helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+            <state relative-caret-position="265">
+              <caret line="101" column="80" lean-forward="false" selection-start-line="101" selection-start-column="80" selection-end-line="101" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -55,8 +50,8 @@
       <file leaf-file-name="ideLiquid.page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="116">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -105,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.MARoles.spec.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.MARoles.spec.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/MasterData-MA-Roles/test.MARoles.spec.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -168,9 +163,9 @@
         <option value="$PROJECT_DIR$/testcases/MasterData-MonitoringAttributes/test.monitoringAttributes.spec.js" />
         <option value="$PROJECT_DIR$/testcases/REMILogin/login.page.js" />
         <option value="$PROJECT_DIR$/conf.js" />
-        <option value="$PROJECT_DIR$/testcases/Helpers/Helper.js" />
         <option value="$PROJECT_DIR$/testcases/MasterData-MA-Roles/MARoles.page.js" />
         <option value="$PROJECT_DIR$/testcases/MasterData-MA-Roles/test.MARoles.spec.js" />
+        <option value="$PROJECT_DIR$/testcases/Helpers/Helper.js" />
       </list>
     </option>
   </component>
@@ -312,7 +307,7 @@
       <workItem from="1507782518678" duration="563000" />
       <workItem from="1508234813583" duration="12648000" />
       <workItem from="1508306616095" duration="1952000" />
-      <workItem from="1508733064732" duration="22321000" />
+      <workItem from="1508733064732" duration="23019000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1507782909570</created>
@@ -384,11 +379,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508752674316</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ROLES TEST - OCNREGULARUSER">
+      <created>1508760008849</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1508760008849</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51886000" />
+    <option name="totallyTimeSpent" value="52584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -440,7 +442,8 @@
     <MESSAGE value="MD-Product Family -Create test" />
     <MESSAGE value="MD-Product Family - CRUD" />
     <MESSAGE value="CLE - recalculate and save" />
-    <option name="LAST_COMMIT_MESSAGE" value="CLE - recalculate and save" />
+    <MESSAGE value="ROLES TEST - OCNREGULARUSER" />
+    <option name="LAST_COMMIT_MESSAGE" value="ROLES TEST - OCNREGULARUSER" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -781,18 +784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/Helpers/Helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="29" />
+        <state relative-caret-position="116">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -809,6 +804,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/Helpers/Helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="101" column="80" lean-forward="false" selection-start-line="101" selection-start-column="80" selection-end-line="101" selection-end-column="80" />
           <folding />
         </state>
       </provider>
