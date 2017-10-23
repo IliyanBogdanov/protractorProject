@@ -49,7 +49,9 @@ var bdePage = function() {
         if (typeof newRunNumber !== 'undefined') {
             runNumber = newRunNumber;
         }
-        element(by.model('vm.dataEntryData.RunNumber')).sendKeys(runNumber);
+        var runNumberInput = element(by.model('vm.dataEntryData.RunNumber'));
+        browser.wait(EC.elementToBeClickable(runNumberInput), 10000);
+        runNumberInput.sendKeys(runNumber);
         return runNumber;
     };
     /*
@@ -104,54 +106,15 @@ var bdePage = function() {
      * Populate the parameter values on the second step of the wizard
      */
     this.populateParameterValues = function() {
+        browser.wait(EC.presenceOf($('input[kendo-bgo-numeric-text-box]')), 5000), 'Parameters input box wait has failed';
         browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'block');");
         element.all(by.css('input[kendo-bgo-numeric-text-box]')).each(function(element, index) {
             // Will print 0 First, 1 Second, 2 Third.
+        browser.wait(EC.presenceOf(element, 5000, 'Parameters input box wait has failed'));    
             element.sendKeys(10);
         });
+        browser.wait(EC.presenceOf($('input[kendo-bgo-numeric-text-box]')), 5000, 'Parameters input box wait has failed');
         browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'none');");
-        //browser.sleep(1000);
-    };
-    /*
-     * Click create button 
-     */
-    this.clickCreateButton = function() {
-        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.row.buttons-row > div > button.k-primary.waves-effect.waves-primary.ng-binding.k-button')), 5000);
-        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.row.buttons-row > div > button.k-primary.waves-effect.waves-primary.ng-binding.k-button')).click();
-    };
-    /*
-     * Click update button 
-     */
-    this.clickUpdateButton = function() {
-        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.row.buttons-row > div > button.k-primary.waves-effect.waves-primary.ng-binding.k-button')), 5000);
-        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.row.buttons-row > div > button.k-primary.waves-effect.waves-primary.ng-binding.k-button')).click();
-    };
-    /*
-     * Click finish button 
-     */
-    this.clickFinishButton = function() {
-        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')), 5000);
-        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')).click();
-    };
-    /*
-     * Clicks button by text - please change
-     */
-    this.clickButtonByText = function(text) {
-        element(by.buttonText(text)).click();
-    };
-    /*
-     * Click the delete BDE button
-     */
-    this.clickDeleteButton = function (selector) {
-        browser.sleep(1000);
-        element(by.css('.' + selector)).click();
-    };
-    /*
-     * Click OK button
-     */
-    this.clickOKbutton = function (text) {
-        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')), 5000);
-        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')).click();
     };
     /*
      * Filter table by the newly created record
@@ -163,20 +126,6 @@ var bdePage = function() {
         browser.executeScript("var bdeGrid = $('#dataEntry-grid').data('kendoGrid');" +
         "bdeGrid.dataSource.filter({field: \"RunNumber\", operator: \"eq\", value: \""+runNumber+"\" });");
         browser.wait(EC.visibilityOf($('#dataEntry-grid')), 5000);    
-    };
-    /*
-     * Verify that the record is created
-     */
-    this.verifyThatRecordIsCreated = function() {
-        var list = element.all(by.css('#dataEntry-grid .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(1);
-    };
-    /*
-     * Verify that the record is deleted
-     */
-    this.verifyThatRecordIsDeleted = function() {
-        var list = element.all(by.css('#dataEntry-grid .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(0);
     };
 
 };

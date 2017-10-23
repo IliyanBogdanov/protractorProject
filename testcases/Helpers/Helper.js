@@ -9,6 +9,14 @@ var helperFile = function() {
         return Math.random().toString(36).substring(10, 13);
     };
     /*
+     * Clicks button by text
+     */
+    this.clickButtonByText = function(text) {
+        var button = element(by.buttonText(text));
+        browser.wait(EC.elementToBeClickable(button), 10000, 'Wait for '+ text +' button has failed :(');
+        button.click();
+    };
+    /*
  	 * Click next button in case of wz-next property 
      */
 	this.clickNextButton = function (selector) {
@@ -58,6 +66,20 @@ var helperFile = function() {
         element(by.id('remis-login-username')).click().sendKeys(username);
         element(by.id('remis-login-password')).click().sendKeys(password);
         element(by.css('button[type="button"]')).click();
+    };
+    /*
+     * Verify that the record is created
+     */
+    this.verifyThatRecordIsCreated = function(gridIDname) {
+        var list = element.all(by.css(""+gridIDname+" .k-grid-content table tbody tr"));
+        expect(list.count()).toBe(1);
+    };
+    /*
+     * Verify that the record is deleted
+     */
+    this.verifyThatRecordIsDeleted = function(gridIDname) {
+        var list = element.all(by.css(""+gridIDname+" .k-grid-content table tbody tr"));
+        expect(list.count()).toBe(0);
     };
 
 
