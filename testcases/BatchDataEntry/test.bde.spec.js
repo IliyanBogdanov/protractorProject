@@ -8,11 +8,11 @@ describe('When user opens the BDE module, he...', function(){
     beforeEach(function(){
         loginPage.navigateToRemisDev();
         loginPage.loginREMI();
+        bdePage.navigateToBDESection();
     });
     
     it('Should be able to create a new record.', function(){
         //Step 1 - details
-        bdePage.navigateToBDESection();
         bdePage.addNewBDEbuttonClick();
         bdePage.siteDropDownSelectRSTO();
         bdePage.selectVenueB10();
@@ -30,39 +30,36 @@ describe('When user opens the BDE module, he...', function(){
         //Step 2 - parameter values
         bdePage.populateParameterValues();
         helperFile.clickNextButton('');
-        bdePage.clickCreateButton();
-        bdePage.clickOKbutton();
+        helperFile.clickButtonByText('Create');
+        helperFile.clickButtonByText('OK');
         //Verification
         bdePage.filterTableBDE();
-        bdePage.verifyThatRecordIsCreated();
+        helperFile.verifyThatRecordIsCreated('#dataEntry-grid');
     });
 
     it('Should be able to update a record.', function(){
         var newRunNumber = 'UPDATE';
-        bdePage.navigateToBDESection();
         bdePage.filterTableBDE(runNumber);
         helperFile.clickEditButton('.icon-small-edit');
         bdePage.clearRunNumberInput();
         runNumber = bdePage.runNumberEnterTextInput(newRunNumber);
         helperFile.clickNextButton("vm.showValidateAlert('run-details')");
         helperFile.clickNextButton('');
-        bdePage.clickUpdateButton();
-        bdePage.clickOKbutton();
+        helperFile.clickButtonByText('Update');
+        helperFile.clickButtonByText('OK');
         //Verification
         bdePage.filterTableBDE(newRunNumber);
-        bdePage.verifyThatRecordIsCreated();
+        helperFile.verifyThatRecordIsCreated('#dataEntry-grid');
     });
 
     it('Should be able to delete a record.', function() {
-        bdePage.navigateToBDESection();
         bdePage.filterTableBDE(runNumber);
-        helperFile.clickDeleteButton('icon-small-clear');
-        bdePage.clickButtonByText();
-        bdePage.clickFinishButton();
+        helperFile.clickDeleteButton('.icon-small-clear');
+        helperFile.clickButtonByText('Delete');
+        helperFile.clickButtonByText('Finish');
         //Verification
         bdePage.filterTableBDE(runNumber);
-        //browser.sleep(1000);
-        bdePage.verifyThatRecordIsDeleted();
+        helperFile.verifyThatRecordIsDeleted('#dataEntry-grid');
     });
 
 
