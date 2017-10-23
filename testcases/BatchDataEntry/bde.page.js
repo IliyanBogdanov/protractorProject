@@ -1,22 +1,22 @@
-var helper = require('./../Helpers/Helper.js').init();
-var runNumber = 'BDE-'+ helper.utils.random();
+var helper = require('./../Helpers/Helper.js');
+var runNumber = 'BDE-'+ helper.createARandomValue();
+var EC = protractor.ExpectedConditions;
 
-var bdePage = function(){
+var bdePage = function() {
     /*
      * Open BDE module
      */
-    this.openBDEpage = function() {
-        browser.sleep(1000);
-        element(by.css('a[ui-sref="dataEntry.home"]')).click();
-        browser.sleep(1000);
-        element(by.css('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')).click();
+    this.navigateToBDESection = function() {
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(3) > a > i')), 5000);
+        element(by.css('#sidebar-menu > ul > li:nth-child(3) > a > i')).click();
+        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 5000);
     };
     /*
      * Click the add new button
      */
     this.addNewBDEbuttonClick = function() {
-        browser.sleep(1000);
-        element(by.css('button[ng-click="vm.openEditModal()"]')).click();
+        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 5000);
+        element(by.css('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click();
     };
     /*
      * Select a site
@@ -101,13 +101,6 @@ var bdePage = function(){
         browser.executeScript("var harvestDate = $('#harvestDate').data('kendoDatePicker');harvestDate.value(new Date(2017, 4, 4));harvestDate.trigger('change');");
     };
     /*
-     * Click next button
-     */
-    this.clickNextButton = function (selector) {
-        browser.sleep(1000);
-        element(by.css('button[wz-next="' + selector + '"]')).click();
-    };
-    /*
      * Populate the parameter values on the second step of the wizard
      */
     this.populateParameterValues = function() {
@@ -117,23 +110,34 @@ var bdePage = function(){
             element.sendKeys(10);
         });
         browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'none');");
-        browser.sleep(1000);
+        //browser.sleep(1000);
     };
     /*
      * Click create button 
      */
-    this.createButtonClick = function() {
-        browser.sleep(1000);
-        element(by.buttonText('Create')).click();
-        browser.sleep(1000);
+    this.clickCreateButton = function() {
+        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.row.buttons-row > div > button.k-primary.waves-effect.waves-primary.ng-binding.k-button')), 5000);
+        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.row.buttons-row > div > button.k-primary.waves-effect.waves-primary.ng-binding.k-button')).click();
     };
     /*
-     * Click the edit BDE button
+     * Click update button 
      */
-    this.clickEditButton = function (selector) {
-        browser.sleep(1000);
-        element(by.css('.' + selector)).click();
-        browser.sleep(1000);
+    this.clickUpdateButton = function() {
+        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.row.buttons-row > div > button.k-primary.waves-effect.waves-primary.ng-binding.k-button')), 5000);
+        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > div.modal-body.warnings-body.remis-wizard.batch-wizard.ng-scope > div > div > section.step.ng-scope.ng-isolate-scope.current > div > form > div.row.buttons-row > div > button.k-primary.waves-effect.waves-primary.ng-binding.k-button')).click();
+    };
+    /*
+     * Click finish button 
+     */
+    this.clickFinishButton = function() {
+        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')), 5000);
+        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')).click();
+    };
+    /*
+     * Clicks button by text - please change
+     */
+    this.clickButtonByText = function(text) {
+        element(by.buttonText(text)).click();
     };
     /*
      * Click the delete BDE button
@@ -143,11 +147,11 @@ var bdePage = function(){
         element(by.css('.' + selector)).click();
     };
     /*
-     * Click button by its text value
+     * Click OK button
      */
-    this.clickButtonByText = function (text) {
-        browser.sleep(1000);
-        element(by.buttonText(text)).click();
+    this.clickOKbutton = function (text) {
+        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')), 5000);
+        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')).click();
     };
     /*
      * Filter table by the newly created record
@@ -157,8 +161,8 @@ var bdePage = function(){
             runNumber = numberValueBDE;
         }
         browser.executeScript("var bdeGrid = $('#dataEntry-grid').data('kendoGrid');" +
-            "bdeGrid.dataSource.filter({field: \"RunNumber\", operator: \"eq\", value: \""+runNumber+"\" });");
-        browser.sleep(1000);    
+        "bdeGrid.dataSource.filter({field: \"RunNumber\", operator: \"eq\", value: \""+runNumber+"\" });");
+        browser.wait(EC.visibilityOf($('#dataEntry-grid')), 5000);    
     };
     /*
      * Verify that the record is created

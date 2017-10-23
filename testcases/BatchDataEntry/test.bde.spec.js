@@ -1,5 +1,6 @@
 var loginPage = require('../REMILogin/login.page.js');
 var bdePage = require('./bde.page.js');
+var helperFile = require('./../Helpers/Helper.js');
 var runNumber = '';
 
 describe('When user opens the BDE module, he...', function(){
@@ -10,8 +11,8 @@ describe('When user opens the BDE module, he...', function(){
     });
     
     it('Should be able to create a new record.', function(){
-        //step1
-        bdePage.openBDEpage();
+        //Step 1 - details
+        bdePage.navigateToBDESection();
         bdePage.addNewBDEbuttonClick();
         bdePage.siteDropDownSelectRSTO();
         bdePage.selectVenueB10();
@@ -25,45 +26,42 @@ describe('When user opens the BDE module, he...', function(){
         bdePage.thawIDTextInput();
         bdePage.thawIDDateEntry();
         bdePage.harvestDateEntry();
-        bdePage.clickNextButton("vm.showValidateAlert('run-details')");
-        //step2
+        helperFile.clickNextButton("vm.showValidateAlert('run-details')");
+        //Step 2 - parameter values
         bdePage.populateParameterValues();
-        bdePage.clickNextButton('');
-        bdePage.createButtonClick();
-        bdePage.clickButtonByText('OK');
-        //Verify that the record has been created
+        helperFile.clickNextButton('');
+        bdePage.clickCreateButton();
+        bdePage.clickOKbutton();
+        //Verification
         bdePage.filterTableBDE();
         bdePage.verifyThatRecordIsCreated();
     });
 
     it('Should be able to update a record.', function(){
         var newRunNumber = 'UPDATE';
-        bdePage.openBDEpage();
-        //Filter table to get the last added record from the test
+        bdePage.navigateToBDESection();
         bdePage.filterTableBDE(runNumber);
-        //Click the edit button
-        bdePage.clickEditButton('icon-small-edit');
-        //Enter new run number value
+        helperFile.clickEditButton('.icon-small-edit');
         bdePage.clearRunNumberInput();
         runNumber = bdePage.runNumberEnterTextInput(newRunNumber);
-        bdePage.clickNextButton("vm.showValidateAlert('run-details')");
-        bdePage.clickNextButton('');
-        bdePage.clickButtonByText('Update');
-        bdePage.clickButtonByText('OK');
-        //Verify that the record has been updated
+        helperFile.clickNextButton("vm.showValidateAlert('run-details')");
+        helperFile.clickNextButton('');
+        bdePage.clickUpdateButton();
+        bdePage.clickOKbutton();
+        //Verification
         bdePage.filterTableBDE(newRunNumber);
         bdePage.verifyThatRecordIsCreated();
     });
 
     it('Should be able to delete a record.', function() {
-        bdePage.openBDEpage();
-        //Filter table to get the last added/updated record from the test
+        bdePage.navigateToBDESection();
         bdePage.filterTableBDE(runNumber);
-        bdePage.clickDeleteButton('icon-small-clear');
-        bdePage.clickButtonByText('Delete');
-        bdePage.clickButtonByText('Finish');
+        helperFile.clickDeleteButton('icon-small-clear');
+        bdePage.clickButtonByText();
+        bdePage.clickFinishButton();
+        //Verification
         bdePage.filterTableBDE(runNumber);
-        browser.sleep(1000);
+        //browser.sleep(1000);
         bdePage.verifyThatRecordIsDeleted();
     });
 

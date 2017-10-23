@@ -88,7 +88,7 @@ var monitoringAttributesPage = function() {
         browser.executeScript("var decimalPointsInput = $('#decimal-points').data('kendoNumericTextBox');decimalPointsInput.value(10);decimalPointsInput.trigger('change');");
     };
     /*
-     * Clicks the create new control limit button
+     * Clicks button by text - please change
      */
     this.clickButtonByText = function(text) {
         element(by.buttonText(text)).click();

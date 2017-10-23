@@ -12,7 +12,6 @@ describe('When user opens the Violation Categories module, he...', function() {
 
     it ('Should be able to create a new record.', function (){
         violationCategoriesPage.navigateToViolationCategories();
-        helperFile.clickOnClearButton();
         violationCategoriesPage.clickOnAddNewViolationCategoryButton();
         violationCategoryName = violationCategoriesPage.enterNameForViolationCategory();
         violationCategoriesPage.checkPQIcheckbox();
@@ -28,7 +27,6 @@ describe('When user opens the Violation Categories module, he...', function() {
 
         var newViolationCategoryName = "UPDATE-" + violationCategoryName;
         violationCategoriesPage.navigateToViolationCategories();
-        helperFile.clickOnClearButton();
         violationCategoriesPage.filterTable(violationCategoryName);
         helperFile.clickEditButton('.icon-small-edit');
         violationCategoryName = violationCategoriesPage.enterNameForViolationCategory(newViolationCategoryName);
