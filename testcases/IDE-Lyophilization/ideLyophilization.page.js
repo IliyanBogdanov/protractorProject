@@ -1,28 +1,10 @@
-var helper = require('./../Helpers/Helper.js').init();
-var inspectionLotNumber = "Test-Lyophilization-" + helper.utils.random();
+var helper = require('./../Helpers/Helper.js');
+var inspectionLotNumber = "Test-Lyophilization-" + helper.createARandomValue();
+var EC = protractor.ExpectedConditions;
 var totalVials = 10;
-var ideLyophilizationPage;
-ideLyophilizationPage = function () {
-    /*
-     * Click the next button
-     */
-    this.clickNextButton = function (selector) {
-        element(by.css('button[wz-next="' + selector + '"]')).click();
-    };
-    /*
-     * Click the create button
-     */
-    this.clickButtonByText = function (text) {
-        element(by.buttonText(text)).click();
-    };
-    
-    /*
-     * Click the edit IDE button
-     */
-    this.clickEditButton = function (selector) {
-        browser.sleep(1000);
-        element(by.css('.' + selector)).click();
-    };
+
+var ideLyophilizationPage = function () {
+
     /*
      * Verify create
      */
@@ -32,26 +14,17 @@ ideLyophilizationPage = function () {
         }
         browser.executeScript("var product = $('#hto-grid-lyophilization').data('kendoGrid');" +
             "product.dataSource.filter({field: \"Lot_Number\", operator: \"eq\", value: \""+inspectionLotNumber+"\" });");
-        browser.sleep(500);    
+            browser.wait(EC.visibilityOf($('#hto-grid-lyophilization')), 10000,'#hto-grid-lyophilization wait has failed.');    
     };
-    this.verifyThatRecordIsCreated = function() {
-        var list = element.all(by.css('#hto-grid-lyophilization .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(1);
-    };
-
-    this.verifyThatRecordIsDeleted = function() {
-        var list = element.all(by.css('#hto-grid-lyophilization .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(0);
-    };
-
     /*
      *  Navigate to IDE-Lyophilization
      */
     this.navigateToIDELyophilizationSection = function () {
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(4) > a > i')), 10000,'Main menu wait for element has failed.');
         element(by.css('#sidebar-menu > ul > li:nth-child(4) > a > i')).click();
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(4) > ul > li:nth-child(2) > a')), 10000, 'Main menu wait for element has failed.');
         element(by.css('#sidebar-menu > ul > li:nth-child(4) > ul > li:nth-child(2) > a')).click();
     };
-
     /*
      STEP ONE
      */
@@ -60,7 +33,7 @@ ideLyophilizationPage = function () {
      *  Click on "Add New IDE" button
      */
     this.clickOnAddIDEButton = function () {
-
+        browser.wait(EC.elementToBeClickable($('a.btn[href="/hto/create/Lyophilization"]')), 10000, 'Wait for IDE button has failed.');
         element(by.css('a.btn[href="/hto/create/Lyophilization"]')).click();
     };
     /*
@@ -109,6 +82,7 @@ ideLyophilizationPage = function () {
         if (typeof newLotNumber !== 'undefined') {
             inspectionLotNumber = newLotNumber;
         }
+        browser.wait(EC.visibilityOf($('#genentech-lot-number')), 10000, 'Wait for InspectionLotNumber has failed.');
         browser.executeScript("var iln = $('#genentech-lot-number').data('kendoMaskedTextBox');" +
             "iln.value('" + inspectionLotNumber + "');iln.trigger('change');");
 
@@ -125,7 +99,6 @@ ideLyophilizationPage = function () {
      *  Set Inspection
      */
     this.enterInspection = function () {
-        //browser.executeScript("var inspection = $('#Inspection1st');inspection.prop('checked', true);inspection.click();");
         element(by.model('vm.htoDataLyophilization.General_Inspection')).click();
     };
 
@@ -145,8 +118,7 @@ ideLyophilizationPage = function () {
             'data.value('+ value +'); data.trigger("change");' +
             '}' +
             '})');
-    }
-
+    };
 
 };
 

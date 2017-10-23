@@ -13,7 +13,7 @@ var ideLiquidPage = function () {
         }
         browser.executeScript("var product = $('#hto-grid-liquid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"General_LotNumber\", operator: \"eq\", value: \""+inspectionLotNumber+"\" });");
-        browser.wait(EC.visibilityOf($('#hto-grid-liquid')), 5000,'#hto-grid-liquid wait has failed.');    
+        browser.wait(EC.visibilityOf($('#hto-grid-liquid')), 10000,'#hto-grid-liquid wait has failed.');    
     };
     /*
      *  Navigate to IDE-Liquid
@@ -117,7 +117,7 @@ var ideLiquidPage = function () {
             'data.value('+ value +'); data.trigger("change");' +
             '}' +
             '})');
-    }
+    };
 };
 
 module.exports = new ideLiquidPage();
