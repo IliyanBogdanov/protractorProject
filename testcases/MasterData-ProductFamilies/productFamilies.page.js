@@ -12,34 +12,6 @@ var MDProductFamiliesPage = function () {
         element(by.css('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click();
     };
     /*
-     *  Clicks the finish button
-     */
-    this.clickOnFinishButton = function () {
-        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')), 5000);
-        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.modal-footer-wrapper.msg-footer > div > button')).click();
-    };
-    /*
-     * Clicks the create button
-     */
-    this.clickOnCreateButton = function () {
-        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.row.buttons-row > div > button.k-button.k-primary.waves-effect.waves-primary.ng-binding')), 5000);
-        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.row.buttons-row > div > button.k-button.k-primary.waves-effect.waves-primary.ng-binding')).click();
-    };
-    /*
-     * Clicks the update button
-     */
-    this.clickOnUpdateButton = function () {
-        browser.wait(EC.elementToBeClickable($('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.row.buttons-row > div > button.k-button.k-primary.waves-effect.waves-primary.ng-binding')), 5000);
-        element(by.css('body > div.modal.fade.ng-isolate-scope.modal-warning.remis-modal.in > div > div > form > div.row.buttons-row > div > button.k-button.k-primary.waves-effect.waves-primary.ng-binding')).click();
-    };
-    /*
-     * Clicks the delete button
-     */
-    this.clickOnDeleteButton = function () {
-        browser.wait(EC.elementToBeClickable($('.btn[ng-click="vm.callFunction(vm.successFunction)"]')), 5000);
-        element(by.css('.btn[ng-click="vm.callFunction(vm.successFunction)"]')).click();
-    };
-    /*
      * Clicks add material number button
      */
     this.clickOnAddMaterialNumberButton = function () {
@@ -64,20 +36,6 @@ var MDProductFamiliesPage = function () {
         browser.executeScript("var product = $('#product-family-grid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"Version\", operator: \"eq\", value: \""+displayName+"\" });");
         browser.wait(EC.visibilityOf($('#product-family-grid')), 5000);
-    };
-    /*
-     * Verifies create
-     */
-    this.verifyThatRecordIsCreated = function() {
-        var list = element.all(by.css('#product-family-grid .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(1);
-    };
-    /*
-     * Verifies delete
-     */
-    this.verifyThatRecordIsDeleted = function() {
-        var list = element.all(by.css('#product-family-grid .k-grid-content table tbody tr'));
-        expect(list.count()).toBe(0);
     };
     /*
      *  Navigates to MD-PF

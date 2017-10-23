@@ -22,11 +22,11 @@ describe('When user opens the Product families module, he...', function() {
         MDProductFamilyPage.enterMaterialNumberValue();
         MDProductFamilyPage.clickOnAddProcessStepButton();
         MDProductFamilyPage.enterProcessStepValue();
-        MDProductFamilyPage.clickOnCreateButton();
-        MDProductFamilyPage.clickOnFinishButton();
+        helperFile.clickButtonByText('Create');
+        helperFile.clickButtonByText('Finish');
         //Verification 
         MDProductFamilyPage.filterTable();
-        MDProductFamilyPage.verifyThatRecordIsCreated();
+        helperFile.verifyThatRecordIsCreated('#product-family-grid');
     });
 
     it('Should be able to update a new record.', function(){
@@ -38,20 +38,20 @@ describe('When user opens the Product families module, he...', function() {
         MDProductFamilyPage.enterCommercialProductValue();
         MDProductFamilyPage.enterConfigDossageValue();
         productFamilyVersion = MDProductFamilyPage.enterVersionValue(newproductFamilyVersion);
-        MDProductFamilyPage.clickOnUpdateButton();
-        MDProductFamilyPage.clickOnFinishButton();
+        helperFile.clickButtonByText('Update');
+        helperFile.clickButtonByText('Finish');
         //Verification 
         MDProductFamilyPage.filterTable(productFamilyVersion);
-        MDProductFamilyPage.verifyThatRecordIsCreated();
+        helperFile.verifyThatRecordIsCreated('#product-family-grid');
     });
 
     it('Should be able to delete a record.', function() {
         MDProductFamilyPage.filterTable(productFamilyVersion);
         helperFile.clickEditButton('.icon-small-clear');
-        MDProductFamilyPage.clickOnDeleteButton();
-        MDProductFamilyPage.clickOnFinishButton();
+        helperFile.clickButtonByText('Delete');
+        helperFile.clickButtonByText('Finish');
         //Verification 
         MDProductFamilyPage.filterTable(productFamilyVersion);
-        MDProductFamilyPage.verifyThatRecordIsDeleted();
+        helperFile.verifyThatRecordIsDeleted('#product-family-grid');
     });
 });
