@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="446d90b7-abea-4bd6-a0d5-f07bd028e648" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testcases/PM-CLE/pmCLE.page.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testcases/PM-CLE/test.pmCLE.spec.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/MasterData-ViolationCategories/test.violationCategories.spec.js" afterPath="$PROJECT_DIR$/testcases/MasterData-ViolationCategories/test.violationCategories.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/MasterData-ViolationCategories/violationCategories.page.js" afterPath="$PROJECT_DIR$/testcases/MasterData-ViolationCategories/violationCategories.page.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf.js" afterPath="$PROJECT_DIR$/conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js" afterPath="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,18 +23,58 @@
       <file leaf-file-name="productFamilies.page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="98" column="41" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="98" selection-end-column="41" />
+            <state relative-caret-position="220">
+              <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="violationCategories.page.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ideLiquid.page.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="617">
+              <caret line="141" column="57" lean-forward="false" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="violationCategories.page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/MasterData-ViolationCategories/violationCategories.page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="78" column="35" lean-forward="false" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+            <state relative-caret-position="170">
+              <caret line="10" column="99" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="99" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.pmCLE.spec.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testcases/PM-CLE/test.pmCLE.spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pmCLE.page.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcases/PM-CLE/pmCLE.page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="756">
+              <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processMonitoringOverview.page.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcases/ProcessMonitoring/processMonitoringOverview.page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="27" column="6" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="27" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -41,9 +83,13 @@
       <file leaf-file-name="test.violationCategories.spec.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcases/MasterData-ViolationCategories/test.violationCategories.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="714">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <marker date="1508735867664" expanded="true" signature="290:1779" ph="{...}" />
+                <marker date="1508735867664" expanded="true" signature="467:542" ph="{...}" />
+                <marker date="1508735867664" expanded="true" signature="1241:1775" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,9 +97,33 @@
       <file leaf-file-name="conf.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="391">
+              <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.page.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcases/REMILogin/login.page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.login.spec.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testcases/REMILogin/test.login.spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <folding>
+                <marker date="1508736572503" expanded="true" signature="111:569" ph="{...}" />
+                <marker date="1508736572503" expanded="true" signature="139:186" ph="{...}" />
+                <marker date="1508736572503" expanded="true" signature="249:430" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,12 +134,14 @@
     <findStrings>
       <find>0.RE</find>
       <find>BGO</find>
-      <find>navigateMDProductFamilySection</find>
       <find>runNumber</find>
       <find>clickOnAddIDEButton</find>
+      <find>filter</find>
+      <find>navigateMDProductFamilySection</find>
     </findStrings>
     <dirStrings>
       <dir>D:\Projects\Roche\QA\Automation-final</dir>
+      <dir>D:\WORK\Roche\QA\QA\testcases</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -84,17 +156,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/testcases/REMILogin/login.page.js" />
         <option value="$PROJECT_DIR$/testcases/REMILogin/test.login.spec.js" />
         <option value="$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js" />
         <option value="$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js" />
         <option value="$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js" />
         <option value="$PROJECT_DIR$/testcases/BatchDataEntry/bde.page.js" />
-        <option value="$PROJECT_DIR$/conf.js" />
-        <option value="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js" />
         <option value="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/test.productFamilies.spec.js" />
         <option value="$PROJECT_DIR$/testcases/MasterData-ViolationCategories/test.violationCategories.spec.js" />
         <option value="$PROJECT_DIR$/testcases/MasterData-ViolationCategories/violationCategories.page.js" />
+        <option value="$PROJECT_DIR$/testcases/REMILogin/login.page.js" />
+        <option value="$PROJECT_DIR$/testcases/PM-CLE/test.violationCategories.spec.js" />
+        <option value="$PROJECT_DIR$/conf.js" />
+        <option value="$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js" />
+        <option value="$PROJECT_DIR$/testcases/PM-CLE/test.pmCLE.spec.js" />
+        <option value="$PROJECT_DIR$/testcases/PM-CLE/pmCLE.page.js" />
       </list>
     </option>
   </component>
@@ -116,8 +191,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="1932" />
-    <option name="height" value="1038" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -136,35 +212,64 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="screenshots" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
               <item name="testcases" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
+              <item name="testcases" type="462c0819:PsiDirectoryNode" />
+              <item name="IDE-Liquid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
               <item name="testcases" type="462c0819:PsiDirectoryNode" />
               <item name="MasterData-ProductFamilies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Automation-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Automation-final" type="462c0819:PsiDirectoryNode" />
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
               <item name="testcases" type="462c0819:PsiDirectoryNode" />
               <item name="MasterData-ViolationCategories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
+              <item name="testcases" type="462c0819:PsiDirectoryNode" />
+              <item name="PM-CLE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QA" type="462c0819:PsiDirectoryNode" />
+              <item name="testcases" type="462c0819:PsiDirectoryNode" />
+              <item name="REMILogin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,6 +280,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WORK\Roche\QA\QA\testcases\PM-CLE" />
       <recent name="D:\Projects\Roche\QA\Automation-final\Тestcases\4.IDE-Liquid" />
       <recent name="D:\Projects\Roche\QA\Automation-final" />
     </key>
@@ -204,6 +310,7 @@
       <workItem from="1507782518678" duration="563000" />
       <workItem from="1508234813583" duration="12648000" />
       <workItem from="1508306616095" duration="1952000" />
+      <workItem from="1508733064732" duration="16444000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1507782909570</created>
@@ -272,39 +379,41 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29565000" />
+    <option name="totallyTimeSpent" value="46009000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920969" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="NativeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
       <list>
-        <option value="$PROJECT_DIR$/../../../ECL/ecl/app/bundle-config.js" />
-        <option value="$PROJECT_DIR$/../../../ECL/ecl/app/vendor.js" />
-        <option value="$PROJECT_DIR$/../../../ECL/ecl/app/vendor-platform.ios.js" />
-        <option value="$PROJECT_DIR$/../../../ECL/ecl/app/vendor-platform.android.js" />
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
       </list>
     </option>
   </component>
@@ -332,6 +441,42 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="98" column="7" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="98" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/MasterData-ViolationCategories/test.violationCategories.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <marker date="1508735867664" expanded="true" signature="290:1779" ph="{...}" />
+            <marker date="1508735867664" expanded="true" signature="467:542" ph="{...}" />
+            <marker date="1508735867664" expanded="true" signature="1241:1775" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/MasterData-ViolationCategories/violationCategories.page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2058">
           <caret line="98" column="41" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="98" selection-end-column="41" />
           <folding />
@@ -342,7 +487,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
           <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding />
+          <folding>
+            <marker date="1508735867664" expanded="true" signature="290:1779" ph="{...}" />
+            <marker date="1508735867664" expanded="true" signature="467:542" ph="{...}" />
+            <marker date="1508735867664" expanded="true" signature="1241:1775" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -390,9 +539,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="29" column="23" lean-forward="false" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <marker date="1508235701273" expanded="true" signature="2621:2623" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -400,48 +547,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2499">
           <caret line="152" column="57" lean-forward="false" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="57" />
-          <folding>
-            <element signature="e#273#351#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/BGOFile/BGO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="74" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="74" />
-          <folding>
-            <marker date="1508235701251" expanded="true" signature="112:5744" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="276:2448" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="615:691" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="742:821" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="873:959" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1012:1762" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1052:1207" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1237:1383" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1423:1568" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1675:1745" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1790:2152" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1924:2135" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2163:2314" ph="//..." />
-            <marker date="1508235701251" expanded="true" signature="2356:2433" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2530:5741" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2547:2753" ph="{&quot;add&quot;: addNewViolationCategory...}" />
-            <marker date="1508235701251" expanded="true" signature="2824:4627" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3204:3259" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3382:3437" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3545:3596" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3674:3728" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4280:4341" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4377:4581" ph="{&quot;isImpactClicked&quot;: isImpactClicked...}" />
-            <marker date="1508235701251" expanded="true" signature="4673:5014" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4799:4877" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="5060:5562" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="5610:5735" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/BGOFile/BGO.js" />
     <entry file="file://$PROJECT_DIR$/testcases/REMILogin/test.login.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -457,49 +567,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/BGOFile/BGO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1508235701251" expanded="true" signature="112:5744" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="276:2448" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="615:691" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="742:821" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="873:959" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1012:1762" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1052:1207" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1237:1383" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1423:1568" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1675:1745" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1790:2152" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1924:2135" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2163:2314" ph="//..." />
-            <marker date="1508235701251" expanded="true" signature="2356:2433" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2530:5741" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2547:2753" ph="{&quot;add&quot;: addNewViolationCategory...}" />
-            <marker date="1508235701251" expanded="true" signature="2824:4627" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3204:3259" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3382:3437" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3545:3596" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3674:3728" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4280:4341" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4377:4581" ph="{&quot;isImpactClicked&quot;: isImpactClicked...}" />
-            <marker date="1508235701251" expanded="true" signature="4673:5014" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4799:4877" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="5060:5562" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="5610:5735" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/BGOFile/BGO.js" />
     <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#273#351#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -533,42 +606,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/BGOFile/BGO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1508235701251" expanded="true" signature="112:5744" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="276:2448" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="615:691" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="742:821" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="873:959" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1012:1762" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1052:1207" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1237:1383" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1423:1568" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1675:1745" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1790:2152" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1924:2135" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2163:2314" ph="//..." />
-            <marker date="1508235701251" expanded="true" signature="2356:2433" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2530:5741" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2547:2753" ph="{&quot;add&quot;: addNewViolationCategory...}" />
-            <marker date="1508235701251" expanded="true" signature="2824:4627" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3204:3259" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3382:3437" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3545:3596" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3674:3728" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4280:4341" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4377:4581" ph="{&quot;isImpactClicked&quot;: isImpactClicked...}" />
-            <marker date="1508235701251" expanded="true" signature="4673:5014" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4799:4877" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="5060:5562" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="5610:5735" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/BGOFile/BGO.js" />
     <entry file="file://$PROJECT_DIR$/.vscode/launch.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -580,9 +618,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#273#351#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -609,73 +645,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/REMILogin/test.login.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/REMILogin/login.page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/BGOFile/BGO.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="74" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="74" />
-          <folding>
-            <marker date="1508235701251" expanded="true" signature="112:5744" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="276:2448" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="615:691" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="742:821" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="873:959" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1012:1762" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1052:1207" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1237:1383" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1423:1568" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1675:1745" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1790:2152" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="1924:2135" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2163:2314" ph="//..." />
-            <marker date="1508235701251" expanded="true" signature="2356:2433" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2530:5741" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="2547:2753" ph="{&quot;add&quot;: addNewViolationCategory...}" />
-            <marker date="1508235701251" expanded="true" signature="2824:4627" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3204:3259" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3382:3437" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3545:3596" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="3674:3728" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4280:4341" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4377:4581" ph="{&quot;isImpactClicked&quot;: isImpactClicked...}" />
-            <marker date="1508235701251" expanded="true" signature="4673:5014" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="4799:4877" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="5060:5562" ph="{...}" />
-            <marker date="1508235701251" expanded="true" signature="5610:5735" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/BGOFile/BGO.js" />
     <entry file="file://$PROJECT_DIR$/testcases/BatchDataEntry/test.bde.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <marker date="1508235701273" expanded="true" signature="2621:2623" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reports/htmlReports/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/reports/htmlReports/index.html" />
     <entry file="file://$PROJECT_DIR$/xmlresults.xml" />
     <entry file="file://$PROJECT_DIR$/testcases/ProcessMonitoring/test.processMonitoring.spec.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -684,41 +663,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/ProcessMonitoring/processMonitoringOverview.page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcases/MasterData-MonitoringAttributes/monitoringAttributes.page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="31" column="6" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="31" selection-end-column="6" />
-          <folding>
-            <marker date="1508244154812" expanded="true" signature="148:5749" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="1145:1315" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="1352:1531" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="1582:1660" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="1841:2014" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="2048:2214" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="2287:2606" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="2342:2399" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="2648:2801" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="2835:2994" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="3038:3263" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="3307:3528" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="3575:3680" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="3731:4051" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="4098:4251" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="4303:4502" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="4550:4954" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="4663:4715" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="5005:5191" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="5245:5350" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="5402:5509" ph="{...}" />
-            <marker date="1508244154812" expanded="true" signature="5560:5746" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -730,28 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="138" column="62" lean-forward="false" selection-start-line="138" selection-start-column="40" selection-end-line="138" selection-end-column="62" />
-          <folding>
-            <element signature="e#273#351#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/test.ideLiquid.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
           <caret line="85" column="7" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="85" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -764,34 +695,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="98" column="41" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="98" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/selenium-webdriver/lib/test/data/javascriptPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="172" column="39" lean-forward="false" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/selenium-webdriver/lib/test/data/javascriptPage.html" />
     <entry file="file://$PROJECT_DIR$/testcases/MasterData-ViolationCategories/test.violationCategories.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+        <state relative-caret-position="714">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <marker date="1508735867664" expanded="true" signature="290:1779" ph="{...}" />
+            <marker date="1508735867664" expanded="true" signature="467:542" ph="{...}" />
+            <marker date="1508735867664" expanded="true" signature="1241:1775" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/REMILogin/test.login.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <marker date="1508736572503" expanded="true" signature="111:569" ph="{...}" />
+            <marker date="1508736572503" expanded="true" signature="139:186" ph="{...}" />
+            <marker date="1508736572503" expanded="true" signature="249:430" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/ProcessMonitoring/processMonitoringOverview.page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="6" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="27" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testcases/MasterData-ViolationCategories/violationCategories.page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="78" column="35" lean-forward="false" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+        <state relative-caret-position="170">
+          <caret line="10" column="99" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/REMILogin/login.page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="49" lean-forward="false" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/MasterData-ProductFamilies/productFamilies.page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="97" column="28" lean-forward="false" selection-start-line="97" selection-start-column="28" selection-end-line="97" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/IDE-Liquid/ideLiquid.page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="141" column="57" lean-forward="false" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/PM-CLE/pmCLE.page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/PM-CLE/test.pmCLE.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
       </provider>
