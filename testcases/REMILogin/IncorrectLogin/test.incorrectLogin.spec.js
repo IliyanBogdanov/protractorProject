@@ -4,10 +4,7 @@ var loginPage = require('./../login.page.js');
 describe('Incorrect Login details, asserts for validation messages', function () {
   
   beforeEach(function(){
-      browser.waitForAngularEnabled(false);
-      browser.get('http://remisdev.demos.bgosoftware.com/remisservice');
-      browser.waitForAngularEnabled(true);
-      browser.get('http://remisdev.demos.bgosoftware.com/login/');
+     loginPage.navigateToRemisDev();
   });
 
   it('Empty Domain', function () {

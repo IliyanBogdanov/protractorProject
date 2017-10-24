@@ -113,7 +113,7 @@ var helperFile = function() {
      * Verify that the record is created
      */
     this.verifyThatRecordIsCreated = function(gridIDname) {
-        browser.wait(EC.visibilityOf($(gridIDname)), 5000);
+        browser.wait(EC.visibilityOf($(gridIDname)), 10000, 'Wait for verifyThatRecordIsCreated has failed.');
         var list = element.all(by.css(""+gridIDname+" .k-grid-content table tbody tr"));
         expect(list.count()).toBe(1);
     };
