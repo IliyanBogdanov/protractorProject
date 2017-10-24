@@ -1,8 +1,10 @@
 var loginPage = require('../REMILogin/login.page.js');
 var monitoringAttrubutesPage = require('../MasterData-MonitoringAttributes/monitoringAttributes.page.js');
+var bdePage = require('../BatchDataEntry/bde.page.js');
 var MARoles = require('./MARoles.page.js');
 var helperFile = require('./../Helpers/Helper.js');
 var attributeName = '';
+var runNumber = '';
 describe('When user opens the Remis App with different roles , he...', function() {
     
     beforeEach(function () {
@@ -107,6 +109,62 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.verifyLoginSingleRole('OCN_GMPDATA_ENTRY');
         helperFile.verifyAddButton('dataEntry-grid', 'Add New Batch Data Entry', 1);
     });
+
+    it('Should be able to create a new record.', function(){
+        helperFile.loginREMIRole('OCNGMPENTRY');
+        //Step 1 - details
+        bdePage.addNewBDEbuttonClick();
+        //bdePage.siteDropDownSelectRSTO();
+        //bdePage.selectVenueB10();
+        bdePage.productFamilyDropDownSelect();
+        bdePage.materialNumberDropDownSelect();
+        runNumber = bdePage.runNumberEnterTextInput();
+        bdePage.campaignNameTextInput();
+        bdePage.lotNumberEnterTextInput();
+        bdePage.runStartDateEntry();
+        bdePage.runEndDateEntry();
+        bdePage.thawIDTextInput();
+        bdePage.thawIDDateEntry();
+        bdePage.harvestDateEntry();
+        helperFile.clickNextButton("vm.showValidateAlert('run-details')");
+        //Step 2 - parameter values
+        bdePage.populateParameterValues();
+        helperFile.clickNextButton('');
+        helperFile.clickButtonByText('Create');
+        helperFile.clickButtonByText('OK');
+        //Verification
+        bdePage.filterTableBDE();
+        helperFile.verifyThatRecordIsCreated('#dataEntry-grid');
+    });
+
+    it('Should be able to update a record.', function(){
+        helperFile.loginREMIRole('OCNGMPENTRY');
+        var newRunNumber = 'UPDATE-run';
+        bdePage.filterTableBDE(runNumber);
+        helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
+        bdePage.clearRunNumberInput();
+        runNumber = bdePage.runNumberEnterTextInput(newRunNumber);
+        helperFile.clickNextButton("vm.showValidateAlert('run-details')");
+        helperFile.clickNextButton('');
+        helperFile.clickButtonByText('Update');
+        helperFile.clickButtonByText('OK');
+        //Verification
+        bdePage.filterTableBDE(newRunNumber);
+        helperFile.verifyThatRecordIsCreated('#dataEntry-grid');
+    });
+
+    it('Should be able to delete a record.', function() {
+        helperFile.loginREMIRole('OCNGMPENTRY');
+        bdePage.filterTableBDE(runNumber);
+        helperFile.clickDeleteButton('.icon-small-clear.roche_grey_7');
+        helperFile.clickButtonByText('Delete');
+        helperFile.clickButtonByText('Finish');
+        //Verification
+        bdePage.filterTableBDE(runNumber);
+        helperFile.verifyThatRecordIsDeleted('#dataEntry-grid');
+    });
+
+
 
     it ('Should be able to Login as GMP Approve user.', function (){
         helperFile.loginREMIRole('OCNGMPAPPROVE');

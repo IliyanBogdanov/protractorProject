@@ -1,5 +1,6 @@
 var helper = require('./../Helpers/Helper.js');
 var runNumber = 'BDE-'+ helper.createARandomValue();
+var lotNumber = 'Lot'+ helper.createARandomValue();
 var EC = protractor.ExpectedConditions;
 
 var bdePage = function() {
@@ -70,7 +71,7 @@ var bdePage = function() {
      * Enter lot number 
      */
     this.lotNumberEnterTextInput = function() {
-        element(by.model('vm.dataEntryData.BatchNumber')).sendKeys('Lot3123123124');
+        element(by.model('vm.dataEntryData.BatchNumber')).sendKeys(lotNumber);
     }; 
     /*
      * Enter run start date
@@ -123,9 +124,10 @@ var bdePage = function() {
         if (typeof numberValueBDE !== 'undefined') {
             runNumber = numberValueBDE;
         }
+        browser.wait(EC.visibilityOf($('#dataEntry-grid')), 5000);
         browser.executeScript("var bdeGrid = $('#dataEntry-grid').data('kendoGrid');" +
         "bdeGrid.dataSource.filter({field: \"RunNumber\", operator: \"eq\", value: \""+runNumber+"\" });");
-        browser.wait(EC.visibilityOf($('#dataEntry-grid')), 5000);    
+
     };
 
 };
