@@ -46,7 +46,7 @@ describe('When user opens the IDE-Liquid module, he...', function(){
     it('Should be able to update a record.', function() {
         var newInspectionLotNumber = 'UPDATE-' + inspectionLotNumber;
         ideLiquidPage.filterTable(inspectionLotNumber);
-        helperFile.clickEditButton('.icon-small-edit');
+        helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         inspectionLotNumber = ideLiquidPage.enterInspectionLotNumber(newInspectionLotNumber);
         ideLiquidPage.enterTotalVials(11);
         //step2
@@ -74,7 +74,7 @@ describe('When user opens the IDE-Liquid module, he...', function(){
 
     it('Should be able to delete a record.', function() {
         ideLiquidPage.filterTable(inspectionLotNumber);
-        helperFile.clickEditButton('.icon-small-clear');
+        helperFile.clickEditButton('.icon-small-clear.roche_grey_7');
         helperFile.clickButtonByText('Delete');
         helperFile.clickButtonByText('Finish');
         ideLiquidPage.filterTable(inspectionLotNumber);

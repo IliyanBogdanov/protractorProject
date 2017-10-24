@@ -7,16 +7,16 @@ var monitoringAttributesPage = function() {
      * Navigates to the module Master Data - Monitoring Attributes
      */
     this.navigateToMonitoringAttributesSection = function() {
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 5000);
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 10000, 'Wait for navigateToMonitoringAttributesSection has failed.');
         element(by.css('#sidebar-menu > ul > li:nth-child(2) > a > i')).click();
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(1) > a')), 5000);
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(1) > a')), 10000, 'Wait for navigateToMonitoringAttributesSection has failed.');
         element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(1) > a')).click();
     };
     /*
      * Clicks on "Add New Monitoring Attribute" button
      */
     this.clickOnAddMonitoringAttributeButton = function() {
-        browser.wait(EC.elementToBeClickable($('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 5000);
+        browser.wait(EC.elementToBeClickable($('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 10000);
         element(by.css('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click(); 
     };
     /*
@@ -65,14 +65,14 @@ var monitoringAttributesPage = function() {
      * Enters description for the monitoring attribute
      */
     this.enterDescription = function() {
-        browser.wait(EC.presenceOf($('#description')), 5000);
+        browser.wait(EC.presenceOf($('#description')), 10000, 'Wait for enterDescription has failed.');
         element(by.id("description")).sendKeys('New Description for KPI attribute');    
     };
     /*
      * Enters MoM for the monitoring attribute
      */
     this.enterMoM = function() {       
-        browser.wait(EC.presenceOf($('#mom')), 5000);
+        browser.wait(EC.presenceOf($('#mom')), 10000, 'Wait for enterMoM has failed.');
         element(by.id("mom")).sendKeys("New Method of Measurement For Test Attribute KPI");   
     };
     /*
@@ -91,18 +91,18 @@ var monitoringAttributesPage = function() {
      * Populates control limit values
      */
     this.populateContrlLimitValues = function() {
-        browser.wait(EC.presenceOf($('input[name="LCL"]')), 5000);
+        browser.wait(EC.presenceOf($('input[name="LCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
         element(by.css('input[name="LCL"]')).sendKeys(10.7);
-        browser.wait(EC.presenceOf($('input[name="Center"]')), 5000);
+        browser.wait(EC.presenceOf($('input[name="Center"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
         element(by.css('input[name="Center"]')).sendKeys(11.52);
-        browser.wait(EC.presenceOf($('input[name="UCL"]')), 5000);
+        browser.wait(EC.presenceOf($('input[name="UCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
         element(by.css('input[name="UCL"]')).sendKeys(13.413);
     };
     /*
      * Clicks create button
      */
     this.clickCreateButton = function(text) {
-        browser.wait(EC.elementToBeClickable($('a[class="k-button k-button-icontext k-primary k-grid-update"]')), 5000);
+        browser.wait(EC.elementToBeClickable($('a[class="k-button k-button-icontext k-primary k-grid-update"]')), 10000, 'Wait for clickCreateButton has failed.');
         element(by.css('a[class="k-button k-button-icontext k-primary k-grid-update"]')).click();
     };
     /*
@@ -121,7 +121,7 @@ var monitoringAttributesPage = function() {
         }
         browser.executeScript("var product = $('#attributes-grid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+attributeName+"\" });");
-        browser.wait(EC.visibilityOf($('#attributes-grid')), 5000);       
+        browser.wait(EC.visibilityOf($('#attributes-grid')), 10000, 'Wait for filterTable has failed.');       
     };
 };
 

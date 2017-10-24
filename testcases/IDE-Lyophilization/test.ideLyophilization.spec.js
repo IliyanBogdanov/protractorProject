@@ -42,7 +42,7 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
     it('Should be able to update a record.', function() {
         var newInspectionLotNumber = 'UPDATE-' + inspectionLotNumber;
         ideLyophilizationPage.filterTable(inspectionLotNumber);
-        helperFile.clickEditButton('.icon-small-edit');
+        helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         browser.sleep(3000);
         inspectionLotNumber = ideLyophilizationPage.enterInspectionLotNumber(newInspectionLotNumber);
         ideLyophilizationPage.enterTotalVials(11);
@@ -68,7 +68,7 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
 
     it('Should be able to delete a record.', function() {
         ideLyophilizationPage.filterTable(inspectionLotNumber);
-        helperFile.clickEditButton('.icon-small-clear');
+        helperFile.clickEditButton('.icon-small-clear.roche_grey_7');
         helperFile.clickButtonByText('Delete');
         helperFile.clickButtonByText('Finish');
         ideLyophilizationPage.filterTable(inspectionLotNumber);

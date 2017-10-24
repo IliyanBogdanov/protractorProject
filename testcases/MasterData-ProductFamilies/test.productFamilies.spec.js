@@ -32,7 +32,7 @@ describe('When user opens the Product families module, he...', function() {
     it('Should be able to update a new record.', function(){
         var newproductFamilyVersion = 'UPDATE-' + productFamilyVersion;
         MDProductFamilyPage.filterTable(productFamilyVersion);
-        helperFile.clickEditButton('.icon-small-edit');
+        helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         MDProductFamilyPage.enterSiteValue();
         MDProductFamilyPage.enterVenueValue();
         MDProductFamilyPage.enterCommercialProductValue();
@@ -47,7 +47,7 @@ describe('When user opens the Product families module, he...', function() {
 
     it('Should be able to delete a record.', function() {
         MDProductFamilyPage.filterTable(productFamilyVersion);
-        helperFile.clickEditButton('.icon-small-clear');
+        helperFile.clickEditButton('.icon-small-clear.roche_grey_7');
         helperFile.clickButtonByText('Delete');
         helperFile.clickButtonByText('Finish');
         //Verification 

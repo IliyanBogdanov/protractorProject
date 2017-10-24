@@ -40,7 +40,7 @@ describe('When user opens the BDE module, he...', function(){
     it('Should be able to update a record.', function(){
         var newRunNumber = 'UPDATE';
         bdePage.filterTableBDE(runNumber);
-        helperFile.clickEditButton('.icon-small-edit');
+        helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         bdePage.clearRunNumberInput();
         runNumber = bdePage.runNumberEnterTextInput(newRunNumber);
         helperFile.clickNextButton("vm.showValidateAlert('run-details')");
@@ -54,7 +54,7 @@ describe('When user opens the BDE module, he...', function(){
 
     it('Should be able to delete a record.', function() {
         bdePage.filterTableBDE(runNumber);
-        helperFile.clickDeleteButton('.icon-small-clear');
+        helperFile.clickDeleteButton('.icon-small-clear.roche_grey_7');
         helperFile.clickButtonByText('Delete');
         helperFile.clickButtonByText('Finish');
         //Verification
