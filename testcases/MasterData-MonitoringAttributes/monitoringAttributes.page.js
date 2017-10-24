@@ -23,28 +23,25 @@ var monitoringAttributesPage = function() {
      * Enters Site value 
      */
     this.enterSiteValue = function(site) {
-        site = (typeof site !== 'undefined') ? site : 2;
-        browser.executeScript("var site = $('#site').data('kendoDropDownList');site.value(" + site + ");site.trigger('change');");
+        browser.executeScript("var site = $('#site').data('kendoDropDownList');site.value(2);site.trigger('change');");
     };
     /*
      * Enters Venue value 
      */
     this.enterVenueValue = function(venue) {
-        venue = (typeof venue !== 'undefined') ? venue : 1;
-        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.value(" + venue + ");venue.trigger('change');");
+        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.value(1);venue.trigger('change');");
     };
     /*
      * Enters product family value 
      */
     this.enterPFValue = function(type, value) {
-        value = (typeof value !== 'undefined') ? value : 305;
-        type = (typeof type !== 'undefined') ? type : 'value';
-        if(value === 'value') {
-            browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.value(" + value + ");pf.trigger('change');");
-        } else {
-            browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.select(" + value + ");pf.trigger('change');");
-        }
-
+        browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.value(305);pf.trigger('change');");
+    };
+    /*
+     * Enters product family value
+     */
+    this.enterPFSelect = function(value) {
+        browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.select(" + value + ");pf.trigger('change');");
     };
     /*
      * Enters an attribute type 

@@ -38,7 +38,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         //Step 1 - product details
         //monitoringAttrubutesPage.enterSiteValue(1);
         //monitoringAttrubutesPage.enterVenueValue(0);
-        monitoringAttrubutesPage.enterPFValue('select', 1);
+        monitoringAttrubutesPage.enterPFSelect(1);
         helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
         //Step 2 - attribute details
         monitoringAttrubutesPage.enterAttributeType();
