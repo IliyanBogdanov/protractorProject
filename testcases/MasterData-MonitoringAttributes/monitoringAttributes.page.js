@@ -22,20 +22,29 @@ var monitoringAttributesPage = function() {
     /*
      * Enters Site value 
      */
-    this.enterSiteValue = function() {
-        browser.executeScript("var site = $('#site').data('kendoDropDownList');site.value(2);site.trigger('change');");
+    this.enterSiteValue = function(site) {
+        site = (typeof site !== 'undefined') ? site : 2;
+        browser.executeScript("var site = $('#site').data('kendoDropDownList');site.value(" + site + ");site.trigger('change');");
     };
     /*
      * Enters Venue value 
      */
-    this.enterVenueValue = function() {
-        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.value(1);venue.trigger('change');");   
+    this.enterVenueValue = function(venue) {
+        venue = (typeof venue !== 'undefined') ? venue : 1;
+        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.value(" + venue + ");venue.trigger('change');");
     };
     /*
      * Enters product family value 
      */
-    this.enterPFValue = function() { 
-        browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.value(305);pf.trigger('change');");
+    this.enterPFValue = function(type, value) {
+        value = (typeof value !== 'undefined') ? value : 305;
+        type = (typeof type !== 'undefined') ? type : 'value';
+        if(value === 'value') {
+            browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.value(" + value + ");pf.trigger('change');");
+        } else {
+            browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.select(" + value + ");pf.trigger('change');");
+        }
+
     };
     /*
      * Enters an attribute type 
@@ -119,9 +128,10 @@ var monitoringAttributesPage = function() {
         if (typeof numberValue !== 'undefined') {
             attributeName = numberValue;
         }
+        browser.wait(EC.visibilityOf($('#attributes-grid')), 5000);
         browser.executeScript("var product = $('#attributes-grid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+attributeName+"\" });");
-        browser.wait(EC.visibilityOf($('#attributes-grid')), 5000);       
+
     };
 };
 

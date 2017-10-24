@@ -103,9 +103,17 @@ var helperFile = function() {
         element(by.css('button[type="button"]')).click();
     };
     /*
+     * Log in REMIS with a specific role
+      */
+    this.loginREMIRole = function(role) {
+        var credentials = this.usersByRole[role];
+        this.loginREMIwithSpecificCredentials(credentials.username, credentials.password);
+    }
+    /*
      * Verify that the record is created
      */
     this.verifyThatRecordIsCreated = function(gridIDname) {
+        browser.wait(EC.visibilityOf($(gridIDname)), 5000);
         var list = element.all(by.css(""+gridIDname+" .k-grid-content table tbody tr"));
         expect(list.count()).toBe(1);
     };
@@ -116,6 +124,22 @@ var helperFile = function() {
         var list = element.all(by.css(""+gridIDname+" .k-grid-content table tbody tr"));
         expect(list.count()).toBe(0);
     };
+    /*
+     * Verify that the login with role
+     */
+    this.verifyLoginSingleRole = function(type) {
+        var rolesList = element.all(by.css('.' + type));
+        expect(rolesList.count()).toEqual(1);
+    }
+    /*
+     * Verify that the read only role
+     */
+    this.verifyAddButton = function(gridIDname, addButtonText, count) {
+        var attributesGrid = element(by.css('#' + gridIDname));
+        browser.wait(EC.elementToBeClickable(attributesGrid), 10000);
+        var addButton = element.all(by.buttonText(addButtonText));
+        expect(addButton.count()).toEqual(count);
+    }
 
 };
 module.exports = new helperFile();
