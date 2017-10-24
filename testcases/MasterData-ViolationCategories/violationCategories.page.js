@@ -47,11 +47,9 @@ var violationCategoriesPage = function(){
     /*
      * Selects the site value
      */
-    this.selectSiteValue = function() {
-        browser.wait(EC.elementToBeClickable($('span[role=\"listbox\"]')), 10000, 'Wait for selectSiteValue element has failed.');
-        var site = $('span[role=\"listbox\"]').click();
-        browser.wait(EC.elementToBeClickable($('body > div:nth-child(13) > div > div.k-list-scroller > ul > li:nth-child(2)')), 10000, 'Wait for rstoValue element has failed.');
-        var rstoValue = $('body > div:nth-child(13) > div > div.k-list-scroller > ul > li:nth-child(2)').click();
+    this.selectSiteValue = function() {  
+        browser.executeScript("$('span[role=\"listbox\"]').click()" );
+        browser.executeScript("$('li[data-offset-index=\"2\"]').click()" );
     };
     /*
      * Clicks the create new control limit button

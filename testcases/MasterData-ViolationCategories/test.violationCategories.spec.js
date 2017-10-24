@@ -12,10 +12,11 @@ describe('When user opens the Violation Categories module, he...', function() {
     });
 
     it ('Should be able to create a new record.', function (){
+        helperFile.clickOnClearButton();
         violationCategoriesPage.clickOnAddNewViolationCategoryButton();
         violationCategoryName = violationCategoriesPage.enterNameForViolationCategory();
         violationCategoriesPage.checkPQIcheckbox();
-        violationCategoriesPage.checkActiveCheckbox();
+        violationCategoriesPage.checkActiveCheckbox(); 
         violationCategoriesPage.selectSiteValue();
         violationCategoriesPage.clickUpdateButton();
         //Verification
@@ -26,7 +27,7 @@ describe('When user opens the Violation Categories module, he...', function() {
     it ('Should be able to update a record.', function (){
         var newViolationCategoryName = "UPDATE-" + violationCategoryName;
         violationCategoriesPage.filterTable(violationCategoryName);
-        helperFile.clickEditButton('.icon-small-edit');
+        helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         violationCategoryName = violationCategoriesPage.enterNameForViolationCategory(newViolationCategoryName);
         violationCategoriesPage.saveRow();
         //Verification

@@ -45,7 +45,7 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     //Filter table to get the last added record from the test
     monitoringAttrubutesPage.filterTable(attributeName);
     //Enter edit mode
-    helperFile.clickEditButton('.icon-small-edit');
+    helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
     //Navigate to second step of the wizard
     helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
     attributeName = monitoringAttrubutesPage.enterNameForMonitoringAttribute(newAttributeName);
@@ -64,7 +64,7 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     //Filter table to get the last added/updated record from the test
     monitoringAttrubutesPage.filterTable(attributeName);
     //Click the delete icon
-    helperFile.clickDeleteButton('.icon-small-clear');
+    helperFile.clickDeleteButton('.icon-small-clear.roche_grey_7');
     //Confirm that the record will be deleted
     helperFile.clickButtonByText('Delete');
     helperFile.clickButtonByText('Finish');
