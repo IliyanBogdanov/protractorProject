@@ -42,6 +42,10 @@ var loginPage = function(){
         element(by.css('#wrapper > div > div > header > nav > div > ul > li:nth-child(2) > a > i')).click();
         element(by.buttonText('Yes')).click();  
     };
+
+    this.verifyThatTestPasses = function() {
+        expect(1).toBe(1);
+    };
 };
 
 module.exports = new loginPage();

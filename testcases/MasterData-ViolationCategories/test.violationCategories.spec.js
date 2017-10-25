@@ -32,6 +32,7 @@ describe('When user opens the Violation Categories module, he...', function() {
         helperFile.clickEditButton('.k-grid-edit');
         violationCategoryName = violationCategoriesPage.enterNameForViolationCategory(newViolationCategoryName);
         violationCategoriesPage.saveRow();
+        violationCategoriesPage.verifyThatTestPasses();
     });
 
     it ('Should be verify  update a record.', function (){

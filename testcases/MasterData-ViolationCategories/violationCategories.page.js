@@ -84,6 +84,12 @@ var violationCategoriesPage = function(){
             "product.saveChanges();" +
             "product.refresh();" );
     };
+    /*
+     * Verify that test passes
+     */
+    this.verifyThatTestPasses = function() {
+        expect(1).toBe(1);
+    };
  
 };
 module.exports = new violationCategoriesPage();

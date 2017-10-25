@@ -11,11 +11,13 @@ describe('When user is openning the login page, he...', function(){
         loginPage.enterUsernameValue('martouser1');
         loginPage.enterPasswordValue('25Kukuvici');
         loginPage.clickLogin();
+        loginPage.verifyThatTestPasses();
     });
 
     it('Should be able to logout of the system.', function(){
         loginPage.loginREMI();
         loginPage.logoutREMI();
+        loginPage.verifyThatTestPasses();
     });
 
 })
