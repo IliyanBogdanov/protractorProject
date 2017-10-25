@@ -32,7 +32,7 @@ describe('When user opens the Remis App with different roles , he...', function(
     });
 
 
-    it('Should be able to create a new record.', function () {
+    it('Should be able to create a new MA record.', function () {
         helperFile.loginREMIRole('OCNMASTERENTRY');
         monitoringAttrubutesPage.clickOnAddMonitoringAttributeButton();
         //Step 1 - product details
@@ -62,7 +62,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.verifyThatRecordIsCreated('#attributes-grid');
     });
 
-    it('Should be able to update a record.', function () {
+    it('Should be able to update a MA record.', function () {
         var newAttributeName = 'UPDATE-' + attributeName;
         helperFile.loginREMIRole('OCNMASTERENTRY');
         //Filter table to get the last added record from the test
@@ -83,7 +83,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.verifyThatRecordIsCreated('#attributes-grid');
     });
 
-    it('Should be able to delete a record.', function () {
+    it('Should be able to delete a MA record.', function () {
         helperFile.loginREMIRole('OCNMASTERENTRY');
         //Filter table to get the last added/updated record from the test
         monitoringAttrubutesPage.filterTable(attributeName);
@@ -110,7 +110,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.verifyAddButton('dataEntry-grid', 'Add New Batch Data Entry', 1);
     });
 
-    it('Should be able to create a new record.', function(){
+    it('Should be able to create a new BDE record.', function(){
         helperFile.loginREMIRole('OCNGMPENTRY');
         //Step 1 - details
         bdePage.addNewBDEbuttonClick();
@@ -137,7 +137,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.verifyThatRecordIsCreated('#dataEntry-grid');
     });
 
-    it('Should be able to update a record.', function(){
+    it('Should be able to update a BDE record.', function(){
         helperFile.loginREMIRole('OCNGMPENTRY');
         var newRunNumber = 'UPDATE-run';
         bdePage.filterTableBDE(runNumber);
@@ -153,7 +153,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.verifyThatRecordIsCreated('#dataEntry-grid');
     });
 
-    it('Should be able to delete a record.', function() {
+    it('Should be able to delete a BDE record.', function() {
         helperFile.loginREMIRole('OCNGMPENTRY');
         bdePage.filterTableBDE(runNumber);
         helperFile.clickDeleteButton('.icon-small-clear.roche_grey_7');
