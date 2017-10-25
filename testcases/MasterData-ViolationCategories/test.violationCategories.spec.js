@@ -9,6 +9,8 @@ describe('When user opens the Violation Categories module, he...', function() {
         loginPage.navigateToRemisDev();
         loginPage.loginREMI();
         violationCategoriesPage.navigateToViolationCategories();
+        // helperFile.waitElement('#categoriesTreeList');
+
     });
 
     it ('Should be able to create a new record.', function (){
@@ -27,14 +29,14 @@ describe('When user opens the Violation Categories module, he...', function() {
     it ('Should be able to update a record.', function (){
         var newViolationCategoryName = "UPDATE-" + violationCategoryName;
         violationCategoriesPage.filterTable(violationCategoryName);
-        helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
+        helperFile.clickEditButton('.k-grid-edit');
         violationCategoryName = violationCategoriesPage.enterNameForViolationCategory(newViolationCategoryName);
         violationCategoriesPage.saveRow();
-        //Verification
+    });
+
+    it ('Should be verify  update a record.', function (){
         violationCategoriesPage.filterTable(violationCategoryName);
-        browser.ignoreSynchronization = true;
         helperFile.verifyThatRecordIsCreated('#categoriesTreeList');
-        browser.ignoreSynchronization = false;
     });
 });
 

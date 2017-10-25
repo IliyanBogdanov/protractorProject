@@ -39,6 +39,13 @@ var helperFile = function() {
         return Math.random().toString(36).substring(10, 13);
     };
     /*
+ 	 * Function that waits element to be presented
+     */
+    this.waitElement = function (selector){
+        var elementWait = element(by.css(selector))
+        browser.wait(EC.visibilityOf(elementWait), 10000, 'Wait for element to be presented.');
+    };
+    /*
      * Clicks button by text
      */
     this.clickButtonByText = function(text) {
@@ -64,8 +71,9 @@ var helperFile = function() {
      * Click the edit button
      */
     this.clickEditButton = function (selector) {
-       	browser.wait(EC.elementToBeClickable($(selector)), 10000, 'Wait for clickEditButton button has failed.');
-        element(by.css(selector)).click();
+        var elementBtn = element(by.css(selector));
+       	browser.wait(EC.elementToBeClickable(elementBtn), 10000, 'Wait for clickEditButton button has failed.');
+        elementBtn.click();
     };
 	/*
      * Click the delete BDE button
@@ -113,8 +121,8 @@ var helperFile = function() {
      * Verify that the record is created
      */
     this.verifyThatRecordIsCreated = function(gridIDname) {
-        browser.wait(EC.visibilityOf($(gridIDname)), 10000, 'Wait for verifyThatRecordIsCreated has failed.');
-        var list = element.all(by.css(""+gridIDname+" .k-grid-content table tbody tr"));
+        browser.wait(EC.visibilityOf($(gridIDname + " .k-grid-content table tbody tr")), 10000, 'Wait for verifyThatRecordIsCreated has failed.');
+        var list = element.all(by.css(gridIDname + " .k-grid-content table tbody tr"));
         expect(list.count()).toBe(1);
     };
     /*

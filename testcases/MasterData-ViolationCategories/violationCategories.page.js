@@ -64,6 +64,7 @@ var violationCategoriesPage = function(){
         if (typeof numberValue !== 'undefined') {
             violationCategoryName = numberValue;
         }
+        browser.wait(EC.visibilityOf($('#categoriesTreeList')), 5000);
         browser.executeScript("var product = $('#categoriesTreeList').data('kendoGrid');" +
         "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+violationCategoryName+"\" });");
     };
