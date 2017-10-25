@@ -16,13 +16,13 @@ var loginPage = function(){
     };
 
     this.clickLogin = function() {
-        browser.wait(EC.elementToBeClickable($('button[type="button"]')), 10000, 'Wait for clickLogin has failed.');
-        element(by.css('button[type="button"]')).click();
+        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.validate()"]')), 10000, 'Wait for clickLogin has failed.');
+        element(by.css('button[ng-click="vm.validate()"]')).click();
     };
 
     this.navigateToRemisDev = function() {
         browser.get('http://remisdev.demos.bgosoftware.com/login/');
-        browser.wait(EC.elementToBeClickable($('button[type="button"]')), 10000, 'Wait for navigateToRemisDev has failed.');
+        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.validate()"]')), 10000, 'Wait for navigateToRemisDev has failed.');
     };
 
     this.loginREMI = function(username, passowrd) {
@@ -33,8 +33,8 @@ var loginPage = function(){
         element(by.id('remis-login-username')).click().sendKeys(setUsername);
         browser.wait(EC.elementToBeClickable($('#remis-login-password')), 10000, 'Wait for #remis-login-password has failed.');
         element(by.id('remis-login-password')).click().sendKeys(setPassword);
-        browser.wait(EC.elementToBeClickable($('button[type="button"]')), 10000, 'Wait for button[type="button"] has failed.');
-        element(by.css('button[type="button"]')).click();
+        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.validate()"]')), 10000, 'Wait for button[ng-click="vm.validate()"] has failed.');
+        element(by.css('button[ng-click="vm.validate()"]')).click();
     };
 
     this.logoutREMI = function() {

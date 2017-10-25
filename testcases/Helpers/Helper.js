@@ -50,7 +50,7 @@ var helperFile = function() {
      */
     this.clickButtonByText = function(text) {
         var button = element(by.buttonText(text));
-        browser.wait(EC.elementToBeClickable(button), 10000, 'Wait for '+ text +' button has failed.');
+        browser.wait(EC.elementToBeClickable(button), 11000, 'Wait for '+ text +' button has failed.');
         button.click();
     };
     /*
@@ -107,8 +107,8 @@ var helperFile = function() {
         element(by.id('remis-login-username')).click().sendKeys(setUsername);
         browser.wait(EC.elementToBeClickable($('#remis-login-password')), 5000);
         element(by.id('remis-login-password')).click().sendKeys(setPassword);
-        browser.wait(EC.elementToBeClickable($('button[type="button"]')), 5000);
-        element(by.css('button[type="button"]')).click();
+        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.validate()"]')), 5000);
+        element(by.css('button[ng-click="vm.validate()"]')).click();
     };
     /*
      * Log in REMIS with a specific role
