@@ -38,8 +38,8 @@ var loginPage = function(){
     };
 
     this.logoutREMI = function() {
-        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > header > nav > div > ul > li:nth-child(2) > a > i')), 10000, 'Wait for logoutREMI has failed.');
-        element(by.css('#wrapper > div > div > header > nav > div > ul > li:nth-child(2) > a > i')).click();
+        browser.wait($('i[class="icon-small-logout"]'), 10000, 'Wait for logoutREMI has failed.');
+        element(by.css('i[class="icon-small-logout"]')).click();
         element(by.buttonText('Yes')).click();  
     };
 
