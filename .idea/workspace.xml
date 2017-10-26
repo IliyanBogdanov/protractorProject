@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="446d90b7-abea-4bd6-a0d5-f07bd028e648" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf.js" afterPath="$PROJECT_DIR$/conf.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,7 +42,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2159">
               <caret line="127" column="67" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="67" />
-              <folding />
+              <folding>
+                <marker date="1508998206718" expanded="true" signature="197:6064" ph="{...}" />
+                <marker date="1508998206718" expanded="true" signature="4381:4940" ph="{...}" />
+                <marker date="1508998206718" expanded="true" signature="4946:4984" ph="/*...*/" />
+                <marker date="1508998206718" expanded="true" signature="5029:5298" ph="{...}" />
+                <marker date="1508998206718" expanded="true" signature="5304:5360" ph="/*...*/" />
+                <marker date="1508998206718" expanded="true" signature="5410:5561" ph="{...}" />
+                <marker date="1508998206718" expanded="true" signature="5567:5638" ph="/*...*/" />
+                <marker date="1508998206718" expanded="true" signature="5684:6061" ph="{...}" />
+                <marker date="1508998206718" expanded="true" signature="5734:5786" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,19 +100,32 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
               <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
-              <folding />
+              <folding>
+                <marker date="1508998206691" expanded="true" signature="69:5944" ph="{...}" />
+                <marker date="1508998206691" expanded="true" signature="5813:5941" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conf.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="conf.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="15" />
               <folding>
                 <element signature="e#395#2718#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,6 +185,7 @@
         <option value="$PROJECT_DIR$/testcases/MasterData-ViolationCategories/violationCategories.page.js" />
         <option value="$PROJECT_DIR$/testcases/MasterData-ViolationCategories/test.violationCategories.spec.js" />
         <option value="$PROJECT_DIR$/conf.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -211,17 +235,6 @@
               <item name="QA" type="b2602c69:ProjectViewProjectNode" />
               <item name="QA" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QA" type="462c0819:PsiDirectoryNode" />
-              <item name="testcases" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="QA" type="462c0819:PsiDirectoryNode" />
-              <item name="testcases" type="462c0819:PsiDirectoryNode" />
-              <item name="REMILogin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -237,6 +250,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WORK\Roche\QA\QA" />
       <recent name="D:\WORK\Roche\QA\QA\testcases" />
       <recent name="D:\WORK\Roche\QA\QA\testcases\PM-CLE" />
       <recent name="D:\Projects\Roche\QA\Automation-final\Тestcases\4.IDE-Liquid" />
@@ -269,7 +283,7 @@
       <workItem from="1508234813583" duration="12648000" />
       <workItem from="1508306616095" duration="1952000" />
       <workItem from="1508733064732" duration="42894000" />
-      <workItem from="1508914168644" duration="3622000" />
+      <workItem from="1508914168644" duration="4629000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1507782909570</created>
@@ -390,11 +404,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508910444504</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Cross browse testing conf">
+      <created>1508998197871</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1508998197871</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76081000" />
+    <option name="totallyTimeSpent" value="77088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -402,7 +423,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24920969" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -452,7 +473,8 @@
     <MESSAGE value="ROLES MGN - CRUD" />
     <MESSAGE value="ROLES MGN - CRUD - quick fix" />
     <MESSAGE value="FIX ViolationCategories" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX ViolationCategories" />
+    <MESSAGE value="Cross browse testing conf" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cross browse testing conf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -461,16 +483,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="e#395#2718#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcases/MasterData-ViolationCategories/violationCategories.page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
@@ -763,7 +775,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2159">
           <caret line="127" column="67" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="67" />
-          <folding />
+          <folding>
+            <marker date="1508998206718" expanded="true" signature="197:6064" ph="{...}" />
+            <marker date="1508998206718" expanded="true" signature="4381:4940" ph="{...}" />
+            <marker date="1508998206718" expanded="true" signature="4946:4984" ph="/*...*/" />
+            <marker date="1508998206718" expanded="true" signature="5029:5298" ph="{...}" />
+            <marker date="1508998206718" expanded="true" signature="5304:5360" ph="/*...*/" />
+            <marker date="1508998206718" expanded="true" signature="5410:5561" ph="{...}" />
+            <marker date="1508998206718" expanded="true" signature="5567:5638" ph="/*...*/" />
+            <marker date="1508998206718" expanded="true" signature="5684:6061" ph="{...}" />
+            <marker date="1508998206718" expanded="true" signature="5734:5786" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -809,17 +831,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
-          <folding />
+          <folding>
+            <marker date="1508998206691" expanded="true" signature="69:5944" ph="{...}" />
+            <marker date="1508998206691" expanded="true" signature="5813:5941" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="15" />
           <folding>
             <element signature="e#395#2718#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
