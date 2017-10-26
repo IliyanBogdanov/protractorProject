@@ -7,7 +7,7 @@ var CLEPage = function(){
      * Navigate to Violation Categories
      */
     this.navigateToCLE = function() {
-        // browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(1) > a > i')), 5000);
+        // browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(1) > a > i')), 10000);
         // element(by.css('#sidebar-menu > ul > li:nth-child(1) > a > i')).click();
     };
 
@@ -36,7 +36,7 @@ var CLEPage = function(){
 
     this.clickOnCLE = function() {
         var self = this;
-        browser.wait(EC.elementToBeClickable($('a.change-specifications-limits')), 5000);
+        browser.wait(EC.elementToBeClickable($('a.change-specifications-limits')), 10000, 'Wait for clickOnCLE has failed.');
         element(by.css('i.fa-line-chart')).click();
     };
 
@@ -63,9 +63,9 @@ var CLEPage = function(){
                 "datepicker.value(new Date());" +
                 "datepicker.trigger(\"change\");");
             var elementSaveBtn = element(by.buttonText('Save'));
-            browser.wait(EC.elementToBeClickable(elementSaveBtn), 5000);
+            browser.wait(EC.elementToBeClickable(elementSaveBtn), 10000, 'Wait for elementSaveBtn has failed.');
             element(by.buttonText('Save')).click();
-            browser.wait(EC.elementToBeClickable(elementBtn), 10000);
+            browser.wait(EC.elementToBeClickable(elementBtn), 10000, 'Wait for elementBtn has failed.');
             var toastList = element.all(by.css('.toast-success'));
             expect(toastList.count()).toEqual(1);
         });
