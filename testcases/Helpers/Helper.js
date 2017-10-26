@@ -82,7 +82,14 @@ var helperFile = function() {
         browser.wait(EC.elementToBeClickable($(selector)), 10000, 'Wait for clickDeleteButton button has failed.');
         element(by.css(selector)).click();
     };
-	/*
+    /*
+	 * Click on the Apply filter button
+ 	 */
+      this.clickOnApplyButton = function() {
+        browser.wait(EC.elementToBeClickable($('.btn.roche_green_bg.waves-effect.waves-primary')), 10000, 'Wait for clickOnApplyButton button has failed.');
+        element(by.css('.btn.roche_green_bg.waves-effect.waves-primary')).click();   
+    };
+    /*
 	 * Click on the Clear filter button
  	 */
 	this.clickOnClearButton = function() {

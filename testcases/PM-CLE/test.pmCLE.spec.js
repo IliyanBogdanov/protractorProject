@@ -14,7 +14,7 @@ describe('When user opens the CLE module, he...', function() {
         clePage.navigateToCLE();
         clePage.setSiteValue();
         clePage.setProductFamilyValue();
-        clePage.clickOnApplyButton();
+        helperFile.clickOnApplyButton();
         clePage.clickOnCLE();
         clePage.saveNewCLE();
     });

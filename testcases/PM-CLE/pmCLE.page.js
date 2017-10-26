@@ -28,12 +28,6 @@ var CLEPage = function(){
         productFamilyValue.click();
     };
 
-    this.clickOnApplyButton = function() {
-        //Click on Apply button
-        element(by.css('.btn.roche_green_bg.waves-effect.waves-primary')).click();
-    };
-
-
     this.clickOnCLE = function() {
         var self = this;
         browser.wait(EC.elementToBeClickable($('a.change-specifications-limits')), 10000, 'Wait for clickOnCLE has failed.');
