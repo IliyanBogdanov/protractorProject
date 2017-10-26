@@ -97,11 +97,11 @@ var monitoringAttributesPage = function() {
      * Populates control limit values
      */
     this.populateContrlLimitValues = function() {
-        browser.wait(EC.presenceOf($('input[name="LCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
+        browser.wait(EC.visibilityOf($('input[name="LCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
         element(by.css('input[name="LCL"]')).sendKeys(10.7);
-        browser.wait(EC.presenceOf($('input[name="Center"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
+        browser.wait(EC.visibilityOf($('input[name="Center"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
         element(by.css('input[name="Center"]')).sendKeys(11.52);
-        browser.wait(EC.presenceOf($('input[name="UCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
+        browser.wait(EC.visibilityOf($('input[name="UCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
         element(by.css('input[name="UCL"]')).sendKeys(13.413);
     };
     /*
