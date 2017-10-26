@@ -4,7 +4,7 @@ exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['spec.js'],
   multiCapabilities: [{
-    browserName: 'chrome'
+    browserName: 'chrome' //chrome, firefox, internet explorer
   }],
   // Spec patterns are relative to the location of the spec file. They may
   // include glob patterns.
