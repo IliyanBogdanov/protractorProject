@@ -43,7 +43,7 @@ var helperFile = function() {
      */
     this.waitElement = function (selector){
         var elementWait = element(by.css(selector))
-        browser.wait(EC.visibilityOf(elementWait), 10000, 'Wait for element to be presented.');
+        browser.wait(EC.visibilityOf(elementWait), 11000, 'Wait for element to be presented.');
     };
     /*
      * Clicks button by text
@@ -57,14 +57,14 @@ var helperFile = function() {
  	 * Click next button in case of wz-next property 
      */
 	this.clickNextButton = function (selector) {
-		browser.wait(EC.elementToBeClickable($('button[wz-next="' + selector + '"]')), 10000, 'Wait for clickNextButton button has failed.');
+		browser.wait(EC.elementToBeClickable($('button[wz-next="' + selector + '"]')), 11000, 'Wait for clickNextButton button has failed.');
 		element(by.css('button[wz-next="' + selector + '"]')).click();
 	};
 	/*
  	 * Click next button in case of ng-click property 
      */
     this.clickNextButton2ndStep = function (selector) {
-        browser.wait(EC.elementToBeClickable($('button[ng-click="' + selector + '"]')), 10000, 'Wait for clickNextButton2ndStep button has failed.');
+        browser.wait(EC.elementToBeClickable($('button[ng-click="' + selector + '"]')), 11000, 'Wait for clickNextButton2ndStep button has failed.');
 		element(by.css('button[ng-click="' + selector + '"]')).click();
     };
 	/*
@@ -72,21 +72,21 @@ var helperFile = function() {
      */
     this.clickEditButton = function (selector) {
         var elementBtn = element(by.css(selector));
-       	browser.wait(EC.elementToBeClickable(elementBtn), 10000, 'Wait for clickEditButton button has failed.');
+       	browser.wait(EC.elementToBeClickable(elementBtn), 11000, 'Wait for clickEditButton button has failed.');
         elementBtn.click();
     };
 	/*
      * Click the delete BDE button
      */
     this.clickDeleteButton = function (selector) {
-        browser.wait(EC.elementToBeClickable($(selector)), 10000, 'Wait for clickDeleteButton button has failed.');
+        browser.wait(EC.elementToBeClickable($(selector)), 11000, 'Wait for clickDeleteButton button has failed.');
         element(by.css(selector)).click();
     };
 	/*
 	 * Click on the Clear filter button
  	 */
 	this.clickOnClearButton = function() {
-        browser.wait(EC.elementToBeClickable($('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')), 10000, 'Wait for clickOnClearButton button has failed.');
+        browser.wait(EC.elementToBeClickable($('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')), 11000, 'Wait for clickOnClearButton button has failed.');
         element(by.css('#aside-filter > div.filter-buttons > button.btn.roche_red_bg.waves-effect.waves-primary')).click();
     };
 	/*
@@ -103,11 +103,11 @@ var helperFile = function() {
         var setPassword = (password) ? password : '25Kukuvici';
         var setDomain = (domain) ? domain : 4;
         browser.executeScript("var test = $('#remis-login-domain').data('kendoDropDownList');test.select(" + setDomain + ");test.trigger('change');");
-        browser.wait(EC.elementToBeClickable($('#remis-login-username')), 5000);
+        browser.wait(EC.elementToBeClickable($('#remis-login-username')), 11000 , 'Wait for #remis-login-username has failed.');
         element(by.id('remis-login-username')).click().sendKeys(setUsername);
-        browser.wait(EC.elementToBeClickable($('#remis-login-password')), 5000);
+        browser.wait(EC.elementToBeClickable($('#remis-login-password')), 11000 , 'Wait for #remis-login-password has failed.');
         element(by.id('remis-login-password')).click().sendKeys(setPassword);
-        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.validate()"]')), 5000);
+        browser.wait(EC.elementToBeClickable($('button[ng-click="vm.validate()"]')), 11000 , 'Wait for loginButton has failed.');
         element(by.css('button[ng-click="vm.validate()"]')).click();
     };
     /*
@@ -121,7 +121,7 @@ var helperFile = function() {
      * Verify that the record is created
      */
     this.verifyThatRecordIsCreated = function(gridIDname) {
-        browser.wait(EC.visibilityOf($(gridIDname + " .k-grid-content table tbody tr")), 10000, 'Wait for verifyThatRecordIsCreated has failed.');
+        browser.wait(EC.visibilityOf($(gridIDname + " .k-grid-content table tbody tr")), 11000, 'Wait for verifyThatRecordIsCreated has failed.');
         var list = element.all(by.css(gridIDname + " .k-grid-content table tbody tr"));
         expect(list.count()).toBe(1);
     };
@@ -144,7 +144,7 @@ var helperFile = function() {
      */
     this.verifyAddButton = function(gridIDname, addButtonText, count) {
         var attributesGrid = element(by.css('#' + gridIDname));
-        browser.wait(EC.elementToBeClickable(attributesGrid), 10000);
+        browser.wait(EC.elementToBeClickable(attributesGrid), 11000);
         var addButton = element.all(by.buttonText(addButtonText));
         expect(addButton.count()).toEqual(count);
     }

@@ -51,7 +51,7 @@ var bdePage = function() {
             runNumber = newRunNumber;
         }
         var runNumberInput = element(by.model('vm.dataEntryData.RunNumber'));
-        browser.wait(EC.elementToBeClickable(runNumberInput), 10000);
+        browser.wait(EC.elementToBeClickable(runNumberInput), 11000, 'Wait for runNumberInput has failed.');
         runNumberInput.sendKeys(runNumber);
         return runNumber;
     };
