@@ -8,15 +8,15 @@ var bdePage = function() {
      * Open BDE module
      */
     this.navigateToBDESection = function() {
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(3) > a > i')), 5000);
+        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(3) > a > i')), 10000, 'Wait for navigateToBDESection has failed.');
         element(by.css('#sidebar-menu > ul > li:nth-child(3) > a > i')).click();
-        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 5000);
+        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 10000, 'Wait for navigateToBDESection has failed.');
     };
     /*
      * Click the add new button
      */
     this.addNewBDEbuttonClick = function() {
-        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 5000);
+        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 10000, 'Wait for addNewBDEbuttonClick has failed.');
         element(by.css('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click();
     };
     /*
@@ -51,7 +51,7 @@ var bdePage = function() {
             runNumber = newRunNumber;
         }
         var runNumberInput = element(by.model('vm.dataEntryData.RunNumber'));
-        browser.wait(EC.elementToBeClickable(runNumberInput), 11000, 'Wait for runNumberInput has failed.');
+        browser.wait(EC.elementToBeClickable(runNumberInput), 10000, 'Wait for runNumberInput has failed.');
         runNumberInput.sendKeys(runNumber);
         return runNumber;
     };
@@ -107,14 +107,14 @@ var bdePage = function() {
      * Populate the parameter values on the second step of the wizard
      */
     this.populateParameterValues = function() {
-        browser.wait(EC.presenceOf($('input[kendo-bgo-numeric-text-box]')), 5000), 'Parameters input box wait has failed';
+        browser.wait(EC.presenceOf($('input[kendo-bgo-numeric-text-box]')), 10000), 'Parameters input box wait has failed.';
         browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'block');");
         element.all(by.css('input[kendo-bgo-numeric-text-box]')).each(function(element, index) {
             // Will print 0 First, 1 Second, 2 Third.
-        browser.wait(EC.presenceOf(element, 5000, 'Parameters input box wait has failed'));    
+        browser.wait(EC.presenceOf(element, 10000, 'Parameters input box wait has failed'));    
             element.sendKeys(10);
         });
-        browser.wait(EC.presenceOf($('input[kendo-bgo-numeric-text-box]')), 5000, 'Parameters input box wait has failed');
+        browser.wait(EC.presenceOf($('input[kendo-bgo-numeric-text-box]')), 10000, 'Parameters input box wait has failed.');
         browser.executeScript("var param =$('input[kendo-bgo-numeric-text-box]'); param.css('display', 'none');");
     };
     /*
@@ -124,7 +124,7 @@ var bdePage = function() {
         if (typeof numberValueBDE !== 'undefined') {
             runNumber = numberValueBDE;
         }
-        browser.wait(EC.visibilityOf($('#dataEntry-grid')), 5000);
+        browser.wait(EC.visibilityOf($('#dataEntry-grid')), 10000, 'Wait for filterTableBDE has failed.');
         browser.executeScript("var bdeGrid = $('#dataEntry-grid').data('kendoGrid');" +
         "bdeGrid.dataSource.filter({field: \"RunNumber\", operator: \"eq\", value: \""+runNumber+"\" });");
 

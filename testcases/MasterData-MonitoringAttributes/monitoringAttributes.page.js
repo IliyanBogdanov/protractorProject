@@ -97,6 +97,7 @@ var monitoringAttributesPage = function() {
      * Populates control limit values
      */
     this.populateContrlLimitValues = function() {
+        browser.sleep(1000);
         browser.wait(EC.visibilityOf($('input[name="LCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
         element(by.css('input[name="LCL"]')).sendKeys(10.7);
         browser.wait(EC.visibilityOf($('input[name="Center"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
@@ -125,7 +126,7 @@ var monitoringAttributesPage = function() {
         if (typeof numberValue !== 'undefined') {
             attributeName = numberValue;
         }
-        browser.wait(EC.visibilityOf($('#attributes-grid')), 5000);
+        browser.wait(EC.visibilityOf($('#attributes-grid')), 10000, 'Wait for filterTable has failed.');
         browser.executeScript("var product = $('#attributes-grid').data('kendoGrid');" +
             "product.dataSource.filter({field: \"Name\", operator: \"eq\", value: \""+attributeName+"\" });");
 

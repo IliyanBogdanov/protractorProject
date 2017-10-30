@@ -70,7 +70,9 @@ describe('When user opens the Remis App with different roles , he...', function(
         //Enter edit mode
         helperFile.clickEditButton('.icon-small-edit');
         //Navigate to second step of the wizard
+        browser.waitForAngular(false);
         helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
+        browser.waitForAngular(true);
         attributeName = monitoringAttrubutesPage.enterNameForMonitoringAttribute(newAttributeName);
         //Process to the last tab
         helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
