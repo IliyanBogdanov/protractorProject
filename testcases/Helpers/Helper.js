@@ -145,7 +145,7 @@ var helperFile = function() {
     this.verifyLoginSingleRole = function(type) {
         var rolesList = element.all(by.css('.' + type));
         expect(rolesList.count()).toEqual(1);
-    }
+    };
     /*
      * Verify that the read only role
      */
@@ -154,7 +154,30 @@ var helperFile = function() {
         browser.wait(EC.elementToBeClickable(attributesGrid), 10000 , 'Wait for attributesGrid has failed.');
         var addButton = element.all(by.buttonText(addButtonText));
         expect(addButton.count()).toEqual(count);
-    }
+    };
+    /*
+     * Open Site menu and select HTO value
+     */
+    this.setSiteValue = function() {
+        //Open Site menu
+        browser.wait(EC.elementToBeClickable($('.k-select')), 10000, 'Wait for setSiteValue has failed.');
+        element(by.className('k-select')).click();
+        //Select HTO value
+        browser.wait(EC.elementToBeClickable($('#filter-site_listbox > li:nth-child(2)')), 10000, 'Wait for setSiteValue has failed.');
+        element(by.css('#filter-site_listbox > li:nth-child(2)')).click();
+    };
+    /*
+     * Open Product Family Menu and select ACTEMRA 162 MG TOCILIZUMAB
+     */
+    this.setProductFamilyValue = function() {
+        //Open Product Family Menu
+        browser.wait(EC.elementToBeClickable($('#aside-filter > div.container.filter-container > div > div > div.productFamilyFilter.form-group.filter-element.col-xs-12.col-sm-3.col-lg-2 > span > span > span')), 10000, 'Wait for setProductFamilyValue has failed.');
+        element(by.css('#aside-filter > div.container.filter-container > div > div > div.productFamilyFilter.form-group.filter-element.col-xs-12.col-sm-3.col-lg-2 > span > span > span')).click();
+        //Select ACTEMRA 162 MG TOCILIZUMAB
+        var productFamilyValue = element(by.css('#filter-productFamily_listbox > li:nth-child(2)'));
+        browser.wait(EC.elementToBeClickable(productFamilyValue, 10000, 'Wait for productFamilyValue has failed.'));
+        productFamilyValue.click();     
+    };
 
 };
 module.exports = new helperFile();

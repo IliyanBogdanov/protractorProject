@@ -8,8 +8,8 @@ describe('When user opens Process Monitoring Overview, he ...', function () {
   beforeEach(function () {
     loginPage.navigateToRemisDev();
     loginPage.loginREMI();
-    processMonitoringOverviewPage.setSiteValue();
-    processMonitoringOverviewPage.setProductFamilyValue();
+    helperFile.setSiteValue();
+    helperFile.setProductFamilyValue();
   });
 
   it('Should be able to set a filter criterion successfully', function () {

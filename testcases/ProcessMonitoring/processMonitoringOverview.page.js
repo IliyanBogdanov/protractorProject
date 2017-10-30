@@ -2,29 +2,6 @@ var EC = protractor.ExpectedConditions;
 
 var processMonitoringOverviewPage = function(){
     /*
-     * Open Site menu and select HTO value
-     */
-    this.setSiteValue = function() {
-        //Open Site menu
-        browser.wait(EC.elementToBeClickable($('.k-select')), 10000, 'Wait for setSiteValue has failed.');
-        element(by.className('k-select')).click();
-        //Select HTO value
-        browser.wait(EC.elementToBeClickable($('#filter-site_listbox > li:nth-child(2)')), 10000, 'Wait for setSiteValue has failed.');
-        element(by.css('#filter-site_listbox > li:nth-child(2)')).click();
-    };
-    /*
-     * Open Product Family Menu and select ACTEMRA 162 MG TOCILIZUMAB
-     */
-    this.setProductFamilyValue = function() {
-        //Open Product Family Menu
-        browser.wait(EC.elementToBeClickable($('#aside-filter > div.container.filter-container > div > div > div.productFamilyFilter.form-group.filter-element.col-xs-12.col-sm-3.col-lg-2 > span > span > span')), 10000, 'Wait for setProductFamilyValue has failed.');
-        element(by.css('#aside-filter > div.container.filter-container > div > div > div.productFamilyFilter.form-group.filter-element.col-xs-12.col-sm-3.col-lg-2 > span > span > span')).click();
-        //Select ACTEMRA 162 MG TOCILIZUMAB
-        var productFamilyValue = element(by.css('#filter-productFamily_listbox > li:nth-child(2)'));
-        browser.wait(EC.elementToBeClickable(productFamilyValue, 10000, 'Wait for productFamilyValue has failed.'));
-        productFamilyValue.click();     
-    };
-    /*
      * Verify that filter has been applied correctly (to the corresponding product family)
      */
     this.verifyThatFilterHasBeenAppliedCorrectly = function() {
