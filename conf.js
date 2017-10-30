@@ -13,6 +13,7 @@ exports.config = {
         incorrectLoginTests: ['./testcases/REMILogin/IncorrectLogin/test.incorrectLogin.spec.js'],
         processMonitoringTests: ['./testcases/ProcessMonitoring/test.processMonitoring.spec.js'],
         cleTests: ['./testcases/PM-CLE/test.pmCLE.spec.js'],
+        detailsTests: ['./testcases/PM-Details/test.pmDetails.spec.js'],
         maRolesTests: ['./testcases/MasterData-MA-Roles/test.MARoles.spec.js'],
         monitoringAttributesTests: ['./testcases/MasterData-MonitoringAttributes/test.monitoringAttributes.spec.js'],
         productFamiliesTests:['./testcases/MasterData-ProductFamilies/test.productFamilies.spec.js'],

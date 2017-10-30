@@ -174,7 +174,7 @@ var helperFile = function() {
         browser.wait(EC.elementToBeClickable($('#aside-filter > div.container.filter-container > div > div > div.productFamilyFilter.form-group.filter-element.col-xs-12.col-sm-3.col-lg-2 > span > span > span')), 10000, 'Wait for setProductFamilyValue has failed.');
         element(by.css('#aside-filter > div.container.filter-container > div > div > div.productFamilyFilter.form-group.filter-element.col-xs-12.col-sm-3.col-lg-2 > span > span > span')).click();
         //Select ACTEMRA 162 MG TOCILIZUMAB
-        var productFamilyValue = element(by.css('#filter-productFamily_listbox > li:nth-child(2)'));
+        var productFamilyValue = element(by.css('#filter-productFamily_listbox > li:nth-child(1)'));
         browser.wait(EC.elementToBeClickable(productFamilyValue, 10000, 'Wait for productFamilyValue has failed.'));
         productFamilyValue.click();     
     };
