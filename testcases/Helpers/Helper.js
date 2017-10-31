@@ -1,37 +1,7 @@
+var loginCredentials = require('./login.json');
 var EC = protractor.ExpectedConditions;
 
 var helperFile = function() {
-    this.usersByRole = {
-        'ADMIN': {
-            username: 'martouser1',
-            password: '25Kukuvici'
-        },
-
-        'OCNREGULARUSER': {
-            username: 'OCNREGULARUSER',
-            password: '25Kukuvici'
-        },
-        'OCNREADONLYUSER': {
-            username: 'OCNREADONLYUSER',
-            password: '25Kukuvici'
-        },
-        'OCNMASTERENTRY': {
-            username: 'OCNMASTERENTRY',
-            password: '25Kukuvici'
-        },
-        'OCNMASTERAPPROVE': {
-            username: 'OCNMASTERAPPROVE',
-            password: '25Kukuvici'
-        },
-        'OCNGMPENTRY': {
-            username: 'OCNGMPENTRY',
-            password: '25Kukuvici'
-        },
-        'OCNGMPAPPROVE': {
-            username: 'OCNGMPAPPROVE',
-            password: '25Kukuvici'
-        }
-    }
     /*
  	 * Function that generates a random value
      */
@@ -121,7 +91,7 @@ var helperFile = function() {
      * Log in REMIS with a specific role
       */
     this.loginREMIRole = function(role) {
-        var credentials = this.usersByRole[role];
+        var credentials = loginCredentials[0][role];
         this.loginREMIwithSpecificCredentials(credentials.username, credentials.password);
     }
     /*

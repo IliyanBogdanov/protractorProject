@@ -1,4 +1,5 @@
 var loginPage = require('./login.page.js');
+var loginCredentials = require('./../Helpers/login.json');
 
 describe('When user is openning the login page, he...', function(){
 
@@ -7,9 +8,10 @@ describe('When user is openning the login page, he...', function(){
     });
 
     it('Should be able to log into the system.', function(){
+        var credentials = loginCredentials[0]['ADMIN'];
         loginPage.enterDomainValue();
-        loginPage.enterUsernameValue('martouser1');
-        loginPage.enterPasswordValue('25Kukuvici');
+        loginPage.enterUsernameValue(credentials.username);
+        loginPage.enterPasswordValue(credentials.password);
         loginPage.clickLogin();
         loginPage.verifyThatTestPasses();
     });
