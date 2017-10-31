@@ -36,6 +36,10 @@ exports.config = {
                     './testcases/MasterData-ViolationCategories/test.violationCategories.spec.js',
                     './testcases/IDE-Liquid/test.ideLiquid.spec.js',
                     './testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
+        basicCRUDTests: ['./testcases/PM-CLE/test.pmCLE.spec.js',
+                        './testcases/PM-Details/test.pmDetails.spec.js',
+                        './testcases/MasterData-MA-Roles/test.MARoles.spec.js',
+                        './testcases/MasterData-ProductFamilies/test.productFamilies.spec.js',]            
   },
 
   onPrepare: function() {
