@@ -1,0 +1,31 @@
+[{
+  "ADMIN": {
+    "username": "martouser1",
+    "password": "25Kukuvici"
+  },
+
+  "OCNREGULARUSER": {
+    "username": "OCNREGULARUSER",
+    "password": "25Kukuvici"
+  },
+  "OCNREADONLYUSER": {
+    "username": "OCNREADONLYUSER",
+    "password": "25Kukuvici"
+  },
+  "OCNMASTERENTRY": {
+    "username": "OCNMASTERENTRY",
+    "password": "25Kukuvici"
+  },
+  "OCNMASTERAPPROVE": {
+    "username": "OCNMASTERAPPROVE",
+    "password": "25Kukuvici"
+  },
+  "OCNGMPENTRY": {
+    "username": "OCNGMPENTRY",
+    "password": "25Kukuvici"
+  },
+  "OCNGMPAPPROVE": {
+    "username": "OCNGMPAPPROVE",
+    "password": "25Kukuvici"
+  }
+}]
