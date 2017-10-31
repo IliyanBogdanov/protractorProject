@@ -5,7 +5,7 @@ var processMonitoringOverviewPage = function(){
      * Verify that filter has been applied correctly (to the corresponding product family)
      */
     this.verifyThatFilterHasBeenAppliedCorrectly = function() {
-        expect(element(by.css('#process-monitoring-overview > div.row > div > div.breadcrumb-wrapper.pull-left > div > div > div > ol > li:nth-child(3) > a')).getAttribute('innerHTML')).toEqual('ACTEMRA 162 mg TOCILIZUMAB');
+        expect(element(by.css('#process-monitoring-overview > div.row > div > div.breadcrumb-wrapper.pull-left > div > div > div > ol > li:nth-child(3) > a')).getAttribute('innerHTML')).toEqual('ACTEMRA 162 mg vTest1');
     };
     /*
      * Open Latest Data Points Menu, enter a custom date range and click on Previous 180 days
