@@ -6,35 +6,30 @@ var incorrectLoginPage = function(){
     };
 
     this.verifyValidationMessageDomain = function() {
-        var validationMessageDomain = element(by.css('#remis-login-form > div:nth-child(1) > div > div > div'));
-        expect(validationMessageDomain.getAttribute('innerHTML')).toEqual('Please select Domain'); 
+        var validationMessageDomain = element.all(by.css('div[ng-message="required"]'));
+        expect(validationMessageDomain.count()).toEqual(1);  
     };
 
 
     this.verifyValidationMessageUsername = function() {
-        var validationMessageUsername = element(by.css('#remis-login-form > div:nth-child(2) > div > div > div'));
-        expect(validationMessageUsername.getAttribute('innerHTML')).toEqual('Please enter your Username');
+        var validationMessageUsername = element.all(by.css('div[ng-message="required"]'));
+        expect(validationMessageUsername.count()).toEqual(1);
     };
 
     this.verifyValidationMessagePassword = function() {
-        var validationMessagePassword = element(by.css('#remis-login-form > div:nth-child(3) > div > div > div'));
-        expect(validationMessagePassword.getAttribute('innerHTML')).toEqual('Please enter your Password');
+        var validationMessagePassword = element.all(by.css('div[ng-message="required"]'));
+        expect(validationMessagePassword.count()).toEqual(1);
     };
 
     this.verifyValidationMessageWrongPassword = function() {
-        var validationMessageWrongPassword = element(by.css('.toast-message'));
-        expect(validationMessageWrongPassword.isDisplayed()).toBe(true);
+        var validationMessageWrongPassword = element.all(by.css('.toast-message'));
+        expect(validationMessageWrongPassword.count()).toEqual(1);
     };
 
     this.verifyValidationMessageWrongUsername = function() {
-        var verifyValidationMessageWrongUsername = element(by.css('.toast-message'));
-        expect(verifyValidationMessageWrongUsername.isDisplayed()).toBe(true);
+        var verifyValidationMessageWrongUsername = element.all(by.css('.toast-message'));
+        expect(verifyValidationMessageWrongUsername.count()).toEqual(1);
     };
-
-
-
-
-    
 
 };
 module.exports = new incorrectLoginPage();
