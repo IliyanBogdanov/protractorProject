@@ -63,16 +63,16 @@ describe('When user opens the Remis App with different roles , he...', function(
     });
 
     it('Should be able to update a MA record.', function () {
-        var newAttributeName = 'UPDATE-' + attributeName;
+        var newAttributeName = 'UPDATE';
         helperFile.loginREMIRole('OCNMASTERENTRY');
         //Filter table to get the last added record from the test
         monitoringAttrubutesPage.filterTable(attributeName);
         //Enter edit mode
-        helperFile.clickEditButton('.icon-small-edit');
+        helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         //Navigate to second step of the wizard
-        browser.waitForAngular(false);
+        //browser.waitForAngular(false);
         helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
-        browser.waitForAngular(true);
+        //browser.waitForAngular(true);
         attributeName = monitoringAttrubutesPage.enterNameForMonitoringAttribute(newAttributeName);
         //Process to the last tab
         helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
@@ -90,7 +90,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         //Filter table to get the last added/updated record from the test
         monitoringAttrubutesPage.filterTable(attributeName);
         //Click the delete icon
-        helperFile.clickDeleteButton('.icon-small-clear');
+        helperFile.clickDeleteButton('.icon-small-clear.roche_grey_7');
         //Confirm that the record will be deleted
         helperFile.clickButtonByText('Delete');
         helperFile.clickButtonByText('Finish');
@@ -141,7 +141,7 @@ describe('When user opens the Remis App with different roles , he...', function(
 
     it('Should be able to update a BDE record.', function(){
         helperFile.loginREMIRole('OCNGMPENTRY');
-        var newRunNumber = 'UPDATE-run';
+        var newRunNumber = 'UPDATE';
         bdePage.filterTableBDE(runNumber);
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         bdePage.clearRunNumberInput();
