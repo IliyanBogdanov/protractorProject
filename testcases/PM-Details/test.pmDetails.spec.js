@@ -54,4 +54,9 @@ describe('When user opens the Details module, he...', function() {
         detailsPage.verifyThatCommentIsDeleted();
     });
 
+    afterAll(function () {
+        browser.restart();
+        browser.manage().window().maximize();
+    });
+
 });

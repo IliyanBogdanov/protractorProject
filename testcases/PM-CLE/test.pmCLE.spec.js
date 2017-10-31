@@ -16,6 +16,11 @@ describe('When user opens the CLE module, he...', function() {
         clePage.clickOnCLE();
         clePage.saveNewCLE();
     });
+
+    afterAll(function () {
+        browser.restart();
+        browser.manage().window().maximize();
+    });
 });
 
 

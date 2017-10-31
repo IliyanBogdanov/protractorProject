@@ -6,7 +6,6 @@ var detailsPage = function(){
      * Clicks on the Details button and opens the Details module (ensure that the respective attribute has violations assigned to it)
      */
     this.clickOnDetails = function() {
-        var self = this;
         browser.wait(EC.elementToBeClickable($('a.change-specifications-limits')), 10000, 'Wait for clickOnDetails has failed.');
         element(by.css('i.fa-file-o')).click();
     };

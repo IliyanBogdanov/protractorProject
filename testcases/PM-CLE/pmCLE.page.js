@@ -6,7 +6,6 @@ var CLEPage = function(){
      * Clicks on the CLE button and opens the CLE module
      */
     this.clickOnCLE = function() {
-        var self = this;
         browser.wait(EC.elementToBeClickable($('a.change-specifications-limits')), 10000, 'Wait for clickOnCLE has failed.');
         element(by.css('i.fa-line-chart')).click();
     };
@@ -39,7 +38,7 @@ var CLEPage = function(){
             element(by.buttonText('Save')).click();
             browser.wait(EC.elementToBeClickable(elementBtn), 10000, 'Wait for elementBtn has failed.');
             var toastList = element.all(by.css('.toast-success'));
-            expect(toastList.count()).toEqual(1);
+            expect(toastList.count()).toEqual(1);    
         });
     };
 };
