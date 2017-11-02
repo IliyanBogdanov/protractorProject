@@ -16,7 +16,7 @@ var monitoringAttributesPage = function() {
      * Clicks on "Add New Monitoring Attribute" button
      */
     this.clickOnAddMonitoringAttributeButton = function() {
-        browser.wait(EC.elementToBeClickable($('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 10000);
+        browser.wait(EC.elementToBeClickable($('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 10000, 'Wait for clickOnAddMonitoringAttributeButton has failed.');
         element(by.css('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click(); 
     };
     /*

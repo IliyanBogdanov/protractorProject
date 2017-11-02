@@ -16,16 +16,16 @@ var CLEPage = function(){
         browser.getAllWindowHandles().then(function(handles) {
             browser.switchTo().window(handles[1]);
             var elementBtn = element(by.buttonText('Save Limits to Master Data'));
-            browser.wait(EC.elementToBeClickable(elementBtn), 10000);
+            browser.wait(EC.elementToBeClickable(elementBtn), 10000, 'Wait for elementBtn has failed.');
             //recalculate CL
             browser.executeScript('var data = $("#control-limit-rationale").data("kendoDropDownList");' +
                 'data.value(2); data.trigger("change");');
             browser.executeScript('var data = $("#DecimalPoints").data("kendoNumericTextBox");' +
                 'data.value(5); data.trigger("change");');
             var elementBtnRecalculate = element(by.buttonText('Recalculate'));
-            browser.wait(EC.elementToBeClickable(elementBtnRecalculate), 10000);
+            browser.wait(EC.elementToBeClickable(elementBtnRecalculate), 10000, 'Wait for elementBtnRecalculate has failed.');
             elementBtnRecalculate.click();
-            browser.wait(EC.elementToBeClickable(elementBtn), 10000);
+            browser.wait(EC.elementToBeClickable(elementBtn), 10000, 'Wait for elementBtn has failed.');
             var mrChart = element.all(by.css('#MRChart'));
             expect(mrChart.count()).toEqual(0);
             //Save CL
