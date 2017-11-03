@@ -21,6 +21,10 @@ var loginPage = function(){
     };
 
     this.navigateToRemisDev = function() {
+        browser.ignoreSynchronization=true;
+        browser.get('http://remisdev.demos.bgosoftware.com/remisservice');
+        browser.refresh();
+        browser.ignoreSynchronization=false;
         browser.get('http://remisdev.demos.bgosoftware.com/login/');
         browser.wait(EC.elementToBeClickable($('button[ng-click="vm.validate()"]')), 10000, 'Wait for navigateToRemisDev has failed.');
     };
