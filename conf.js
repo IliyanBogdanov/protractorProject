@@ -23,7 +23,9 @@ exports.config = {
                         './testcases/MasterData-ViolationCategories/test.violationCategories.spec.js'],
         bdeTests: ['./testcases/BatchDataEntry/test.bde.spec.js'],
         liquidTests: ['./testcases/IDE-Liquid/test.ideLiquid.spec.js'],
+        liquidTestsRefactoring: ['./testcases/IDE-Liquid/test.ideLiquidRefactoring.spec.js'],
         lyophilizationTests: ['./testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
+        lyophilizationTestsRefactoring: ['./testcases/IDE-Lyophilization/test.ideLyophilizationRefactoring.spec.js'],
         ideTests:['./testcases/IDE-Liquid/test.ideLiquid.spec.js',
                 './testcases/IDE-Lyophilization/test.ideLyophilization.spec.js'],
         allTests: ['./testcases/REMILogin/test.login.spec.js', 
@@ -39,7 +41,9 @@ exports.config = {
         basicCRUDTests: ['./testcases/PM-CLE/test.pmCLE.spec.js',
                         './testcases/PM-Details/test.pmDetails.spec.js',
                         './testcases/MasterData-MA-Roles/test.MARoles.spec.js',
-                        './testcases/MasterData-ProductFamilies/test.productFamilies.spec.js',]            
+                        './testcases/MasterData-ProductFamilies/test.productFamilies.spec.js',
+                        './testcases/IDE-Liquid/test.ideLiquidRefactoring.spec.js',
+                        './testcases/IDE-Lyophilization/test.ideLyophilizationRefactoring.spec.js']            
   },
 
   onPrepare: function() {

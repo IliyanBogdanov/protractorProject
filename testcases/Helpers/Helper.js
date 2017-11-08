@@ -148,6 +148,12 @@ var helperFile = function() {
         browser.wait(EC.elementToBeClickable(productFamilyValue, 10000, 'Wait for productFamilyValue has failed.'));
         productFamilyValue.click();     
     };
-
+     /*
+     Click next button by a position in an array
+     */
+    this.clickNextArray = function (text) {
+        //browser.wait(EC.visibilityOf($('button[wz-next="$ctrl.onNext()"]')), 10000, 'Wait for clickNextArray has failed.');
+        element.all(by.css('button[wz-next="$ctrl.onNext()"]')).get(text).click();
+    };
 };
 module.exports = new helperFile();

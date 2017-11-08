@@ -100,7 +100,6 @@ var ideLiquidPage = function () {
     this.enterInspection = function () {
         element(by.model('vm.htoDataLiquid.General_Inspection')).click();
     };
-
     /*
      STEP ENTER VIOLATIONS
      */
