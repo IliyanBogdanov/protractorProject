@@ -1,6 +1,7 @@
 var loginPage = require('../REMILogin/login.page.js');
 var ideLiquidPage = require('./ideLiquid.page.js');
 var helperFile = require('./../Helpers/Helper.js');
+var random = helperFile.createARandomValue();
 var inspectionLotNumber = '';
 
 describe('When user opens the IDE-Liquid module, he...', function(){
@@ -44,7 +45,7 @@ describe('When user opens the IDE-Liquid module, he...', function(){
     });
 
     it('Should be able to update a record.', function() {
-        var newInspectionLotNumber = 'UPDATE-' + inspectionLotNumber;
+        var newInspectionLotNumber = 'UPDATE-' + random;
         ideLiquidPage.filterTable(inspectionLotNumber);
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         inspectionLotNumber = ideLiquidPage.enterInspectionLotNumber(newInspectionLotNumber);

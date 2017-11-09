@@ -1,7 +1,6 @@
-var helper = require('./../Helpers/Helper.js');
-var displayName = 'Test-PF-' + helper.createARandomValue();
+var helperFile = require('./../Helpers/Helper.js');
+var displayName = helperFile.createARandomValue();
 var EC = protractor.ExpectedConditions;
-var materialNumber = 'test101';
 
 var MDProductFamiliesPage = function () {
     /*
@@ -81,9 +80,9 @@ var MDProductFamiliesPage = function () {
             displayName = newName
         }
         browser.executeScript("$('input[ng-model=\"vm.productFamilyData.Version\"').val('');");
-        //element(by.model('vm.productFamilyData.Version')).sendKeys();
         element(by.model('vm.productFamilyData.Version')).sendKeys(displayName);
         return displayName;
+        console.log(displayName);
     };
     /*
      *  Enters material number value

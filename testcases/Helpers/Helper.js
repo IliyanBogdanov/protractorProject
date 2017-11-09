@@ -126,34 +126,50 @@ var helperFile = function() {
         expect(addButton.count()).toEqual(count);
     };
     /*
-     * Open Site menu and select HTO value
+     * Open Site menu and set site value
      */
-    this.setSiteValue = function() {
-        //Open Site menu
-        browser.wait(EC.elementToBeClickable($('.k-select')), 10000, 'Wait for setSiteValue has failed.');
-        element(by.className('k-select')).click();
-        //Select HTO value
-        browser.wait(EC.elementToBeClickable($('#filter-site_listbox > li:nth-child(2)')), 10000, 'Wait for setSiteValue has failed.');
-        element(by.css('#filter-site_listbox > li:nth-child(2)')).click();
+    this.setSiteValue = function(siteNamePosition) {
+        browser.wait(EC.presenceOf($('#filter-site')), 10000, 'Wait for #filter-site has failed.');
+        browser.executeScript("var site = $('#filter-site').data('kendoComboBox');site.focus();site.select("+siteNamePosition+");site.trigger('change');");
     };
     /*
-     * Open Product Family Menu and select ACTEMRA 162 MG TOCILIZUMAB
+     * Open Venue menu and set a venue value
      */
-    this.setProductFamilyValue = function() {
-        //Open Product Family Menu
-        browser.wait(EC.elementToBeClickable($('#aside-filter > div.container.filter-container > div > div > div.productFamilyFilter.form-group.filter-element.col-xs-12.col-sm-3.col-lg-2 > span > span > span')), 10000, 'Wait for setProductFamilyValue has failed.');
-        element(by.css('#aside-filter > div.container.filter-container > div > div > div.productFamilyFilter.form-group.filter-element.col-xs-12.col-sm-3.col-lg-2 > span > span > span')).click();
-        //Select ACTEMRA 162 MG TOCILIZUMAB
-        var productFamilyValue = element(by.css('#filter-productFamily_listbox > li:nth-child(1)'));
-        browser.wait(EC.elementToBeClickable(productFamilyValue, 10000, 'Wait for productFamilyValue has failed.'));
-        productFamilyValue.click();     
+    this.setVenueValue = function(venueNamePosition) {
+        browser.wait(EC.presenceOf($('#filter-venue')), 10000, 'Wait for #filter-venue has failed.');
+        browser.executeScript("var venue = $('#filter-venue').data('kendoComboBox');venue.focus();venue.select("+venueNamePosition+");venue.trigger('change');");
+    };
+     /*
+     * Open Product Family Menu and set a pf value
+     */
+    this.setProductFamilyValue = function(productFamilyPosition) {
+        browser.wait(EC.presenceOf($('#filter-productFamily')), 10000, 'Wait for #filter-productFamily has failed.');
+        browser.executeScript("var pf = $('#filter-productFamily').data('kendoComboBox');pf.focus();pf.select("+productFamilyPosition+");pf.trigger('change');");  
     };
      /*
      Click next button by a position in an array
      */
     this.clickNextArray = function (text) {
-        //browser.wait(EC.visibilityOf($('button[wz-next="$ctrl.onNext()"]')), 10000, 'Wait for clickNextArray has failed.');
+        browser.wait(EC.presenceOf($('button[wz-next="$ctrl.onNext()"]')), 10000, 'Wait for clickNextArray has failed.');
         element.all(by.css('button[wz-next="$ctrl.onNext()"]')).get(text).click();
+    };
+     /*
+     Click approve button 
+     */
+    this.clickApproveButton = function (selector) {
+        var approveBtn = element(by.css(selector));
+        browser.wait(EC.elementToBeClickable(approveBtn), 10000, 'Wait for clickEditButton button has failed.');
+        approveBtn.click();
+    };
+      /*
+     *  Sign up approval form with credentials
+     */
+    this.signUpApprovalForm = function(username , password) {
+        browser.wait(EC.elementToBeClickable($('#username')), 10000, 'Wait for #username has failed.');
+        element(by.id('username')).click().sendKeys(username);
+        browser.wait(EC.elementToBeClickable($('#password')), 10000, 'Wait for #password has failed.');
+        element(by.id('password')).click().sendKeys(password);
     };
 };
 module.exports = new helperFile();
+

@@ -10,8 +10,9 @@ describe('When user opens the Details module, he...', function() {
     });
 
     it ('Should be able to create a new violation comment.', function (){
-        helperFile.setSiteValue();
-        helperFile.setProductFamilyValue();
+        helperFile.setSiteValue('1');
+        helperFile.setVenueValue('0');
+        helperFile.setProductFamilyValue('0');
         helperFile.clickOnApplyButton();
         detailsPage.clickOnDetails();
         detailsPage.switchToDetails('1');
@@ -27,8 +28,9 @@ describe('When user opens the Details module, he...', function() {
     });
 
     it ('Should be able to update the violation comment.', function (){
-        helperFile.setSiteValue();
-        helperFile.setProductFamilyValue();
+        helperFile.setSiteValue('1');
+        helperFile.setVenueValue('0');
+        helperFile.setProductFamilyValue('0');
         helperFile.clickOnApplyButton();
         detailsPage.clickOnDetails();
         detailsPage.switchToDetails('2');
@@ -42,8 +44,9 @@ describe('When user opens the Details module, he...', function() {
     });
 
     it ('Should be able to delete the violation comment.', function (){
-        helperFile.setSiteValue();
-        helperFile.setProductFamilyValue();
+        helperFile.setSiteValue('1');
+        helperFile.setVenueValue('0');
+        helperFile.setProductFamilyValue('0');
         helperFile.clickOnApplyButton();
         detailsPage.clickOnDetails();
         detailsPage.switchToDetails('3');

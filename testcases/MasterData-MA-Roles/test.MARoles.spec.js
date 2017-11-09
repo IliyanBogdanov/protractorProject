@@ -3,6 +3,7 @@ var monitoringAttrubutesPage = require('../MasterData-MonitoringAttributes/monit
 var bdePage = require('../BatchDataEntry/bde.page.js');
 var MARoles = require('./MARoles.page.js');
 var helperFile = require('./../Helpers/Helper.js');
+var random = helperFile.createARandomValue();
 var attributeName = '';
 var runNumber = '';
 describe('When user opens the Remis App with different roles , he...', function() {
@@ -63,7 +64,7 @@ describe('When user opens the Remis App with different roles , he...', function(
     });
 
     it('Should be able to update a MA record.', function () {
-        var newAttributeName = 'UPDATE';
+        var newAttributeName = 'UPDATE-' + random;
         helperFile.loginREMIRole('OCNMASTERENTRY');
         //Filter table to get the last added record from the test
         monitoringAttrubutesPage.filterTable(attributeName);
@@ -141,7 +142,7 @@ describe('When user opens the Remis App with different roles , he...', function(
 
     it('Should be able to update a BDE record.', function(){
         helperFile.loginREMIRole('OCNGMPENTRY');
-        var newRunNumber = 'UPDATE';
+        var newRunNumber = 'UPDATE-' + random;
         bdePage.filterTableBDE(runNumber);
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         bdePage.clearRunNumberInput();

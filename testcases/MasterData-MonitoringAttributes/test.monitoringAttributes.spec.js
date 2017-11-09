@@ -1,6 +1,7 @@
 var loginPage = require('../REMILogin/login.page.js');
 var monitoringAttrubutesPage = require('./monitoringAttributes.page.js');
 var helperFile = require('./../Helpers/Helper.js');
+var random = helperFile.createARandomValue();
 var attributeName = '';
 
 describe(' When user opens the Monitoring Attributes module, he ... ', function () {
@@ -41,7 +42,7 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
   });
 
   it('Should be able to update a record.', function () {
-    var newAttributeName = 'UPDATE';
+    var newAttributeName = 'UPDATE-' + random;
     //Filter table to get the last added record from the test
     monitoringAttrubutesPage.filterTable(attributeName);
     //Enter edit mode

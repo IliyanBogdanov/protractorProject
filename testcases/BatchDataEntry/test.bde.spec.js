@@ -1,6 +1,7 @@
 var loginPage = require('../REMILogin/login.page.js');
 var bdePage = require('./bde.page.js');
 var helperFile = require('./../Helpers/Helper.js');
+var random = helperFile.createARandomValue();
 var runNumber = '';
 
 describe('When user opens the BDE module, he...', function(){
@@ -38,7 +39,7 @@ describe('When user opens the BDE module, he...', function(){
     });
 
     it('Should be able to update a record.', function(){
-        var newRunNumber = 'UPDATE';
+        var newRunNumber = 'UPDATE-' + random;
         bdePage.filterTableBDE(runNumber);
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         bdePage.clearRunNumberInput();

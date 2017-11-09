@@ -1,6 +1,7 @@
 var loginPage = require('../REMILogin/login.page.js');
 var ideLyophilizationPage = require('./ideLyophilization.page.js');
 var helperFile = require('./../Helpers/Helper.js');
+var random = helperFile.createARandomValue();
 var inspectionLotNumber = '';
 describe('When user opens the IDE-Lyophilization module, he...', function(){
 
@@ -40,7 +41,7 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
     });
 
     it('Should be able to update a record.', function() {
-        var newInspectionLotNumber = 'UPDATE-' + inspectionLotNumber;
+        var newInspectionLotNumber = 'UPDATE-' + random;
         ideLyophilizationPage.filterTable(inspectionLotNumber);
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         browser.sleep(3000);

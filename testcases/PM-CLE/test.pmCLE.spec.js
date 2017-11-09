@@ -10,8 +10,9 @@ describe('When user opens the CLE module, he...', function() {
     });
 
     it ('Should be able to save CL.', function (){
-        helperFile.setSiteValue();
-        helperFile.setProductFamilyValue();
+        helperFile.setSiteValue('1');
+        helperFile.setVenueValue('0');
+        helperFile.setProductFamilyValue('0');
         helperFile.clickOnApplyButton();
         clePage.clickOnCLE();
         clePage.saveNewCLE();

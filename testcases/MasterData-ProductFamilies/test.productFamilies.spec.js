@@ -1,6 +1,7 @@
 var loginPage = require('../REMILogin/login.page.js');
 var MDProductFamilyPage = require('./productFamilies.page.js');
 var helperFile = require('./../Helpers/Helper.js');
+var random = helperFile.createARandomValue();
 var productFamilyVersion = '';
 
 describe('When user opens the Product families module, he...', function() {
@@ -30,7 +31,7 @@ describe('When user opens the Product families module, he...', function() {
     });
 
     it('Should be able to update a new record.', function(){
-        var newproductFamilyVersion = 'UPDATE-' + productFamilyVersion;
+        var newproductFamilyVersion = 'UPDATE-' + random;
         MDProductFamilyPage.filterTable(productFamilyVersion);
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         MDProductFamilyPage.enterSiteValue();
