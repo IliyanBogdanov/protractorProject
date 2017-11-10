@@ -46,12 +46,6 @@ var MDProductFamiliesPage = function () {
         element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(2) > a')).click();
     };
     /*
-     *  Enters site value
-     */
-    this.enterSiteValue = function() {
-        browser.executeScript("var site = $('#site').data('kendoDropDownList');site.select(1);site.trigger('change');");
-    };
-    /*
      *  Enters config dosage value
      */
     this.enterConfigDossageValue = function() {
@@ -59,12 +53,6 @@ var MDProductFamiliesPage = function () {
             "if(typeof af !== 'undefined'){af.select(1);af.trigger('change');}");
         browser.executeScript("var af = $('#dosage').data('kendoDropDownList');" +
             "if(typeof af !== 'undefined'){ af.select(1);af.trigger('change'); }");
-    };
-    /*
-     *  Enters venue value
-     */
-    this.enterVenueValue = function() {
-        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.select(1);venue.trigger('change');");
     };
     /*
      *  Enters commercial product value

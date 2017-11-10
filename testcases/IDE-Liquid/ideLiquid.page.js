@@ -36,13 +36,6 @@ var ideLiquidPage = function () {
         element(by.css('a.btn[href="/hto/create/Liquid"]')).click();
     };
     /*
-     *  Select Product
-     */
-    this.enterCompanyValue = function () {
-        browser.executeScript("var product = $('#product').data('kendoDropDownList');" +
-            "product.select(1);product.trigger('change');");
-    };
-    /*
      *  Set Total Vials
      */
     this.enterTotalVials = function (vials) {

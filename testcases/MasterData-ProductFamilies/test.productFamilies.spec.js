@@ -14,8 +14,8 @@ describe('When user opens the Product families module, he...', function() {
 
     it('Should be able to create a new record.', function(){
         MDProductFamilyPage.clickOnAddPFButton();
-        MDProductFamilyPage.enterSiteValue();
-        MDProductFamilyPage.enterVenueValue();
+        helperFile.enterSiteValue('1');
+        helperFile.enterVenueValue('1');
         MDProductFamilyPage.enterCommercialProductValue();
         MDProductFamilyPage.enterConfigDossageValue();
         productFamilyVersion = MDProductFamilyPage.enterVersionValue();
@@ -34,8 +34,8 @@ describe('When user opens the Product families module, he...', function() {
         var newproductFamilyVersion = 'UPDATE-' + random;
         MDProductFamilyPage.filterTable(productFamilyVersion);
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
-        MDProductFamilyPage.enterSiteValue();
-        MDProductFamilyPage.enterVenueValue();
+        helperFile.enterSiteValue('1');
+        helperFile.enterVenueValue('1');
         MDProductFamilyPage.enterCommercialProductValue();
         MDProductFamilyPage.enterConfigDossageValue();
         productFamilyVersion = MDProductFamilyPage.enterVersionValue(newproductFamilyVersion);

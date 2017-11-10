@@ -15,8 +15,8 @@ describe('When user opens the REMIS app, he...', function(){
         xit('Should be able to create a new PF record and approve it.', function(){
             productFamilyPage.navigateMDProductFamilySection();
             productFamilyPage.clickOnAddPFButton();
-            productFamilyPage.enterSiteValue('2');
-            productFamilyPage.enterVenueValue();
+            helperFile.enterSiteValue('2');
+            helperFile.enterVenueValue('1');
             productFamilyPage.enterCommercialProductValue();
             productFamilyPage.enterConfigDossageValue();
             productFamilyVersion = productFamilyPage.enterVersionValue() + random;
@@ -53,9 +53,9 @@ describe('When user opens the REMIS app, he...', function(){
         it('Should be able to create a MA record and approve it (using the same PF record) and approve it.', function() {
             monAttrPage.navigateToMonitoringAttributesSection();
             monAttrPage.clickOnAddMonitoringAttributeButton();
-            monAttrPage.enterSiteValue('2');
-            monAttrPage.enterVenueValue();
-            monAttrPage.enterPFValue();
+            helperFile.enterSiteValue('2');
+            helperFile.enterVenueValue('1');
+            helperFile.enterProductFamilyValue('305');
             helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
             monAttrPage.enterAttributeType();
             monAttrPage.enterUoM();

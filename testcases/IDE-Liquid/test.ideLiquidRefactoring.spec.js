@@ -13,7 +13,7 @@ describe('When user opens the IDE-Liquid module, he...', function(){
     });
     it('Should be able to create a new record.', function(){
         ideLiquidPage.clickOnAddIDEButton();
-        ideLiquidPage.enterCompanyValue();
+        helperFile.enterCompanyValue();
         ideLiquidPage.enterTotalVials();
         ideLiquidPage.enterInspection();
         ideLiquidPage.enterFacilityValue();

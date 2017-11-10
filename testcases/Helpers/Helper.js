@@ -139,21 +139,21 @@ var helperFile = function() {
         browser.wait(EC.presenceOf($('#filter-venue')), 10000, 'Wait for #filter-venue has failed.');
         browser.executeScript("var venue = $('#filter-venue').data('kendoComboBox');venue.focus();venue.select("+venueNamePosition+");venue.trigger('change');");
     };
-     /*
+    /*
      * Open Product Family Menu and set a pf value
      */
     this.setProductFamilyValue = function(productFamilyPosition) {
         browser.wait(EC.presenceOf($('#filter-productFamily')), 10000, 'Wait for #filter-productFamily has failed.');
         browser.executeScript("var pf = $('#filter-productFamily').data('kendoComboBox');pf.focus();pf.select("+productFamilyPosition+");pf.trigger('change');");  
     };
-     /*
+    /*
      Click next button by a position in an array
      */
     this.clickNextArray = function (text) {
         browser.wait(EC.presenceOf($('button[wz-next="$ctrl.onNext()"]')), 10000, 'Wait for clickNextArray has failed.');
         element.all(by.css('button[wz-next="$ctrl.onNext()"]')).get(text).click();
     };
-     /*
+    /*
      Click approve button 
      */
     this.clickApproveButton = function (selector) {
@@ -161,7 +161,7 @@ var helperFile = function() {
         browser.wait(EC.elementToBeClickable(approveBtn), 10000, 'Wait for clickEditButton button has failed.');
         approveBtn.click();
     };
-      /*
+    /*
      *  Sign up approval form with credentials
      */
     this.signUpApprovalForm = function(username , password) {
@@ -170,6 +170,35 @@ var helperFile = function() {
         browser.wait(EC.elementToBeClickable($('#password')), 10000, 'Wait for #password has failed.');
         element(by.id('password')).click().sendKeys(password);
     };
+     /*
+     *  Enter company value
+     */
+    this.enterCompanyValue = function () {
+        browser.wait(EC.presenceOf($('#product')), 10000 , 'Wait for enterCompanyValue has failed.');
+        browser.executeScript("var company = $('#product').data('kendoDropDownList');company.select(1);company.trigger('change');");
+    };
+    /*
+     *  Enters site value
+     */
+    this.enterSiteValue = function(siteValueArrayPosition) {
+        browser.wait(EC.presenceOf($('#site')), 10000 , 'Wait for enterSiteValue has failed.');
+        browser.executeScript("var site = $('#site').data('kendoDropDownList');site.select("+siteValueArrayPosition+");site.trigger('change');");
+    };
+       /*
+     * Enters venue value 
+     */
+    this.enterVenueValue = function(venueValueArrayPosition) {
+        browser.wait(EC.presenceOf($('#venue')), 10000 , 'Wait for enterVenueValue has failed.');
+        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.value("+venueValueArrayPosition+");venue.trigger('change');");
+    };
+    /*
+     * Enters product family value 
+     */
+    this.enterProductFamilyValue = function(productFamilyValueArrayPosition) {
+        browser.wait(EC.presenceOf($('#productgroup')), 10000 , 'Wait for enterProductFamilyValue has failed.');
+        browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.value("+productFamilyValueArrayPosition+");pf.trigger('change');");
+    };
+
 };
 module.exports = new helperFile();
 

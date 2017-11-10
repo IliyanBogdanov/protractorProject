@@ -17,32 +17,8 @@ var monitoringAttributesPage = function() {
      */
     this.clickOnAddMonitoringAttributeButton = function() {
         browser.wait(EC.elementToBeClickable($('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 10000, 'Wait for clickOnAddMonitoringAttributeButton has failed.');
-        element(by.css('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click(); 
-    };
-    /*
-     * Enters Site value 
-     */
-    this.enterSiteValue = function(site) {
-        browser.executeScript("var site = $('#site').data('kendoDropDownList');site.value(2);site.trigger('change');");
-    };
-    /*
-     * Enters Venue value 
-     */
-    this.enterVenueValue = function(venue) {
-        browser.executeScript("var venue = $('#venue').data('kendoDropDownList');venue.value(1);venue.trigger('change');");
-    };
-    /*
-     * Enters product family value 
-     */
-    this.enterPFValue = function(type, value) {
-        browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.value(305);pf.trigger('change');");
-    };
-    /*
-     * Enters product family value
-     */
-    this.enterPFSelect = function(value) {
-        browser.executeScript("var pf = $('#productgroup').data('kendoDropDownList');pf.select(" + value + ");pf.trigger('change');");
-    };
+        element(by.css('#monitoringAttributesPage > div > div.panel-heading > div.header-right-panel.pull-right > div > button')).click();
+    };     
     /*
      * Enters an attribute type 
      */

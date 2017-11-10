@@ -37,9 +37,9 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.loginREMIRole('OCNMASTERENTRY');
         monitoringAttrubutesPage.clickOnAddMonitoringAttributeButton();
         //Step 1 - product details
-        //monitoringAttrubutesPage.enterSiteValue(1);
-        //monitoringAttrubutesPage.enterVenueValue(0);
-        monitoringAttrubutesPage.enterPFSelect(1);
+        //helperFile.enterSiteValue('1');
+        //helperFile.enterVenueValue('0');
+        helperFile.enterProductFamilyValue('1');
         helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
         //Step 2 - attribute details
         monitoringAttrubutesPage.enterAttributeType();

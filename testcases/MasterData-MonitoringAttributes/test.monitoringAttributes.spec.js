@@ -15,9 +15,9 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
   it('Should be able to create a new record.', function () {
     monitoringAttrubutesPage.clickOnAddMonitoringAttributeButton();
     //Step 1 - product details
-    monitoringAttrubutesPage.enterSiteValue('2');
-    monitoringAttrubutesPage.enterVenueValue();
-    monitoringAttrubutesPage.enterPFValue();
+    helperFile.enterSiteValue('1');
+    helperFile.enterVenueValue('1');
+    helperFile.enterProductFamilyValue('305');
     helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
     //Step 2 - attribute details
     monitoringAttrubutesPage.enterAttributeType();

@@ -12,7 +12,7 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
     });
     it('Should be able to create a new record.', function(){
         ideLyophilizationPage.clickOnAddIDEButton();
-        ideLyophilizationPage.enterCompanyValue();
+        helperFile.enterCompanyValue();
         ideLyophilizationPage.enterTotalVials();
         ideLyophilizationPage.enterInspection();
         ideLyophilizationPage.enterFacilityValue();
