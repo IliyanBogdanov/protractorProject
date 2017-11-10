@@ -21,16 +21,16 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
         inspectionLotNumber = ideLyophilizationPage.enterInspectionLotNumber();
         ideLyophilizationPage.enterComments();
         //step2
-        helperFile.clickNextButton("vm.showValidateAlert('lot-information')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('lot-information')");
         ideLyophilizationPage.addVials();
         //step3
-        helperFile.clickNextButton("vm.showValidateAlert('critical')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('critical')");
         ideLyophilizationPage.addVials();
         //step4
-        helperFile.clickNextButton("vm.showValidateAlert('major')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('major')");
         ideLyophilizationPage.addVials();
         //step5
-        helperFile.clickNextButton("vm.showValidateAlert('minor')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('minor')");
         ideLyophilizationPage.addVials();
         //summary
         helperFile.clickButtonByText('Create');
@@ -48,16 +48,16 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
         inspectionLotNumber = ideLyophilizationPage.enterInspectionLotNumber(newInspectionLotNumber);
         ideLyophilizationPage.enterTotalVials(11);
         //step2
-        helperFile.clickNextButton("vm.showValidateAlert('lot-information')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('lot-information')");
         ideLyophilizationPage.addVials(3);
         //step3
-        helperFile.clickNextButton("vm.showValidateAlert('critical')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('critical')");
         ideLyophilizationPage.addVials(3);
         //step4
-        helperFile.clickNextButton("vm.showValidateAlert('major')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('major')");
         ideLyophilizationPage.addVials(3);
         //step5
-        helperFile.clickNextButton("vm.showValidateAlert('minor')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('minor')");
         ideLyophilizationPage.addVials(3);
         //summary
         helperFile.clickButtonByText('Update');

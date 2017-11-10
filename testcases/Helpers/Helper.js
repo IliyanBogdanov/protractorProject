@@ -26,14 +26,14 @@ var helperFile = function() {
     /*
  	 * Click next button in case of wz-next property 
      */
-	this.clickNextButton = function (selector) {
+	this.clickNextButtonWzNext = function (selector) {
 		browser.wait(EC.elementToBeClickable($('button[wz-next="' + selector + '"]')), 10000, 'Wait for clickNextButton button has failed.');
 		element(by.css('button[wz-next="' + selector + '"]')).click();
 	};
 	/*
  	 * Click next button in case of ng-click property 
      */
-    this.clickNextButton2ndStep = function (selector) {
+    this.clickNextButtonNgClick = function (selector) {
         browser.wait(EC.elementToBeClickable($('button[ng-click="' + selector + '"]')), 10000, 'Wait for clickNextButton2ndStep button has failed.');
 		element(by.css('button[ng-click="' + selector + '"]')).click();
     };

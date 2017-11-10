@@ -1,5 +1,6 @@
 var loginPage = require('../REMILogin/login.page.js');
 var productFamilyPage = require('../MasterData-ProductFamilies/productFamilies.page.js');
+var monAttrPage = require('../MasterData-MonitoringAttributes/monitoringAttributes.page.js');
 var helperFile = require('../Helpers/Helper.js');
 var random = helperFile.createARandomValue();
 var e2ePage = require('./e2e.page.js');
@@ -11,10 +12,10 @@ describe('When user opens the REMIS app, he...', function(){
             loginPage.loginREMI('testuser1', '25Kukuvici');
         });
 
-        it('Should be able to create a new PF record and approve it.', function(){
+        xit('Should be able to create a new PF record and approve it.', function(){
             productFamilyPage.navigateMDProductFamilySection();
             productFamilyPage.clickOnAddPFButton();
-            productFamilyPage.enterSiteValue();
+            productFamilyPage.enterSiteValue('2');
             productFamilyPage.enterVenueValue();
             productFamilyPage.enterCommercialProductValue();
             productFamilyPage.enterConfigDossageValue();
@@ -33,14 +34,14 @@ describe('When user opens the REMIS app, he...', function(){
             productFamilyPage.navigateMDProductFamilySection();
             productFamilyPage.filterTable();
             helperFile.clickApproveButton('.icon-small-approved.roche_grey_7');
-            helperFile.clickNextButton2ndStep("vm.openActionModal('approve')");
+            helperFile.clickNextButtonNgClick("vm.openActionModal('approve')");
             helperFile.signUpApprovalForm('martouser1' , '25Kukuvici');
             helperFile.clickButtonByText('OK');
             helperFile.clickButtonByText('Finish');
             e2ePage.verifyThatTestPasses();
         });
     
-        it('Should be able to find the approved PF in the filter and apply it.', function() {
+        xit('Should be able to find the approved PF in the filter and apply it.', function() {
             productFamilyPage.navigateMDProductFamilySection();
             helperFile.setSiteValue('0');
             helperFile.setVenueValue('0');
@@ -49,8 +50,35 @@ describe('When user opens the REMIS app, he...', function(){
             e2ePage.verifyThatTestPasses();
         });
 
-        it('Should be able to create a MA record and approve it (using the same PF record).', function() {
-            e2ePage.verifyThatTestPasses();        
+        it('Should be able to create a MA record and approve it (using the same PF record) and approve it.', function() {
+            monAttrPage.navigateToMonitoringAttributesSection();
+            monAttrPage.clickOnAddMonitoringAttributeButton();
+            monAttrPage.enterSiteValue('2');
+            monAttrPage.enterVenueValue();
+            monAttrPage.enterPFValue();
+            helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
+            monAttrPage.enterAttributeType();
+            monAttrPage.enterUoM();
+            attributeName = monAttrPage.enterNameForMonitoringAttribute();
+            monAttrPage.enterDescription();
+            monAttrPage.enterMoM();
+            monAttrPage.enterEffectiveDate();
+            monAttrPage.enterDecimalPoints();
+            helperFile.clickNextButtonNgClick('vm.showValidateAlert(\'attribute-details\')');
+            helperFile.clickButtonByText('Create New Control Limit');
+            monAttrPage.populateContrоlLimitValues();
+            monAttrPage.clickCreateButton();
+            monAttrPage.clickNextButton3rdStep();
+            helperFile.clickButtonByText('Create');
+            helperFile.clickButtonByText('Finish');
+            monAttrPage.filterTable();
+            helperFile.clickApproveButton('.icon-small-approved.roche_grey_7');
+            helperFile.clickNextButtonNgClick("vm.openActionModal('approve')");
+            helperFile.signUpApprovalForm('martouser1' , '25Kukuvici');
+            helperFile.clickButtonByText('OK');
+            helperFile.clickButtonByText('Finish');
+            e2ePage.verifyThatTestPasses();
+    
         });
 
     }); 

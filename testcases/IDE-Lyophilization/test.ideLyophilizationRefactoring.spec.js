@@ -21,7 +21,7 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
         inspectionLotNumber = ideLyophilizationPage.enterInspectionLotNumber();
         ideLyophilizationPage.enterComments();
         //step2
-        helperFile.clickNextButton("vm.showValidateAlert('lot-information')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('lot-information')");
         ideLyophilizationPage.addVials();
         //step3
         helperFile.clickNextArray(0);
@@ -48,7 +48,7 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
         inspectionLotNumber = ideLyophilizationPage.enterInspectionLotNumber(newInspectionLotNumber);
         ideLyophilizationPage.enterTotalVials(11);
         //step2
-        helperFile.clickNextButton("vm.showValidateAlert('lot-information')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('lot-information')");
         ideLyophilizationPage.addVials(3);
         //step3
         helperFile.clickNextArray(0);

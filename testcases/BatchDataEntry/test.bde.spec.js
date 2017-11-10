@@ -27,10 +27,10 @@ describe('When user opens the BDE module, he...', function(){
         bdePage.thawIDTextInput();
         bdePage.thawIDDateEntry();
         bdePage.harvestDateEntry();
-        helperFile.clickNextButton("vm.showValidateAlert('run-details')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('run-details')");
         //Step 2 - parameter values
         bdePage.populateParameterValues();
-        helperFile.clickNextButton('');
+        helperFile.clickNextButtonWzNext('');
         helperFile.clickButtonByText('Create');
         helperFile.clickButtonByText('OK');
         //Verification
@@ -44,8 +44,8 @@ describe('When user opens the BDE module, he...', function(){
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         bdePage.clearRunNumberInput();
         runNumber = bdePage.runNumberEnterTextInput(newRunNumber);
-        helperFile.clickNextButton("vm.showValidateAlert('run-details')");
-        helperFile.clickNextButton('');
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('run-details')");
+        helperFile.clickNextButtonWzNext('');
         helperFile.clickButtonByText('Update');
         helperFile.clickButtonByText('OK');
         //Verification

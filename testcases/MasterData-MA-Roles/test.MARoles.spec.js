@@ -40,7 +40,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         //monitoringAttrubutesPage.enterSiteValue(1);
         //monitoringAttrubutesPage.enterVenueValue(0);
         monitoringAttrubutesPage.enterPFSelect(1);
-        helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
+        helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
         //Step 2 - attribute details
         monitoringAttrubutesPage.enterAttributeType();
         monitoringAttrubutesPage.enterUoM();
@@ -49,7 +49,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         monitoringAttrubutesPage.enterMoM();
         monitoringAttrubutesPage.enterEffectiveDate();
         monitoringAttrubutesPage.enterDecimalPoints();
-        helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
+        helperFile.clickNextButtonNgClick('vm.showValidateAlert(\'attribute-details\')');
         //Step 3 - control limits
         helperFile.clickButtonByText('Create New Control Limit');
         monitoringAttrubutesPage.populateContrlLimitValues();
@@ -72,11 +72,11 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         //Navigate to second step of the wizard
         //browser.waitForAngular(false);
-        helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
+        helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
         //browser.waitForAngular(true);
         attributeName = monitoringAttrubutesPage.enterNameForMonitoringAttribute(newAttributeName);
         //Process to the last tab
-        helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
+        helperFile.clickNextButtonNgClick('vm.showValidateAlert(\'attribute-details\')');
         monitoringAttrubutesPage.clickNextButton3rdStep();
         //Confirm the update of the entry
         helperFile.clickButtonByText('Update');
@@ -129,10 +129,10 @@ describe('When user opens the Remis App with different roles , he...', function(
         bdePage.thawIDTextInput();
         bdePage.thawIDDateEntry();
         bdePage.harvestDateEntry();
-        helperFile.clickNextButton("vm.showValidateAlert('run-details')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('run-details')");
         //Step 2 - parameter values
         bdePage.populateParameterValues();
-        helperFile.clickNextButton('');
+        helperFile.clickNextButtonWzNext('');
         helperFile.clickButtonByText('Create');
         helperFile.clickButtonByText('OK');
         //Verification
@@ -147,8 +147,8 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
         bdePage.clearRunNumberInput();
         runNumber = bdePage.runNumberEnterTextInput(newRunNumber);
-        helperFile.clickNextButton("vm.showValidateAlert('run-details')");
-        helperFile.clickNextButton('');
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('run-details')");
+        helperFile.clickNextButtonWzNext('');
         helperFile.clickButtonByText('Update');
         helperFile.clickButtonByText('OK');
         //Verification

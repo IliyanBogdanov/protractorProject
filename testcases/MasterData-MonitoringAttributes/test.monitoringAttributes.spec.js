@@ -15,10 +15,10 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
   it('Should be able to create a new record.', function () {
     monitoringAttrubutesPage.clickOnAddMonitoringAttributeButton();
     //Step 1 - product details
-    monitoringAttrubutesPage.enterSiteValue();
+    monitoringAttrubutesPage.enterSiteValue('2');
     monitoringAttrubutesPage.enterVenueValue();
     monitoringAttrubutesPage.enterPFValue();
-    helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
+    helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
     //Step 2 - attribute details
     monitoringAttrubutesPage.enterAttributeType();
     monitoringAttrubutesPage.enterUoM();
@@ -27,7 +27,7 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     monitoringAttrubutesPage.enterMoM();
     monitoringAttrubutesPage.enterEffectiveDate();
     monitoringAttrubutesPage.enterDecimalPoints();
-    helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
+    helperFile.clickNextButtonNgClick('vm.showValidateAlert(\'attribute-details\')');
     //Step 3 - control limits
     helperFile.clickButtonByText('Create New Control Limit');
     monitoringAttrubutesPage.populateContrlLimitValues();
@@ -48,10 +48,10 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     //Enter edit mode
     helperFile.clickEditButton('.icon-small-edit.roche_grey_7');
     //Navigate to second step of the wizard
-    helperFile.clickNextButton('vm.showValidateAlert(\'product-details\')');
+    helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
     attributeName = monitoringAttrubutesPage.enterNameForMonitoringAttribute(newAttributeName);
     //Process to the last tab
-    helperFile.clickNextButton2ndStep('vm.showValidateAlert(\'attribute-details\')');
+    helperFile.clickNextButtonNgClick('vm.showValidateAlert(\'attribute-details\')');
     monitoringAttrubutesPage.clickNextButton3rdStep();
     //Confirm the update of the entry
     helperFile.clickButtonByText('Update');

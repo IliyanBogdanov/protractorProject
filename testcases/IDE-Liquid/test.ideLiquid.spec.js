@@ -22,19 +22,19 @@ describe('When user opens the IDE-Liquid module, he...', function(){
         inspectionLotNumber = ideLiquidPage.enterInspectionLotNumber();
         ideLiquidPage.enterComments();
         //step2
-        helperFile.clickNextButton("vm.showValidateAlert('lot-information')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('lot-information')");
         ideLiquidPage.addVials();
         //step3
-        helperFile.clickNextButton("vm.showValidateAlert('critical')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('critical')");
         ideLiquidPage.addVials();
         //step4
-        helperFile.clickNextButton("vm.showValidateAlert('major')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('major')");
         ideLiquidPage.addVials();
         //step5
-        helperFile.clickNextButton("vm.showValidateAlert('minor')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('minor')");
         ideLiquidPage.addVials();
         //step5
-        helperFile.clickNextButton("vm.showValidateAlert('aim')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('aim')");
         ideLiquidPage.addVials();
         //summary
         helperFile.clickButtonByText('Create');
@@ -51,19 +51,19 @@ describe('When user opens the IDE-Liquid module, he...', function(){
         inspectionLotNumber = ideLiquidPage.enterInspectionLotNumber(newInspectionLotNumber);
         ideLiquidPage.enterTotalVials(11);
         //step2
-        helperFile.clickNextButton("vm.showValidateAlert('lot-information')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('lot-information')");
         ideLiquidPage.addVials(3);
         //step3
-        helperFile.clickNextButton("vm.showValidateAlert('critical')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('critical')");
         ideLiquidPage.addVials(3);
         //step4
-        helperFile.clickNextButton("vm.showValidateAlert('major')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('major')");
         ideLiquidPage.addVials(3);
         //step5
-        helperFile.clickNextButton("vm.showValidateAlert('minor')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('minor')");
         ideLiquidPage.addVials(3);
         //step5
-        helperFile.clickNextButton("vm.showValidateAlert('aim')");
+        helperFile.clickNextButtonWzNext("vm.showValidateAlert('aim')");
         ideLiquidPage.addVials(3);
         //summary
         helperFile.clickButtonByText('Update');
