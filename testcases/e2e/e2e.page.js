@@ -6,8 +6,8 @@ var e2ePage = function () {
      * Click on open CL icon
      */
     this.clickOnOpenControlLimitGridIcon = function() {
-        browser.wait(EC.elementToBeClickable($('#attributes-grid > div.k-grid-content.k-auto-scrollable > table > tbody > tr:nth-child(1) > td.k-hierarchy-cell > a')), 10000, 'Wait for clickOnOpenControlLimitGridIcon button has failed.');
-        element.all(by.css('#attributes-grid > div.k-grid-content.k-auto-scrollable > table > tbody > tr:nth-child(1) > td.k-hierarchy-cell > a')).first().click();
+        browser.wait(EC.elementToBeClickable($('a.k-icon.k-plus')), 10000, 'Wait for clickOnOpenControlLimitGridIcon button has failed.');
+        element.all(by.css('a.k-icon.k-plus')).first().click();
     };
     /*
      * Click on + button in order to add a new control limit
@@ -51,25 +51,32 @@ var e2ePage = function () {
         element(by.css('a[class="k-button k-button-icontext k-primary k-grid-update"]')).click();
     };
     /*
-     Click next button by a position in an array
+     Click approve CL button
      */
     this.clickApproveCL = function () {
         browser.wait(EC.elementToBeClickable($('#controlLimitsGrid > div.k-grid-content.k-auto-scrollable > table > tbody > tr > td.text-right > a:nth-child(4) > i')), 10000, 'Wait for clickNextArray has failed.');
         element.all(by.css('#controlLimitsGrid > div.k-grid-content.k-auto-scrollable > table > tbody > tr > td.text-right > a:nth-child(4) > i')).first().click();
     };
     /*
-     Click on edit control limit button
+     Click approve BDE button
+     */
+    this.clickApproveBDE = function () {
+        browser.wait(EC.elementToBeClickable($('.icon-small-approved.roche_grey_7')), 10000, 'Wait for clickApproveBDE has failed.');
+        element.all(by.css('.icon-small-approved.roche_grey_7')).first().click();
+    };
+    /*
+     Click edit control limit button
      */
     this.clickEditCLButton = function () {
         browser.wait(EC.elementToBeClickable($('tr:nth-child(1) > td.text-right > a.k-grid-edit.icon-small-wrapper.pointer > i')), 10000, 'Wait for clickEditCLButton has failed.');
-        element(by.css('tr:nth-child(1) > td.text-right > a.k-grid-edit.icon-small-wrapper.pointer > i')).click();
+        element.all(by.css('tr:nth-child(1) > td.text-right > a.k-grid-edit.icon-small-wrapper.pointer > i')).first().click();
     };
     /*
      Click delete button by a position in an array
      */
     this.clickDeleteCLButton = function (position) {
         browser.wait(EC.elementToBeClickable($('#controlLimitsGrid > div.k-grid-content.k-auto-scrollable > table > tbody > tr > td.text-right > a:nth-child(2) > i')), 10000, 'Wait for clickDeleteCLButton has failed.');
-        element(by.css('#controlLimitsGrid > div.k-grid-content.k-auto-scrollable > table > tbody > tr > td.text-right > a:nth-child(2) > i')).click();
+        element.all(by.css('#controlLimitsGrid > div.k-grid-content.k-auto-scrollable > table > tbody > tr > td.text-right > a:nth-child(2) > i')).first().click();
     };
     /*
      * Verify that test passes

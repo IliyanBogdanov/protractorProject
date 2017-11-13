@@ -9,7 +9,7 @@ describe('When user opens the BDE module, he...', function(){
     beforeEach(function(){
         loginPage.navigateToRemisDev();
         loginPage.loginREMI();
-        bdePage.navigateToBDESection();
+        helperFile.navigateTo('.menu-icon.icon-menu-dataentry', '/products/dataEntry');
     });
     
     it('Should be able to create a new record.', function(){

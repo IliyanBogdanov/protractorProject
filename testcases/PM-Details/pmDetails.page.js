@@ -30,7 +30,7 @@ var detailsPage = function(){
      */
     this.enterEvalComment = function(text) {
         var evalCommentBox = element(by.id('evaluation'));
-        browser.wait(EC.elementToBeClickable($(evalCommentBox)), 10000, 'Wait for enterEvalComment has failed.');
+        browser.wait(EC.elementToBeClickable(evalCommentBox), 10000, 'Wait for enterEvalComment has failed.');
         evalCommentBox.clear();
         evalCommentBox.sendKeys(text);
     };  
@@ -39,7 +39,7 @@ var detailsPage = function(){
      */
     this.enterConclComment = function(text) {
         var conclCommentBox = element(by.id('conclusion'));
-        browser.wait(EC.elementToBeClickable($(conclCommentBox)), 10000, 'Wait for enterConclComment has failed.');
+        browser.wait(EC.elementToBeClickable(conclCommentBox), 10000, 'Wait for enterConclComment has failed.');
         conclCommentBox.clear();
         conclCommentBox.sendKeys(text);
     };  
@@ -48,11 +48,11 @@ var detailsPage = function(){
      */
     this.selectCategory = function() {
         var selectCategoryDropdown = element(by.css('.k-input.ng-scope'));
-        browser.wait(EC.elementToBeClickable($(selectCategoryDropdown)), 10000, 'Wait for selectCategory has failed.');
+        browser.wait(EC.elementToBeClickable(selectCategoryDropdown), 10000, 'Wait for selectCategory has failed.');
         selectCategoryDropdown.click();
         
         var selectFirstCategory = element(by.css('li[data-offset-index="0"]'));
-        browser.wait(EC.elementToBeClickable($(selectFirstCategory)), 10000, 'Wait for selectFirstCategory has failed.');
+        browser.wait(EC.elementToBeClickable(selectFirstCategory), 10000, 'Wait for selectFirstCategory has failed.');
         selectFirstCategory.click();  
     };  
     /*

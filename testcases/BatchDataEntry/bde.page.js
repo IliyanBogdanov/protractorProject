@@ -5,14 +5,6 @@ var EC = protractor.ExpectedConditions;
 
 var bdePage = function() {
     /*
-     * Open BDE module
-     */
-    this.navigateToBDESection = function() {
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(3) > a > i')), 10000, 'Wait for navigateToBDESection has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(3) > a > i')).click();
-        browser.wait(EC.elementToBeClickable($('#wrapper > div > div > main > div.content > ui-view > ui-view > div > div.page-container > div > div.panel-heading > div.header-right-panel.pull-right > div > button')), 10000, 'Wait for navigateToBDESection has failed.');
-    };
-    /*
      * Click the add new button
      */
     this.addNewBDEbuttonClick = function() {

@@ -1,6 +1,7 @@
 var loginPage = require('../REMILogin/login.page.js');
 var productFamilyPage = require('../MasterData-ProductFamilies/productFamilies.page.js');
 var monitoringAttributesPage = require('../MasterData-MonitoringAttributes/monitoringAttributes.page.js');
+var bdePage = require('../BatchDataEntry/bde.page.js');
 var helperFile = require('../Helpers/Helper.js');
 var random = helperFile.createARandomValue();
 var e2ePage = require('./e2e.page.js');
@@ -108,5 +109,39 @@ describe('When user opens the REMIS app, he...', function(){
             helperFile.clickButtonByText('OK');
             helperFile.clickButtonByText('Finish');
             e2ePage.verifyThatTestPasses();
+        });
+        
+        it('Should be able to create and approve a BDE record.', function() {            
+            loginPage.navigateToRemisDev();
+            loginPage.loginREMI('martouser1', '25Kukuvici');
+            helperFile.navigateTo('.menu-icon.icon-menu-dataentry', '/products/dataEntry');
+            bdePage.addNewBDEbuttonClick();
+            bdePage.siteDropDownSelectRSTO();
+            bdePage.selectVenueB10();
+            bdePage.productFamilyDropDownSelect(); 
+            bdePage.materialNumberDropDownSelect();
+            runNumber = bdePage.runNumberEnterTextInput();
+            bdePage.campaignNameTextInput();
+            bdePage.lotNumberEnterTextInput();
+            bdePage.runStartDateEntry();
+            bdePage.runEndDateEntry();
+            bdePage.thawIDTextInput();
+            bdePage.thawIDDateEntry();
+            bdePage.harvestDateEntry();
+            helperFile.clickNextButtonWzNext("vm.showValidateAlert('run-details')");
+            bdePage.populateParameterValues();
+            helperFile.clickNextButtonWzNext('');
+            helperFile.clickButtonByText('Create');
+            helperFile.clickButtonByText('OK');
+            loginPage.navigateToRemisDev();
+            loginPage.loginREMI('testuser1', '25Kukuvici');
+            helperFile.navigateTo('.menu-icon.icon-menu-dataentry', '/products/dataEntry');
+            bdePage.filterTableBDE();
+            e2ePage.clickApproveBDE();
+            helperFile.clickButtonByText('Compliance Check & Sign');
+            helperFile.signUpApprovalForm('testuser1', '25Kukuvici');
+            helperFile.clickButtonByText('OK');
+            e2ePage.verifyThatTestPasses();
         });    
+
     }); 
