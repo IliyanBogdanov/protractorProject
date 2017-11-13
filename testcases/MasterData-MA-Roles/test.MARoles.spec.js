@@ -15,14 +15,14 @@ describe('When user opens the Remis App with different roles , he...', function(
     it ('Should be able to Login as Regular user.', function (){
         helperFile.loginREMIRole('OCNREGULARUSER');
         helperFile.verifyLoginSingleRole('OCN_REGULAR_USER');
-        monitoringAttrubutesPage.navigateToMonitoringAttributesSection();
+        helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/attributes/monitoring');
         helperFile.verifyAddButton('attributes-grid', 'Add New Monitoring Attribute', 0);
     });
 
     it ('Should be able to Login as Read Only user.', function (){
         helperFile.loginREMIRole('OCNREADONLYUSER');
         helperFile.verifyLoginSingleRole('OCN_READONLY_USER');
-        monitoringAttrubutesPage.navigateToMonitoringAttributesSection();
+        helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/attributes/monitoring');
         helperFile.verifyAddButton('attributes-grid', 'Add New Monitoring Attribute', 0);
     });
 
@@ -52,7 +52,7 @@ describe('When user opens the Remis App with different roles , he...', function(
         helperFile.clickNextButtonNgClick('vm.showValidateAlert(\'attribute-details\')');
         //Step 3 - control limits
         helperFile.clickButtonByText('Create New Control Limit');
-        monitoringAttrubutesPage.populateContrlLimitValues();
+        monitoringAttrubutesPage.populateControlLimitValues();
         monitoringAttrubutesPage.clickCreateButton();
         monitoringAttrubutesPage.clickNextButton3rdStep();
         //Step 4 - summary

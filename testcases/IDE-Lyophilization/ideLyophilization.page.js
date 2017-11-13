@@ -17,15 +17,6 @@ var ideLyophilizationPage = function () {
             browser.wait(EC.visibilityOf($('#hto-grid-lyophilization')), 10000,'#hto-grid-lyophilization wait has failed.');    
     };
     /*
-     *  Navigate to IDE-Lyophilization
-     */
-    this.navigateToIDELyophilizationSection = function () {
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(4) > a > i')), 10000,'Main menu wait for element has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(4) > a > i')).click();
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(4) > ul > li:nth-child(2) > a')), 10000, 'Main menu wait for element has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(4) > ul > li:nth-child(2) > a')).click();
-    };
-    /*
      STEP ONE
      */
 

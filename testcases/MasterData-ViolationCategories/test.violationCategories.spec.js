@@ -8,9 +8,7 @@ describe('When user opens the Violation Categories module, he...', function() {
     beforeEach(function () {
         loginPage.navigateToRemisDev();
         loginPage.loginREMI();
-        violationCategoriesPage.navigateToViolationCategories();
-        // helperFile.waitElement('#categoriesTreeList');
-
+        helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/violation/data');
     });
 
     it ('Should be able to create a new record.', function (){
@@ -21,7 +19,6 @@ describe('When user opens the Violation Categories module, he...', function() {
         violationCategoriesPage.checkActiveCheckbox(); 
         violationCategoriesPage.selectSiteValue();
         violationCategoriesPage.clickUpdateButton();
-        //Verification
         violationCategoriesPage.filterTable();
         helperFile.verifyThatRecordIsCreated('#categoriesTreeList');
     });

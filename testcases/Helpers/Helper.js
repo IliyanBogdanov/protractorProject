@@ -3,6 +3,19 @@ var EC = protractor.ExpectedConditions;
 
 var helperFile = function() {
     /*
+ 	 * NavigateTo section ; module function 
+     */
+    this.navigateTo = function (sectionClassName, moduleUiSrefName){
+        //Use the class name of the section - ex. class="menu-icon icon-menu-masterdata"
+        var navigateToFunctionSection = element(by.css(''+ sectionClassName +''));
+        browser.wait(EC.elementToBeClickable(navigateToFunctionSection), 10000, 'Wait for '+ navigateToFunctionSection +' button has failed.');
+        navigateToFunctionSection.click();
+        //Use the ui-sref name of the module - ex. href="/hto/monitoring/Liquid"
+        var navigateToModule = element(by.css('a[href="'+ moduleUiSrefName+'"]'));
+        browser.wait(EC.elementToBeClickable(navigateToModule), 10000, 'Wait for '+ navigateToModule +' button has failed.');
+        navigateToModule.click();
+    };
+    /*
  	 * Function that generates a random value
      */
     this.createARandomValue = function (){
@@ -41,9 +54,8 @@ var helperFile = function() {
      * Click the edit button
      */
     this.clickEditButton = function (selector) {
-        var elementBtn = element(by.css(selector));
-       	browser.wait(EC.elementToBeClickable(elementBtn), 10000, 'Wait for clickEditButton button has failed.');
-        elementBtn.click();
+        browser.wait(EC.elementToBeClickable($(selector)), 10000, 'Wait for clickEditButton button has failed.');
+        element(by.css(selector)).click();
     };
 	/*
      * Click the delete BDE button
@@ -158,7 +170,7 @@ var helperFile = function() {
      */
     this.clickApproveButton = function (selector) {
         var approveBtn = element(by.css(selector));
-        browser.wait(EC.elementToBeClickable(approveBtn), 10000, 'Wait for clickEditButton button has failed.');
+        browser.wait(EC.elementToBeClickable(approveBtn), 10000, 'Wait for clickApproveButton button has failed.');
         approveBtn.click();
     };
     /*

@@ -37,15 +37,6 @@ var MDProductFamiliesPage = function () {
         browser.wait(EC.visibilityOf($('#product-family-grid')), 10000, 'Wait for filterTable has failed.');
     };
     /*
-     *  Navigates to MD-PF
-     */
-    this.navigateMDProductFamilySection = function () {
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 10000, 'Wait for navigateMDProductFamilySection has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(2) > a > i')).click();
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(2) > a')), 10000, 'Wait for navigateMDProductFamilySection has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(2) > a')).click();
-    };
-    /*
      *  Enters config dosage value
      */
     this.enterConfigDossageValue = function() {

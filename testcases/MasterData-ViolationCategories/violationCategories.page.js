@@ -3,16 +3,6 @@ var violationCategoryName = " Test-VC-" + helper.createARandomValue();
 var EC = protractor.ExpectedConditions;
 
 var violationCategoriesPage = function(){
-
-    /*
-     * Navigate to Violation Categories
-     */
-    this.navigateToViolationCategories = function() {
-    browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 10000, 'Main menu wait for element has failed.');    
-    element(by.css('#sidebar-menu > ul > li:nth-child(2) > a > i')).click();
-    browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a')), 10000, 'Main menu wait for element has failed.');
-    element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(3) > a')).click();
-    };
     /*
      * Clicks the add new violation category button
      */

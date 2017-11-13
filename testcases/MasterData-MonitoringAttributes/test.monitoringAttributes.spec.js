@@ -9,7 +9,7 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
   beforeEach(function () {
     loginPage.navigateToRemisDev();
     loginPage.loginREMI();
-    monitoringAttrubutesPage.navigateToMonitoringAttributesSection();
+    helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/attributes/monitoring');
   });
 
   it('Should be able to create a new record.', function () {
@@ -30,7 +30,7 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     helperFile.clickNextButtonNgClick('vm.showValidateAlert(\'attribute-details\')');
     //Step 3 - control limits
     helperFile.clickButtonByText('Create New Control Limit');
-    monitoringAttrubutesPage.populateContrlLimitValues();
+    monitoringAttrubutesPage.populateControlLimitValues();
     monitoringAttrubutesPage.clickCreateButton();
     monitoringAttrubutesPage.clickNextButton3rdStep();
     //Step 4 - summary

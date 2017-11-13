@@ -16,15 +16,6 @@ var ideLiquidPage = function () {
         browser.wait(EC.visibilityOf($('#hto-grid-liquid')), 10000,'#hto-grid-liquid wait has failed.');    
     };
     /*
-     *  Navigate to IDE-Liquid
-     */
-    this.navigateToIDELiquidSection = function () {
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(4) > a > i')), 10000,'Main menu wait for element has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(4) > a > i')).click();
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(4) > ul > li:nth-child(1) > a')), 10000, 'Main menu wait for element has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(4) > ul > li:nth-child(1) > a')).click();
-    };
-    /*
      STEP ONE
      */
 

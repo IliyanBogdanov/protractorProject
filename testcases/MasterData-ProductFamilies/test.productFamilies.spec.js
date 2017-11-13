@@ -9,7 +9,7 @@ describe('When user opens the Product families module, he...', function() {
     beforeEach(function () {
         loginPage.navigateToRemisDev();
         loginPage.loginREMI();
-        MDProductFamilyPage.navigateMDProductFamilySection();
+        helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/productfamily/monitoring');
     });
 
     it('Should be able to create a new record.', function(){

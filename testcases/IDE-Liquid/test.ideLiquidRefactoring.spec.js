@@ -9,7 +9,7 @@ describe('When user opens the IDE-Liquid module, he...', function(){
     beforeEach(function(){
         loginPage.navigateToRemisDev();
         loginPage.loginREMI();
-        ideLiquidPage.navigateToIDELiquidSection();
+        helperFile.navigateTo('.menu-icon.icon-menu-hto', '/hto/monitoring/Liquid');
     });
     it('Should be able to create a new record.', function(){
         ideLiquidPage.clickOnAddIDEButton();

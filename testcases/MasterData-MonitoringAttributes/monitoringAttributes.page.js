@@ -4,15 +4,6 @@ var EC = protractor.ExpectedConditions;
 
 var monitoringAttributesPage = function() {
     /*
-     * Navigates to the module Master Data - Monitoring Attributes
-     */
-    this.navigateToMonitoringAttributesSection = function() {
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > a > i')), 10000, 'Wait for navigateToMonitoringAttributesSection has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(2) > a > i')).click();
-        browser.wait(EC.elementToBeClickable($('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(1) > a')), 10000, 'Wait for navigateToMonitoringAttributesSection has failed.');
-        element(by.css('#sidebar-menu > ul > li:nth-child(2) > ul > li:nth-child(1) > a')).click();
-    };
-    /*
      * Clicks on "Add New Monitoring Attribute" button
      */
     this.clickOnAddMonitoringAttributeButton = function() {
@@ -72,13 +63,13 @@ var monitoringAttributesPage = function() {
     /*
      * Populates control limit values
      */
-    this.populateContrlLimitValues = function() {
+    this.populateControlLimitValues = function() {
         browser.sleep(1000);
-        browser.wait(EC.visibilityOf($('input[name="LCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
+        browser.wait(EC.visibilityOf($('input[name="LCL"]')), 10000, 'Wait for populateControlLimitValues has failed.');
         element(by.css('input[name="LCL"]')).sendKeys(10.7);
-        browser.wait(EC.visibilityOf($('input[name="Center"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
+        browser.wait(EC.visibilityOf($('input[name="Center"]')), 10000, 'Wait for populateControlLimitValues has failed.');
         element(by.css('input[name="Center"]')).sendKeys(11.52);
-        browser.wait(EC.visibilityOf($('input[name="UCL"]')), 10000, 'Wait for populateContrlLimitValues has failed.');
+        browser.wait(EC.visibilityOf($('input[name="UCL"]')), 10000, 'Wait for populateControlLimitValues has failed.');
         element(by.css('input[name="UCL"]')).sendKeys(13.413);
     };
     /*

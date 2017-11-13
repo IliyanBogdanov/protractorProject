@@ -20,7 +20,7 @@ var processMonitoringOverviewPage = function(){
         dateRadioButton.click();
         //Click on Previous 180 days
         var previous180Days = element(by.css('#range-filter > div.dates-selectors > div.row.radio-group-holder > div:nth-child(3) > div > label'));
-        browser.wait(EC.elementToBeClickable(previous180Days, 10000, 'Wait for previous180Days has failed.'));
+        //browser.wait(EC.elementToBeClickable($(previous180Days)), 10000, 'Wait for previous180Days has failed.');
         previous180Days.click();
     };
     /*

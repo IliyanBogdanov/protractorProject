@@ -42,7 +42,7 @@ var loginPage = function(){
     };
 
     this.logoutREMI = function() {
-        browser.wait($('i[class="icon-small-logout"]'), 10000, 'Wait for logoutREMI has failed.');
+        browser.wait(EC.elementToBeClickable($('i[class="icon-small-logout"]')), 10000, 'Wait for logoutREMI has failed.');
         element(by.css('i[class="icon-small-logout"]')).click();
         element(by.buttonText('Yes')).click();  
     };

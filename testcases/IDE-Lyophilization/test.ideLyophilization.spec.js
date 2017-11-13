@@ -8,7 +8,7 @@ describe('When user opens the IDE-Lyophilization module, he...', function(){
     beforeEach(function(){
         loginPage.navigateToRemisDev();
         loginPage.loginREMI();
-        ideLyophilizationPage.navigateToIDELyophilizationSection();
+        helperFile.navigateTo('.menu-icon.icon-menu-hto', '/hto/monitoring/Lyophilization');
     });
     it('Should be able to create a new record.', function(){
         ideLyophilizationPage.clickOnAddIDEButton();
