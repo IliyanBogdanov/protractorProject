@@ -9,13 +9,13 @@ describe('When user opens the REMIS app, he...', function(){
     
         beforeEach(function(){
             loginPage.navigateToRemisDev();
-            loginPage.loginREMI('martouser1', '25Kukuvici');
+            loginPage.loginREMI('testuser1', '25Kukuvici');
         });
 
         it('Should be able to create a new PF record and approve it.', function(){
             helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/productfamily/monitoring');
             productFamilyPage.clickOnAddPFButton();
-            helperFile.enterSiteValue('2');
+            helperFile.enterSiteValue('1');
             helperFile.enterVenueValue('1');
             productFamilyPage.enterCommercialProductValue();
             productFamilyPage.enterConfigDossageValue();
@@ -33,7 +33,7 @@ describe('When user opens the REMIS app, he...', function(){
             loginPage.loginREMI('martouser1' , '25Kukuvici');
             helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/productfamily/monitoring');
             productFamilyPage.filterTable();
-            helperFile.clickApproveButton('.icon-small-approved.roche_grey_7');
+            helperFile.clickApproveButton();
             helperFile.clickNextButtonNgClick("vm.openActionModal('approve')");
             helperFile.signUpApprovalForm('martouser1' , '25Kukuvici');
             helperFile.clickButtonByText('OK');
@@ -89,22 +89,24 @@ describe('When user opens the REMIS app, he...', function(){
             loginPage.loginREMI('martouser1', '25Kukuvici');
             helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/attributes/monitoring');
             monitoringAttributesPage.filterTable();
-            helperFile.clickApproveButton('.icon-small-approved.roche_grey_7');
+            helperFile.clickApproveButton();
             helperFile.clickNextButtonNgClick("vm.openActionModal('approve')");
             helperFile.signUpApprovalForm('martouser1', '25Kukuvici');
             helperFile.clickButtonByText('OK');
             helperFile.clickButtonByText('Finish');
+            e2ePage.verifyThatTestPasses();
         });
 
-        fit('Should be able to approve the newly created control limits.', function() {            
+        it('Should be able to approve the newly created control limits.', function() {            
+            loginPage.navigateToRemisDev();
+            loginPage.loginREMI('martouser1', '25Kukuvici');
             helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/attributes/monitoring');
-            //monitoringAttributesPage.filterTable();
+            monitoringAttributesPage.filterTable();
             e2ePage.clickOnOpenControlLimitGridIcon();
-            e2ePage.clickApproveCLarray();
+            e2ePage.clickApproveCL();
             helperFile.signUpApprovalForm('martouser1', '25Kukuvici');
             helperFile.clickButtonByText('OK');
             helperFile.clickButtonByText('Finish');
-        
-        
+            e2ePage.verifyThatTestPasses();
         });    
     }); 

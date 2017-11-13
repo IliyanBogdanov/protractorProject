@@ -168,10 +168,9 @@ var helperFile = function() {
     /*
      Click approve button 
      */
-    this.clickApproveButton = function (selector) {
-        var approveBtn = element(by.css(selector));
-        browser.wait(EC.elementToBeClickable(approveBtn), 10000, 'Wait for clickApproveButton button has failed.');
-        approveBtn.click();
+    this.clickApproveButton = function () {
+        browser.wait(EC.elementToBeClickable($('.icon-small-approved.roche_grey_7')), 10000, 'Wait for clickApproveButton has failed.');
+        element.all(by.css('.icon-small-approved.roche_grey_7')).first().click();
     };
     /*
      *  Sign up approval form with credentials

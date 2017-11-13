@@ -6,17 +6,15 @@ var e2ePage = function () {
      * Click on open CL icon
      */
     this.clickOnOpenControlLimitGridIcon = function() {
-        var openGridIcon = element(by.css('a[class="k-icon k-plus"]'));
-        browser.wait(EC.elementToBeClickable($(openGridIcon)), 10000, 'Wait for clickOnOpenControlLimitGridIcon button has failed.');
-        openGridIcon.click();
+        browser.wait(EC.elementToBeClickable($('#attributes-grid > div.k-grid-content.k-auto-scrollable > table > tbody > tr:nth-child(1) > td.k-hierarchy-cell > a')), 10000, 'Wait for clickOnOpenControlLimitGridIcon button has failed.');
+        element.all(by.css('#attributes-grid > div.k-grid-content.k-auto-scrollable > table > tbody > tr:nth-child(1) > td.k-hierarchy-cell > a')).first().click();
     };
     /*
      * Click on + button in order to add a new control limit
      */
     this.clickOnPlusIcon = function() {
-        var plusGridIcon = element(by.css('i[class="icon-small-newrow roche_grey_7 font-size-18"]'));
-        browser.wait(EC.elementToBeClickable($(plusGridIcon)), 10000, 'Wait for clickOnPlusIcon button has failed.');
-        plusGridIcon.click();
+        browser.wait(EC.elementToBeClickable($('.icon-small-newrow.roche_grey_7.font-size-18')), 10000, 'Wait for clickOnPlusIcon button has failed.');
+        element.all(by.css('.icon-small-newrow.roche_grey_7.font-size-18')).first().click();
     };
     /*
      * Populates control limit values
@@ -55,7 +53,7 @@ var e2ePage = function () {
     /*
      Click next button by a position in an array
      */
-    this.clickApproveCLarray = function () {
+    this.clickApproveCL = function () {
         browser.wait(EC.elementToBeClickable($('#controlLimitsGrid > div.k-grid-content.k-auto-scrollable > table > tbody > tr > td.text-right > a:nth-child(4) > i')), 10000, 'Wait for clickNextArray has failed.');
         element.all(by.css('#controlLimitsGrid > div.k-grid-content.k-auto-scrollable > table > tbody > tr > td.text-right > a:nth-child(4) > i')).first().click();
     };
