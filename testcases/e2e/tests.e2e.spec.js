@@ -2,6 +2,8 @@ var loginPage = require('../REMILogin/login.page.js');
 var productFamilyPage = require('../MasterData-ProductFamilies/productFamilies.page.js');
 var monitoringAttributesPage = require('../MasterData-MonitoringAttributes/monitoringAttributes.page.js');
 var bdePage = require('../BatchDataEntry/bde.page.js');
+var ideLiquidPage = require('../IDE-Liquid/ideLiquid.page.js');
+var ideLyophilizationPage = require('../IDE-Lyophilization/ideLyophilization.page.js');
 var helperFile = require('../Helpers/Helper.js');
 var random = helperFile.createARandomValue();
 var e2ePage = require('./e2e.page.js');
@@ -13,7 +15,7 @@ describe('When user opens the REMIS app, he...', function(){
             loginPage.loginREMI('testuser1', '25Kukuvici');
         });
 
-        it('Should be able to create a new PF record and approve it.', function(){
+        fit('Should be able to create a new PF record and approve it.', function(){
             helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/productfamily/monitoring');
             productFamilyPage.clickOnAddPFButton();
             helperFile.enterSiteValue('1');
@@ -27,8 +29,6 @@ describe('When user opens the REMIS app, he...', function(){
             productFamilyPage.enterProcessStepValue();
             helperFile.clickButtonByText('Create');
             helperFile.clickButtonByText('Finish');
-            productFamilyPage.filterTable();
-            helperFile.verifyThatRecordIsCreated('#product-family-grid');
             loginPage.logoutREMI();
             loginPage.navigateToRemisDev();
             loginPage.loginREMI('martouser1' , '25Kukuvici');
@@ -42,21 +42,22 @@ describe('When user opens the REMIS app, he...', function(){
             e2ePage.verifyThatTestPasses();
         });
     
-        it('Should be able to find the approved PF in the filter and apply it.', function() {
+        fit('Should be able to find the approved PF in the filter and apply it.', function() {
             helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/productfamily/monitoring');
             helperFile.setSiteValue('0');
             helperFile.setVenueValue('0');
             helperFile.setProductFamilyValue('10'); //please change that to take the parameter set when creating the PF
             helperFile.clickOnApplyButton();
             e2ePage.verifyThatTestPasses();
+            loginPage.logoutREMI();
         });
 
-        it('Should be able to create a MA record and approve it (using the same PF record).CRUD of a CL in the grid are also checked.', function() {
+        fit('Should be able to create a MA record and approve it (using the same PF record).CRUD of a CL in the grid are also checked.', function() {
             helperFile.navigateTo('.menu-icon.icon-menu-masterdata', '/attributes/monitoring');
             monitoringAttributesPage.clickOnAddMonitoringAttributeButton();
             helperFile.enterSiteValue('1');
             helperFile.enterVenueValue('1');
-            helperFile.enterProductFamilyValue('2198'); //please change that to take the parameter set when creating the PF
+            helperFile.enterProductFamilyValue('305'); //please change that to take the parameter set when creating the PF
             helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
             monitoringAttributesPage.enterAttributeType();
             monitoringAttributesPage.enterUoM();
@@ -109,6 +110,7 @@ describe('When user opens the REMIS app, he...', function(){
             helperFile.clickButtonByText('OK');
             helperFile.clickButtonByText('Finish');
             e2ePage.verifyThatTestPasses();
+            loginPage.logoutREMI();
         });
         
         it('Should be able to create and approve a BDE record.', function() {            
@@ -133,15 +135,86 @@ describe('When user opens the REMIS app, he...', function(){
             helperFile.clickNextButtonWzNext('');
             helperFile.clickButtonByText('Create');
             helperFile.clickButtonByText('OK');
+            loginPage.logoutREMI();
             loginPage.navigateToRemisDev();
             loginPage.loginREMI('testuser1', '25Kukuvici');
             helperFile.navigateTo('.menu-icon.icon-menu-dataentry', '/products/dataEntry');
             bdePage.filterTableBDE();
-            e2ePage.clickApproveBDE();
+            e2ePage.clickApprove();
             helperFile.clickButtonByText('Compliance Check & Sign');
             helperFile.signUpApprovalForm('testuser1', '25Kukuvici');
             helperFile.clickButtonByText('OK');
             e2ePage.verifyThatTestPasses();
+        });
+
+        it('Should be able to create and approve a IDE-Liquid record.', function() {
+            helperFile.navigateTo('.menu-icon.icon-menu-hto', '/hto/monitoring/Liquid');
+            ideLiquidPage.clickOnAddIDEButton();
+            helperFile.enterCompanyValue();
+            ideLiquidPage.enterTotalVials();
+            ideLiquidPage.enterInspection();
+            ideLiquidPage.enterFacilityValue();
+            ideLiquidPage.enterALEValue();
+            ideLiquidPage.enterInspectionStartDate();
+            inspectionLotNumber = ideLiquidPage.enterInspectionLotNumber();
+            ideLiquidPage.enterComments();
+            helperFile.clickNextArray(0);
+            ideLiquidPage.addVials();
+            helperFile.clickNextArray(1);
+            ideLiquidPage.addVials();
+            helperFile.clickNextArray(2);
+            ideLiquidPage.addVials();
+            helperFile.clickNextArray(3);
+            ideLiquidPage.addVials();
+            helperFile.clickNextArray(4);
+            ideLiquidPage.addVials();
+            helperFile.clickButtonByText('Create');
+            helperFile.clickButtonByText('Finish');
+            loginPage.logoutREMI();
+            loginPage.navigateToRemisDev();
+            loginPage.loginREMI('martouser1', '25Kukuvici');
+            helperFile.navigateTo('.menu-icon.icon-menu-hto', '/hto/monitoring/Liquid');
+            ideLiquidPage.filterTable();
+            e2ePage.clickApprove();
+            helperFile.clickButtonByText('Compliance Check & Sign');
+            helperFile.signUpApprovalForm('martouser1', '25Kukuvici');
+            helperFile.clickButtonByText('OK');
+            e2ePage.verifyThatTestPasses();         
+        });
+        
+        it('Should be able to create and approve a IDE-Lyophilization record.', function() {
+            helperFile.navigateTo('.menu-icon.icon-menu-hto', '/hto/monitoring/Lyophilization');
+            ideLyophilizationPage.clickOnAddIDEButton();
+            helperFile.enterCompanyValue();
+            ideLyophilizationPage.enterTotalVials();
+            ideLyophilizationPage.enterInspection();
+            ideLyophilizationPage.enterFacilityValue();
+            ideLyophilizationPage.enterALEValue();
+            ideLyophilizationPage.enterInspectionStartDate();
+            inspectionLotNumber = ideLyophilizationPage.enterInspectionLotNumber();
+            ideLyophilizationPage.enterComments();
+            helperFile.clickNextButtonWzNext("vm.showValidateAlert('lot-information')");
+            ideLyophilizationPage.addVials();
+            helperFile.clickNextArray(0);
+            ideLyophilizationPage.addVials();
+            helperFile.clickNextArray(1);
+            ideLyophilizationPage.addVials();
+            helperFile.clickNextArray(2);
+            ideLyophilizationPage.addVials();
+            helperFile.clickButtonByText('Create');
+            helperFile.clickButtonByText('Finish');
+            loginPage.logoutREMI();
+            loginPage.navigateToRemisDev();
+            loginPage.loginREMI('martouser1', '25Kukuvici');
+            helperFile.navigateTo('.menu-icon.icon-menu-hto', '/hto/monitoring/Lyophilization');
+            ideLyophilizationPage.filterTable();
+            e2ePage.clickApprove();
+            helperFile.clickButtonByText('Compliance Check & Sign');
+            helperFile.signUpApprovalForm('martouser1', '25Kukuvici');
+            helperFile.clickButtonByText('OK');
+            e2ePage.verifyThatTestPasses();         
         });    
+        
+        
 
     }); 

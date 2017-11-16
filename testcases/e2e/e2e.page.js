@@ -58,10 +58,10 @@ var e2ePage = function () {
         element.all(by.css('#controlLimitsGrid > div.k-grid-content.k-auto-scrollable > table > tbody > tr > td.text-right > a:nth-child(4) > i')).first().click();
     };
     /*
-     Click approve BDE button
+     Click approve button
      */
-    this.clickApproveBDE = function () {
-        browser.wait(EC.elementToBeClickable($('.icon-small-approved.roche_grey_7')), 10000, 'Wait for clickApproveBDE has failed.');
+    this.clickApprove = function () {
+        browser.wait(EC.elementToBeClickable($('.icon-small-approved.roche_grey_7')), 10000, 'Wait for clickApprove has failed.');
         element.all(by.css('.icon-small-approved.roche_grey_7')).first().click();
     };
     /*

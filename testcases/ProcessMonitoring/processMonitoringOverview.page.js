@@ -35,6 +35,17 @@ var processMonitoringOverviewPage = function(){
     this.verifyThatClearButtonHasClearedFilterInput = function() {
     expect(element(by.css('#process-monitoring-overview > div.alert.roche_yellow_bg.text-white.ng-scope > strong')).getAttribute('innerHTML')).toEqual('Please select a Product Family');
     };
+    /*
+     * Verify that filter setting is persisted after logout,login
+     */
+    
+    this.verifyThatPFSettingIsPersisted = function() {
+        var pfInput = element(by.id('#filter-productFamily'));
+        browser.wait(EC.elementToBeClickable(pfInput, 10000, 'Wait for verifyThatPFSettingIsPersisted has failed.'));
+        expect(pfInput.getText()).toEqual('ACTEMRA 162 MG VTEST1');
+
+       //please finish that one
+    };
 
 };
 

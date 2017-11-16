@@ -14,12 +14,10 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
 
   it('Should be able to create a new record.', function () {
     monitoringAttrubutesPage.clickOnAddMonitoringAttributeButton();
-    //Step 1 - product details
     helperFile.enterSiteValue('1');
     helperFile.enterVenueValue('1');
     helperFile.enterProductFamilyValue('305');
     helperFile.clickNextButtonWzNext('vm.showValidateAlert(\'product-details\')');
-    //Step 2 - attribute details
     monitoringAttrubutesPage.enterAttributeType();
     monitoringAttrubutesPage.enterUoM();
     attributeName = monitoringAttrubutesPage.enterNameForMonitoringAttribute();
@@ -28,15 +26,12 @@ describe(' When user opens the Monitoring Attributes module, he ... ', function 
     monitoringAttrubutesPage.enterEffectiveDate();
     monitoringAttrubutesPage.enterDecimalPoints();
     helperFile.clickNextButtonNgClick('vm.showValidateAlert(\'attribute-details\')');
-    //Step 3 - control limits
     helperFile.clickButtonByText('Create New Control Limit');
     monitoringAttrubutesPage.populateControlLimitValues();
     monitoringAttrubutesPage.clickCreateButton();
     monitoringAttrubutesPage.clickNextButton3rdStep();
-    //Step 4 - summary
     helperFile.clickButtonByText('Create');
     helperFile.clickButtonByText('Finish');
-    //Verification that the record is created
     monitoringAttrubutesPage.filterTable();
     helperFile.verifyThatRecordIsCreated('#attributes-grid');
   });
