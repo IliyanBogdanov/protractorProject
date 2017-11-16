@@ -110,6 +110,7 @@ describe('When user opens the REMIS app, he...', function(){
             helperFile.clickButtonByText('OK');
             helperFile.clickButtonByText('Finish');
             e2ePage.verifyThatTestPasses();
+            //new bla bla
             loginPage.logoutREMI();
         });
         
